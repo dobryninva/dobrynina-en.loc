@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd5c90d761bdce063fb029b9b7041f98b',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '83f04d05075606491e1e2dbb992ecd89',
+  'native_key' => 'eshoplogistic3_baikal_sender_identity_type',
+  'object' => '{"key":"eshoplogistic3_baikal_sender_identity_type","value":"","xtype":"numberfield","namespace":"eshoplogistic3","area":"eshoplogistic3_order_unload_baikal","editedon":null}',
+);

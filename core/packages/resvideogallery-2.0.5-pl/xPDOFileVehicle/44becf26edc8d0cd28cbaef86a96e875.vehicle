@@ -1,0 +1,23 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'resvideogallery-2.0.5-pl/xPDOFileVehicle/44becf26edc8d0cd28cbaef86a96e875/',
+    'target' => 'return MODX_CORE_PATH . \'components/\';',
+    'name' => 'resvideogallery',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"type":"php","source":"resvideogallery-2.0.5-pl\\/xPDOFileVehicle\\/44becf26edc8d0cd28cbaef86a96e875.resolve.encryption.resolver","name":"resolve.encryption"}',
+    ),
+  ),
+  'vehicle_package' => 'transport',
+  'guid' => '3324416b20733281d122c5eb0f914a5e',
+  'package' => '',
+  'signature' => '44becf26edc8d0cd28cbaef86a96e875',
+  'native_key' => '3324416b20733281d122c5eb0f914a5e',
+);

@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e411dd3521f92c78672dedf2908dd33a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '71f34d8d5bf7b977663011ca892a3628',
+  'native_key' => 'mspre_filter_size_colump',
+  'object' => '{"key":"mspre_filter_size_colump","value":"200","xtype":"numberfield","namespace":"mspre","area":"mspre_main","editedon":null}',
+);

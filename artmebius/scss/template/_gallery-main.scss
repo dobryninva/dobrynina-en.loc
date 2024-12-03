@@ -1,0 +1,217 @@
+//************************************************************************ gallery_main */
+
+.gallery_main{
+
+  // albums_grid
+  .albums_grid{
+    .article_block{
+      .item_link{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: $clrH;
+        &:hover{
+          color: $clr1;
+          text-decoration: none;
+          .item_preview{
+            border-style: solid;
+          }
+        }
+      }
+      .item_preview{
+        display: block;
+        border: 1px dashed #000;
+        padding: 1px;
+        img{
+          width: 100%;
+        }
+      }
+      .item_title{
+        display: block;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  // grid
+  .photos_grid{
+    .photos_block{
+      .item_link{
+        display: block;
+        border: 1px dashed #000;
+        padding: 1px;
+        text-align: center;
+        font-size: 0;
+        // background: $clr4;
+
+// hover spot
+        position: relative;
+        &:before{
+          content: '';
+          position: absolute;
+          left: 1px;
+          right: 1px;
+          bottom: 1px;
+          top: 1px;
+          display: block;
+          background: rgba(0, 0, 0, .2);
+          opacity: 1;
+          // @extend %posa_full;
+          @include transition(opacity ease-out .2s);
+        }
+        &:hover{
+          border-style: solid;
+          &:before{
+            opacity: 0;
+          }
+        }
+//
+
+// hover shadow
+        // &:hover{
+        //   -webkit-box-shadow: 0 3px 5px -3px rgba(0, 0, 0, 0.5);
+        //   box-shadow: 0 3px 5px -3px rgba(0, 0, 0, 0.5);
+        // }
+//
+
+// hover scale
+        // overflow: hidden;
+        // &:hover{
+        //   .item_img{
+        //     .scale(1.1);
+        //   }
+        // }
+//
+        .item_img{
+          width: 100%;
+          @include transition(transform 0.2s ease-out, opacity 0.2s ease-out);
+        }
+      }
+    }
+  }
+
+} // gallery_main
+
+//************************************************************************ gallery_hover */
+.gallery_hover{
+
+  // grid
+  .photos_grid{
+    .photos_block{
+      .item_link{
+        display: block;
+        border: 1px dashed #000;
+        padding: 1px;
+        text-align: center;
+        font-size: 0;
+        // background: $clr4;
+
+        &:hover{
+          // border-style: solid;
+        }
+
+// hover spot
+        // position: relative;
+        // &:before{
+        //   content: '';
+        //   position: absolute;
+        //   left: 1px;
+        //   right: 1px;
+        //   bottom: 1px;
+        //   top: 1px;
+        //   display: block;
+        //   background: rgba(0, 0, 0, .2);
+        //   opacity: 1;
+        //   // @extend %posa_full;
+        //   @include transition(opacity ease-out .2s);
+        // }
+        // &:hover{
+        //   border-style: solid;
+        //   &:before{
+        //     opacity: 0;
+        //   }
+        // }
+//
+
+// hover shadow
+        &:hover{
+          border-style: solid;
+          // box-shadow: 0 4px 5px -4px rgba(0, 0, 0, 0.5);
+          // @extend %shadow-h1;
+        }
+//
+
+// hover scale
+        // overflow: hidden;
+        // &:hover{
+        //   .item_img{
+        //     .scale(1.1);
+        //   }
+        // }
+//
+        .item_img{
+          width: 100%;
+          @include transition(transform 0.2s ease-out, opacity 0.2s ease-out);
+        }
+      }
+    }
+  }
+
+} // gallery_clear
+
+//lg
+@media (min-width: $screen-lg) and (max-width: $screen-lg-max) { // 1024 and 1279
+
+.gallery_main{
+
+} // .gallery_main
+
+} // @lg
+
+//md
+@media (min-width: $screen-md) and (max-width: $screen-md-max) { // 768 and 1023
+
+.gallery_main{
+
+} // .gallery_main
+
+} // @md
+
+//sm
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) { // 480 and 767
+
+.gallery_main{
+
+} // .gallery_main
+
+} // @sm
+
+//sm-max
+@media (max-width: $screen-sm-max) { // 767
+
+.gallery_main{
+
+  .photos_grid{
+    .photos_block{
+      .item_link{
+// hover spot
+        &:before{
+          display: none;
+        }
+//
+      }
+    }
+  }
+
+} // .gallery_main
+
+} // @xs
+
+//xs
+@media (max-width: $screen-xs-max) { // 479
+
+.gallery_main{
+
+} // .gallery_main
+
+} // @xs

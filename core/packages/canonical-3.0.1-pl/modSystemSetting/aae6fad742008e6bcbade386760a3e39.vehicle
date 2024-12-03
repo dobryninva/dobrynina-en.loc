@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'canonical',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '04c8c2a856665180375b57bf6aba875c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'aae6fad742008e6bcbade386760a3e39',
+  'native_key' => 'canonical_always',
+  'object' => '{"key":"canonical_always","value":true,"xtype":"combo-boolean","namespace":"canonical","area":"canonical","editedon":null,"name":"setting_canonical_always","description":"setting_canonical_always_desc"}',
+);

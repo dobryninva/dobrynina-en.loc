@@ -1,0 +1,60 @@
+Changelog for imageSlim
+
+1.1.3-pl [01.11.2013]
+---------------------
+
+- [#7] Always use the cached copy of a remote image, even if it doesn't
+  need to be altered.
+- [#8] Fix unwanted conversion of empty DOM nodes into self-closing tags
+  when there's more than one in the HTML fragment
+
+
+1.1.2-pl [06.10.2013]
+---------------------
+
+- Improve identification and handling of remote images
+- [#6] Fix handling of empty <textarea></textarea> tags
+- Add a use_resizer setting/property for enabling Resizer independent
+  of the site-wide setting. imageSlim will use Resizer by default if
+  pThumb is installed.
+
+
+1.1.1-pl [22.08.2013]
+---------------------
+
+- [#5] If MODX is installed in a subdirectory, keep the subdirectory
+  name from incorrectly occurring twice in the path.
+- On remote images, add a protocol to any protocol-relative URLs to
+  prevent cURL from failing.
+
+
+1.1.0-pl
+--------
+- [#4] Add imgSrc property to specify a different source attribute
+  for img tags. Data attributes for example.
+- Remove hotlinking checks for remote images.  I can't think of when
+  these would actually be useful.
+- Add imageSlimCacheManager plugin to clean up the remote images
+  cache on OnSiteRefresh events.
+
+
+1.0.2-pl
+--------
+- [#2] Add a workaround for phpThumbOf issue #53
+
+
+1.0.1-pl
+--------
+- Fix domDocument handling of iframe, video and audio tags so they
+  don't become self closing
+
+
+1.0.0-pl
+--------
+- uses cURL for remote images
+- adds caching of remote images and a max download time threshold
+
+
+1.0.0-beta1
+-----------
+Initial Version

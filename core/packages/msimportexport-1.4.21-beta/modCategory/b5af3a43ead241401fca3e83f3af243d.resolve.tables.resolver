@@ -1,0 +1,98 @@
+<?php
+$pkgName = 'msImportExport';
+$pkgNameLower = mb_strtolower($pkgName);
+if ($object->xpdo) {
+    $modx =& $object->xpdo;
+    $modelPath = $modx->getOption("{$pkgNameLower}.core_path", null, $modx->getOption('core_path') . "components/{$pkgNameLower}/") . 'model/';
+    $sqlPath = $modelPath . 'sql/';
+    $modx->addPackage($pkgNameLower, $modelPath);
+    $manager = $modx->getManager();
+    $tablePrefix = $manager->xpdo->config[xPDO::OPT_TABLE_PREFIX];
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_INSTALL:
+            $manager->createObjectContainer('MsieHeadAlias');
+            $manager->createObjectContainer('MsiePresetsFields');
+            $manager->createObjectContainer('MsieCron');
+            $manager->createObjectContainer('MsieAccessPrice');
+            execSql($modx, array(
+                $sqlPath . 'presetFields.sql',
+                $sqlPath . 'headAlias.sql',
+            ), $tablePrefix);
+            break;
+        case xPDOTransport::ACTION_UPGRADE:
+            $level = $modx->getLogLevel();
+            $modx->setLogLevel(xPDO::LOG_LEVEL_FATAL);
+
+            $manager->createObjectContainer('MsieCron');
+            if (!$modx->getTableName('MsieHeadAlias')) {
+                $manager->createObjectContainer('MsieHeadAlias');
+                $manager->createObjectContainer('MsiePresetsFields');
+                $manager->createObjectContainer('MsieAccessPrice');
+                execSql($modx, array(
+                    $sqlPath . 'headAlias.sql',
+                ), $tablePrefix);
+            }
+            if (!$modx->getTableName('MsiePresetsFields')) {
+                $manager->createObjectContainer('MsiePresetsFields');
+                execSql($modx, array(
+                    $sqlPath . 'presetFields.sql',
+                ), $tablePrefix);
+            }
+
+            $manager->addField('MsiePresetsFields', 'properties', array('before' => 'fields'));
+            $manager->addField('MsiePresetsFields', 'where', array('before' => 'fields'));
+            $manager->addField('MsiePresetsFields', 'select', array('before' => 'fields'));
+            $manager->addField('MsiePresetsFields', 'innerjoin', array('before' => 'fields'));
+            $manager->addField('MsiePresetsFields', 'leftjoin', array('before' => 'fields'));
+
+            $manager->addField('MsiePresetsFields', 'key');
+            $manager->addField('MsiePresetsFields', 'categories');
+
+            $manager->addField('MsieCron', 'run_user', array('before' => 'date_start'));
+
+            if (!$obj = $modx->getObject('MsieHeadAlias', array('key' => 'put_thumb'))) {
+                $obj = $modx->newObject('MsieHeadAlias');
+                $obj->set('key', 'put_thumb');
+                $obj->set('value', 'Фото');
+                $obj->save();
+            }
+
+            if (!$obj = $modx->getObject('MsieHeadAlias', array('key' => 'vendor.name'))) {
+                $obj = $modx->newObject('MsieHeadAlias');
+                $obj->set('key', 'vendor.name');
+                $obj->set('value', 'Производитель');
+                $obj->save();
+            }
+
+
+            $modx->setLogLevel($level);
+            break;
+        case xPDOTransport::ACTION_UNINSTALL:/*
+			$manager->removeObjectContainer('MsieHeadAlias');
+			$manager->removeObjectContainer('MsiePresetsFields');*/
+            break;
+    }
+}
+
+/**
+ * @param $modx
+ * @param array $files
+ * @param string $tablePrefix
+ */
+function execSql(&$modx, $files = array(), $tablePrefix = '')
+{
+    foreach ($files as $file) {
+        if (file_exists($file)) {
+            if ($sql = file_get_contents($file)) {
+                $sql = str_replace("%table_prefix%", $tablePrefix, $sql);
+                $modx->exec($sql);
+            } else {
+                $modx->log(modX::LOG_LEVEL_ERROR, '[msImportExport]  sql file empty ' . $file);
+            }
+        } else {
+            $modx->log(modX::LOG_LEVEL_ERROR, '[msImportExport] not find sql file: ' . $file);
+        }
+    }
+}
+
+return true;

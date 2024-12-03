@@ -1,0 +1,172 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '5464f58373d0e1e370a2a4c0e347151b' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"TVTable","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"$tv = $modx->getOption(\'tv\', $scriptProperties, \'\');\\r\\n$input = $modx->getOption(\'input\', $scriptProperties, \'\');\\r\\n$resource = (int)$modx->getOption(\'id\', $scriptProperties, \'\');\\r\\n$x = $modx->getOption(\'getX\', $scriptProperties, \'\');\\r\\n$y = $modx->getOption(\'getY\', $scriptProperties, \'\');\\r\\n$head = $modx->getOption(\'head\', $scriptProperties, true, true);\\r\\n$display_headers = $modx->getOption(\'displayHeaders\', $scriptProperties, false, true);\\r\\n\\r\\n$tdTpl = $modx->getOption(\'tdTpl\', $scriptProperties, \'@INLINE <td>[[+val]]<\\/td>\', true);\\r\\n$thTpl = $modx->getOption(\'thTpl\', $scriptProperties, \'@INLINE <th>[[+val]]<\\/th>\', true);\\r\\n$trTpl = $modx->getOption(\'trTpl\', $scriptProperties, \'@INLINE <tr>[[+cells]]<\\/tr>\', true);\\r\\n$wrapperTpl = $modx->getOption(\'wrapperTpl\', $scriptProperties, \'@INLINE <table class=\\"[[+classname]]\\">[[+table]]<\\/table>\', true);\\r\\n\\r\\n$tableClass = $modx->getOption(\'tableClass\', $scriptProperties, \'tvtable\', true);\\r\\n$headClass = $modx->getOption(\'headClass\', $scriptProperties, \'\');\\r\\n$bodyClass = $modx->getOption(\'bodyClass\', $scriptProperties, \'\');\\r\\n\\r\\n$classname = !empty($classname) ? $classname : $tableClass;\\r\\n$headOpen = empty($headClass) ? \'<thead>\' : \'<thead class=\\"\' . $headClass . \'\\">\';\\r\\n$bodyOpen = empty($bodyClass) ? \'<tbody>\' : \'<tbody class=\\"\' . $bodyClass . \'\\">\';\\r\\n\\r\\nif (empty($tv) && empty($input)) return;\\r\\n\\r\\n$version = $modx->getVersionData();\\r\\n$modx_version = intval(substr($version[\'full_version\'], 0, 1));\\r\\n\\r\\nif (empty($input)) {\\r\\n    if (!empty($resource)) {\\r\\n        $resource = $modx->getObject(\'modResource\', [\'id\' => $resource]);\\r\\n        if (!$resource instanceof modResource) return;\\r\\n        $value = $resource->getTVValue($tv);\\r\\n    } else {\\r\\n        $value = $modx->resource->getTVValue($tv);\\r\\n    }\\r\\n} else {\\r\\n    $value = $input;\\r\\n}\\r\\n\\r\\nif (!$tvtArr = $modx->fromJSON($value)) {\\r\\n    return;\\r\\n};\\r\\n\\r\\nif ($x == \'first\') $x = 0;\\r\\nif ($y == \'first\') $y = 0;\\r\\n\\r\\n$values = [];\\r\\n\\r\\nif ($x !== \'\' && $y === \'\') {\\r\\n    $directionX = true;\\r\\n    if ($x === \'last\') {\\r\\n        $values = array_pop($tvtArr);\\r\\n    } else {\\r\\n        $values = $tvtArr[$x];\\r\\n    }\\r\\n} elseif ($x === \'\' && $y !== \'\') {\\r\\n    $directionY = true;\\r\\n    if (count($tvtArr[0]) > $y) {\\r\\n        foreach ($tvtArr as $key => $row) {\\r\\n            if ($y === \'last\') {\\r\\n                $y = count($tvtArr[$key]) - 1;\\r\\n            }\\r\\n            $values[$key] = $tvtArr[$key][$y];\\r\\n        }\\r\\n    }\\r\\n} elseif ($x !== \'\' && $y !== \'\') {\\r\\n    if ($x === \'last\') {\\r\\n        $x = count($tvtArr) - 1;\\r\\n    }\\r\\n    if ($y === \'last\') {\\r\\n        $y = count($tvtArr[$x]) - 1;\\r\\n    }\\r\\n\\r\\n    return $tvtArr[$x][$y];\\r\\n} else {\\r\\n    $values = $tvtArr;\\r\\n}\\r\\n\\r\\nif ($display_headers && count($values)) {\\r\\n    $query = $modx->newQuery(\'modTemplateVar\');\\r\\n    $query->where([\'id\' => $tv]);\\r\\n    $query->where([\'name\' => $tv], xPDOQuery::SQL_OR);\\r\\n    if ($tv_obj = $modx->getObject(\'modTemplateVar\', $query)) {\\r\\n        $tv_props = $tv_obj->get(\'input_properties\');\\r\\n        $headers = explode(\'||\', $tv_props[\'headers\']);\\r\\n        $headersDefault = $tv_props[\'headers_default\'];\\r\\n        if (count($headers)) {\\r\\n            $column_count = ($directionX || $directionY) ? count($values) : count($values[0]);\\r\\n            $header_row = [];\\r\\n            if ($directionY) {\\r\\n                $header_row = $headers[$y] ?: $headersDefault;\\r\\n            } else {\\r\\n                for ($i = 0; $i < $column_count; $i++) {\\r\\n                    $header_row[] = $headers[$i] ?: $headersDefault;\\r\\n                }\\r\\n            }\\r\\n            if ($directionX) {\\r\\n                $directionX = false;\\r\\n                $values = [$header_row, $values];\\r\\n            } else {\\r\\n                array_unshift($values, $header_row);\\r\\n            }\\r\\n        }\\r\\n    }\\r\\n}\\r\\n\\r\\nif (empty($values)) return;\\r\\n\\r\\nif ($modx_version === 3) {\\r\\n    $pdoFetch = $modx->services->get(ModxPro\\\\PdoTools\\\\Fetch::class);\\r\\n    if (!$pdoFetch) {\\r\\n        return false;\\r\\n    }\\r\\n    $fastMode = $pdoFetch->getConfig[\'fastMode\'];\\r\\n\\r\\n} else {\\r\\n    $fqn = $modx->getOption(\'pdoFetch.class\', null, \'pdotools.pdofetch\', true);\\r\\n    $path = $modx->getOption(\'pdofetch_class_path\', null, MODX_CORE_PATH . \'components\\/pdotools\\/model\\/\', true);\\r\\n    if ($pdoClass = $modx->loadClass($fqn, $path, false, true)) {\\r\\n        $pdoFetch = new $pdoClass($modx, $scriptProperties);\\r\\n        $fastMode = $pdoFetch->config[\'fastMode\'];\\r\\n    } else {\\r\\n        return false;\\r\\n    }\\r\\n}\\r\\n\\r\\n$pdoFetch->addTime(\'pdoTools loaded\');\\r\\n$output = $pdoFetch->run();\\r\\n$rows = \'\';\\r\\n\\r\\nif ($directionX) {\\r\\n    $directionXTpl = $head ? $thTpl : $tdTpl;\\r\\n    foreach ($values as $value) {\\r\\n        $cells .= $pdoFetch->getChunk($directionXTpl, [\'val\' => $value], $fastMode);\\r\\n    }\\r\\n    $rows .= $head ? $headOpen : $bodyOpen;\\r\\n    $rows .= $pdoFetch->getChunk($trTpl, [\'cells\' => $cells, \'idx\' => $x], $fastMode);\\r\\n    $rows .= $head ? \'<\\/thead>\' : \'<\\/tbody>\';\\r\\n} else {\\r\\n    if ($head) {\\r\\n        $rows .= $headOpen;\\r\\n        $head = array_shift($values);\\r\\n        $headCells = \'\';\\r\\n        if (is_array($head)) {\\r\\n            foreach ($head as $row) {\\r\\n                $headCells .= $pdoFetch->getChunk($thTpl, [\'val\' => $row], $fastMode);\\r\\n            }\\r\\n        } else {\\r\\n            $headCells .= $pdoFetch->getChunk($thTpl, [\'val\' => $head], $fastMode);\\r\\n        }\\r\\n        $rows .= $pdoFetch->getChunk($trTpl, [\'cells\' => $headCells, \'idx\' => 0], $fastMode);\\r\\n        $rows .= \'<\\/thead>\';\\r\\n    }\\r\\n    if ($values) {\\r\\n        $rows .= $bodyOpen;\\r\\n        $idx = $head ? 1 : 0;\\r\\n        foreach ($values as $row) {\\r\\n            $cells = \'\';\\r\\n            if (is_array($row)) {\\r\\n                foreach ($row as $cell) {\\r\\n                    $cells .= $pdoFetch->getChunk($tdTpl, [\'val\' => $cell], $fastMode);\\r\\n                }\\r\\n            } else {\\r\\n                $cells .= $pdoFetch->getChunk($tdTpl, [\'val\' => $row], $fastMode);\\r\\n            }\\r\\n            $rows .= $pdoFetch->getChunk($trTpl, [\'cells\' => $cells, \'idx\' => $idx], $fastMode);\\r\\n            $idx++;\\r\\n        }\\r\\n        $rows .= \'<\\/tbody>\';\\r\\n    }\\r\\n}\\r\\n\\r\\n$output = $pdoFetch->getChunk($wrapperTpl, [\'table\' => $rows, \'classname\' => $classname], $fastMode);\\r\\n\\r\\nreturn $output;","locked":0,"properties":"a:12:{s:10:\\"tableClass\\";a:7:{s:4:\\"name\\";s:10:\\"tableClass\\";s:4:\\"desc\\";s:23:\\"tvtable_prop_tableClass\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"tvtable:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:9:\\"headClass\\";a:7:{s:4:\\"name\\";s:9:\\"headClass\\";s:4:\\"desc\\";s:22:\\"tvtable_prop_headClass\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"tvtable:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:9:\\"bodyClass\\";a:7:{s:4:\\"name\\";s:9:\\"bodyClass\\";s:4:\\"desc\\";s:22:\\"tvtable_prop_bodyClass\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"tvtable:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:4:\\"head\\";a:7:{s:4:\\"name\\";s:4:\\"head\\";s:4:\\"desc\\";s:17:\\"tvtable_prop_head\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";b:1;s:7:\\"lexicon\\";s:18:\\"tvtable:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:2:\\"tv\\";a:7:{s:4:\\"name\\";s:2:\\"tv\\";s:4:\\"desc\\";s:15:\\"tvtable_prop_tv\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"tvtable:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:2:\\"id\\";a:7:{s:4:\\"name\\";s:2:\\"id\\";s:4:\\"desc\\";s:15:\\"tvtable_prop_id\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"tvtable:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:5:\\"tdTpl\\";a:7:{s:4:\\"name\\";s:5:\\"tdTpl\\";s:4:\\"desc\\";s:18:\\"tvtable_prop_tdTpl\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:25:\\"@INLINE <td>[[+val]]<\\/td>\\";s:7:\\"lexicon\\";s:18:\\"tvtable:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:5:\\"thTpl\\";a:7:{s:4:\\"name\\";s:5:\\"thTpl\\";s:4:\\"desc\\";s:18:\\"tvtable_prop_thTpl\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:25:\\"@INLINE <th>[[+val]]<\\/th>\\";s:7:\\"lexicon\\";s:18:\\"tvtable:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:5:\\"trTpl\\";a:7:{s:4:\\"name\\";s:5:\\"trTpl\\";s:4:\\"desc\\";s:18:\\"tvtable_prop_trTpl\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:27:\\"@INLINE <tr>[[+cells]]<\\/tr>\\";s:7:\\"lexicon\\";s:18:\\"tvtable:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:10:\\"wrapperTpl\\";a:7:{s:4:\\"name\\";s:10:\\"wrapperTpl\\";s:4:\\"desc\\";s:23:\\"tvtable_prop_wrapperTpl\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:56:\\"@INLINE <table class=\\"[[+classname]]\\">[[+table]]<\\/table>\\";s:7:\\"lexicon\\";s:18:\\"tvtable:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:4:\\"getY\\";a:7:{s:4:\\"name\\";s:4:\\"getY\\";s:4:\\"desc\\";s:17:\\"tvtable_prop_getY\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"tvtable:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:4:\\"getX\\";a:7:{s:4:\\"name\\";s:4:\\"getX\\";s:4:\\"desc\\";s:17:\\"tvtable_prop_getX\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"tvtable:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"core\\/components\\/tvtable\\/elements\\/snippets\\/snippet.tvtable.php","content":"$tv = $modx->getOption(\'tv\', $scriptProperties, \'\');\\r\\n$input = $modx->getOption(\'input\', $scriptProperties, \'\');\\r\\n$resource = (int)$modx->getOption(\'id\', $scriptProperties, \'\');\\r\\n$x = $modx->getOption(\'getX\', $scriptProperties, \'\');\\r\\n$y = $modx->getOption(\'getY\', $scriptProperties, \'\');\\r\\n$head = $modx->getOption(\'head\', $scriptProperties, true, true);\\r\\n$display_headers = $modx->getOption(\'displayHeaders\', $scriptProperties, false, true);\\r\\n\\r\\n$tdTpl = $modx->getOption(\'tdTpl\', $scriptProperties, \'@INLINE <td>[[+val]]<\\/td>\', true);\\r\\n$thTpl = $modx->getOption(\'thTpl\', $scriptProperties, \'@INLINE <th>[[+val]]<\\/th>\', true);\\r\\n$trTpl = $modx->getOption(\'trTpl\', $scriptProperties, \'@INLINE <tr>[[+cells]]<\\/tr>\', true);\\r\\n$wrapperTpl = $modx->getOption(\'wrapperTpl\', $scriptProperties, \'@INLINE <table class=\\"[[+classname]]\\">[[+table]]<\\/table>\', true);\\r\\n\\r\\n$tableClass = $modx->getOption(\'tableClass\', $scriptProperties, \'tvtable\', true);\\r\\n$headClass = $modx->getOption(\'headClass\', $scriptProperties, \'\');\\r\\n$bodyClass = $modx->getOption(\'bodyClass\', $scriptProperties, \'\');\\r\\n\\r\\n$classname = !empty($classname) ? $classname : $tableClass;\\r\\n$headOpen = empty($headClass) ? \'<thead>\' : \'<thead class=\\"\' . $headClass . \'\\">\';\\r\\n$bodyOpen = empty($bodyClass) ? \'<tbody>\' : \'<tbody class=\\"\' . $bodyClass . \'\\">\';\\r\\n\\r\\nif (empty($tv) && empty($input)) return;\\r\\n\\r\\n$version = $modx->getVersionData();\\r\\n$modx_version = intval(substr($version[\'full_version\'], 0, 1));\\r\\n\\r\\nif (empty($input)) {\\r\\n    if (!empty($resource)) {\\r\\n        $resource = $modx->getObject(\'modResource\', [\'id\' => $resource]);\\r\\n        if (!$resource instanceof modResource) return;\\r\\n        $value = $resource->getTVValue($tv);\\r\\n    } else {\\r\\n        $value = $modx->resource->getTVValue($tv);\\r\\n    }\\r\\n} else {\\r\\n    $value = $input;\\r\\n}\\r\\n\\r\\nif (!$tvtArr = $modx->fromJSON($value)) {\\r\\n    return;\\r\\n};\\r\\n\\r\\nif ($x == \'first\') $x = 0;\\r\\nif ($y == \'first\') $y = 0;\\r\\n\\r\\n$values = [];\\r\\n\\r\\nif ($x !== \'\' && $y === \'\') {\\r\\n    $directionX = true;\\r\\n    if ($x === \'last\') {\\r\\n        $values = array_pop($tvtArr);\\r\\n    } else {\\r\\n        $values = $tvtArr[$x];\\r\\n    }\\r\\n} elseif ($x === \'\' && $y !== \'\') {\\r\\n    $directionY = true;\\r\\n    if (count($tvtArr[0]) > $y) {\\r\\n        foreach ($tvtArr as $key => $row) {\\r\\n            if ($y === \'last\') {\\r\\n                $y = count($tvtArr[$key]) - 1;\\r\\n            }\\r\\n            $values[$key] = $tvtArr[$key][$y];\\r\\n        }\\r\\n    }\\r\\n} elseif ($x !== \'\' && $y !== \'\') {\\r\\n    if ($x === \'last\') {\\r\\n        $x = count($tvtArr) - 1;\\r\\n    }\\r\\n    if ($y === \'last\') {\\r\\n        $y = count($tvtArr[$x]) - 1;\\r\\n    }\\r\\n\\r\\n    return $tvtArr[$x][$y];\\r\\n} else {\\r\\n    $values = $tvtArr;\\r\\n}\\r\\n\\r\\nif ($display_headers && count($values)) {\\r\\n    $query = $modx->newQuery(\'modTemplateVar\');\\r\\n    $query->where([\'id\' => $tv]);\\r\\n    $query->where([\'name\' => $tv], xPDOQuery::SQL_OR);\\r\\n    if ($tv_obj = $modx->getObject(\'modTemplateVar\', $query)) {\\r\\n        $tv_props = $tv_obj->get(\'input_properties\');\\r\\n        $headers = explode(\'||\', $tv_props[\'headers\']);\\r\\n        $headersDefault = $tv_props[\'headers_default\'];\\r\\n        if (count($headers)) {\\r\\n            $column_count = ($directionX || $directionY) ? count($values) : count($values[0]);\\r\\n            $header_row = [];\\r\\n            if ($directionY) {\\r\\n                $header_row = $headers[$y] ?: $headersDefault;\\r\\n            } else {\\r\\n                for ($i = 0; $i < $column_count; $i++) {\\r\\n                    $header_row[] = $headers[$i] ?: $headersDefault;\\r\\n                }\\r\\n            }\\r\\n            if ($directionX) {\\r\\n                $directionX = false;\\r\\n                $values = [$header_row, $values];\\r\\n            } else {\\r\\n                array_unshift($values, $header_row);\\r\\n            }\\r\\n        }\\r\\n    }\\r\\n}\\r\\n\\r\\nif (empty($values)) return;\\r\\n\\r\\nif ($modx_version === 3) {\\r\\n    $pdoFetch = $modx->services->get(ModxPro\\\\PdoTools\\\\Fetch::class);\\r\\n    if (!$pdoFetch) {\\r\\n        return false;\\r\\n    }\\r\\n    $fastMode = $pdoFetch->getConfig[\'fastMode\'];\\r\\n\\r\\n} else {\\r\\n    $fqn = $modx->getOption(\'pdoFetch.class\', null, \'pdotools.pdofetch\', true);\\r\\n    $path = $modx->getOption(\'pdofetch_class_path\', null, MODX_CORE_PATH . \'components\\/pdotools\\/model\\/\', true);\\r\\n    if ($pdoClass = $modx->loadClass($fqn, $path, false, true)) {\\r\\n        $pdoFetch = new $pdoClass($modx, $scriptProperties);\\r\\n        $fastMode = $pdoFetch->config[\'fastMode\'];\\r\\n    } else {\\r\\n        return false;\\r\\n    }\\r\\n}\\r\\n\\r\\n$pdoFetch->addTime(\'pdoTools loaded\');\\r\\n$output = $pdoFetch->run();\\r\\n$rows = \'\';\\r\\n\\r\\nif ($directionX) {\\r\\n    $directionXTpl = $head ? $thTpl : $tdTpl;\\r\\n    foreach ($values as $value) {\\r\\n        $cells .= $pdoFetch->getChunk($directionXTpl, [\'val\' => $value], $fastMode);\\r\\n    }\\r\\n    $rows .= $head ? $headOpen : $bodyOpen;\\r\\n    $rows .= $pdoFetch->getChunk($trTpl, [\'cells\' => $cells, \'idx\' => $x], $fastMode);\\r\\n    $rows .= $head ? \'<\\/thead>\' : \'<\\/tbody>\';\\r\\n} else {\\r\\n    if ($head) {\\r\\n        $rows .= $headOpen;\\r\\n        $head = array_shift($values);\\r\\n        $headCells = \'\';\\r\\n        if (is_array($head)) {\\r\\n            foreach ($head as $row) {\\r\\n                $headCells .= $pdoFetch->getChunk($thTpl, [\'val\' => $row], $fastMode);\\r\\n            }\\r\\n        } else {\\r\\n            $headCells .= $pdoFetch->getChunk($thTpl, [\'val\' => $head], $fastMode);\\r\\n        }\\r\\n        $rows .= $pdoFetch->getChunk($trTpl, [\'cells\' => $headCells, \'idx\' => 0], $fastMode);\\r\\n        $rows .= \'<\\/thead>\';\\r\\n    }\\r\\n    if ($values) {\\r\\n        $rows .= $bodyOpen;\\r\\n        $idx = $head ? 1 : 0;\\r\\n        foreach ($values as $row) {\\r\\n            $cells = \'\';\\r\\n            if (is_array($row)) {\\r\\n                foreach ($row as $cell) {\\r\\n                    $cells .= $pdoFetch->getChunk($tdTpl, [\'val\' => $cell], $fastMode);\\r\\n                }\\r\\n            } else {\\r\\n                $cells .= $pdoFetch->getChunk($tdTpl, [\'val\' => $row], $fastMode);\\r\\n            }\\r\\n            $rows .= $pdoFetch->getChunk($trTpl, [\'cells\' => $cells, \'idx\' => $idx], $fastMode);\\r\\n            $idx++;\\r\\n        }\\r\\n        $rows .= \'<\\/tbody>\';\\r\\n    }\\r\\n}\\r\\n\\r\\n$output = $pdoFetch->getChunk($wrapperTpl, [\'table\' => $rows, \'classname\' => $classname], $fastMode);\\r\\n\\r\\nreturn $output;"}',
+        'guid' => 'b730a3750f04401b998941650bb92752',
+        'native_key' => 0,
+        'signature' => 'a75e3699903fd26864acab65c77511be',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      '64627d4028271fe475fbf8bfef141fdd' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"TVTable","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/** @var modX $modx *\\/\\r\\n$corePath = $modx->getOption(\'tvtable.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/tvtable\\/\');\\r\\n$assetsPath = $modx->getOption(\'assets_url\', null, MODX_ASSETS_URL) . \'components\\/tvtable\\/\';\\r\\n\\r\\nswitch ($modx->event->name) {\\r\\n    case \'OnTVInputRenderList\':\\r\\n        $modx->event->output($corePath . \'elements\\/tv\\/input\\/\');\\r\\n        break;\\r\\n    case \'OnTVInputPropertiesList\':\\r\\n        $modx->event->output($corePath . \'elements\\/tv\\/inputoptions\\/\');\\r\\n        break;\\r\\n    case \'OnDocFormPrerender\':\\r\\n        $modx->regClientCSS($assetsPath . \'css\\/mgr\\/tvtable.css?ver=3.5.3\');\\r\\n        $modx->regClientStartupScript($assetsPath . \'js\\/mgr\\/tvtable.js?ver=3.5.3\');\\r\\n        break;\\r\\n    case \'OnManagerPageBeforeRender\':\\r\\n        $modx->controller->addLexiconTopic(\'tvtable:default\');\\r\\n        break;\\r\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/tvtable\\/elements\\/plugins\\/plugin.tvtable.php","content":"\\/** @var modX $modx *\\/\\r\\n$corePath = $modx->getOption(\'tvtable.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/tvtable\\/\');\\r\\n$assetsPath = $modx->getOption(\'assets_url\', null, MODX_ASSETS_URL) . \'components\\/tvtable\\/\';\\r\\n\\r\\nswitch ($modx->event->name) {\\r\\n    case \'OnTVInputRenderList\':\\r\\n        $modx->event->output($corePath . \'elements\\/tv\\/input\\/\');\\r\\n        break;\\r\\n    case \'OnTVInputPropertiesList\':\\r\\n        $modx->event->output($corePath . \'elements\\/tv\\/inputoptions\\/\');\\r\\n        break;\\r\\n    case \'OnDocFormPrerender\':\\r\\n        $modx->regClientCSS($assetsPath . \'css\\/mgr\\/tvtable.css?ver=3.5.3\');\\r\\n        $modx->regClientStartupScript($assetsPath . \'js\\/mgr\\/tvtable.js?ver=3.5.3\');\\r\\n        break;\\r\\n    case \'OnManagerPageBeforeRender\':\\r\\n        $modx->controller->addLexiconTopic(\'tvtable:default\');\\r\\n        break;\\r\\n}"}',
+        'guid' => 'ac7c9da322230ed738a8db3e6fabf97d',
+        'native_key' => NULL,
+        'signature' => '30f054b1a5fb03eea1d6810dcac10c24',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'aebef4bee41555c978b023c332efe05e' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVInputRenderList","priority":0,"propertyset":0}',
+              'guid' => '179139e4ddeca3bb5453c98e19fc7dc1',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVInputRenderList',
+              ),
+              'signature' => 'ba593f82333965d6df56922a537fc0ff',
+            ),
+            '37977c5f21ea6a9c291dbf4a4d1b66c5' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVInputPropertiesList","priority":0,"propertyset":0}',
+              'guid' => '7ab94c58fa9ad7c00f49e3000ced4946',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVInputPropertiesList',
+              ),
+              'signature' => 'c0726cdf3f3d841ee618ec7dfc95ceb2',
+            ),
+            'd0534be5ce9a7f7fe33164ee32a454ce' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnDocFormPrerender","priority":0,"propertyset":0}',
+              'guid' => '90f16a61816443505e14a8306ad1d41a',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnDocFormPrerender',
+              ),
+              'signature' => 'f580b00e7fce1a67fa24e017168211ae',
+            ),
+            '915287bd3cd1f50e678f78b085bbda44' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageBeforeRender","priority":0,"propertyset":0}',
+              'guid' => 'ccb09193166f237ca8d059fb21be2296',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageBeforeRender',
+              ),
+              'signature' => '357041baf73dbb7b1db1fc097cd2effc',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'tvtable',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"tvtable-4.0.0-pl\\/modCategory\\/f32ddf738045a7ed1f1e46778924c7f4\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"tvtable"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"tvtable-4.0.0-pl\\/modCategory\\/f32ddf738045a7ed1f1e46778924c7f4\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"tvtable"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ec7d8c06bf6f2e13ff21130ca3b208f4',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'f32ddf738045a7ed1f1e46778924c7f4',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"TVTable","rank":0}',
+);

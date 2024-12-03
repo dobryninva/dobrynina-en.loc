@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '79e0cd28868f824305c2dc9e8af92f60',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '9cc7a499e61dff954cbcfd55535cf9ee',
+  'native_key' => 'ms2_order_tv_list',
+  'object' => '{"key":"ms2_order_tv_list","value":"","xtype":"textfield","namespace":"minishop2","area":"ms2_order","editedon":"2023-07-02 21:18:32"}',
+);

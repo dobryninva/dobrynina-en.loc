@@ -1,0 +1,89 @@
+.search-tip{
+  display: flex;
+  align-items: center;
+  padding: 3px 9px;
+  transition: background .2s ease-out;
+
+	&__thumb{
+	  flex-shrink: 0;
+	  margin-right: 9px;
+	}
+	&__thumb-link{
+		display: block;
+	}
+	&__thumb-img{}
+
+	&__info{}
+
+	&__link{
+	  display: block;
+	  color: $clrM !important;
+
+	  &:hover{
+
+	    .search-tip__link-text{
+	      text-decoration: underline;
+	    }
+	  }
+	}
+	&__link-text{
+		display: block;
+	}
+
+	&__prices{
+		display: block;
+	}
+	&__prices-title{}
+	&__price{
+	  color: $clrM;
+	  font-weight: bold;
+
+	  &_discount{
+	    color: $clr0;
+	  }
+	}
+	&__price_discount{}
+	&__price-value{}
+	&__price-currency{}
+
+	&__price-old{
+	  margin-left: 5px;
+	  text-decoration: line-through;
+	  font-size: 14px;
+	  color: $clrD;
+	}
+	&__price-old-value{}
+	&__price-old-currency{}
+}
+
+
+// mse2 drops
+.mse2-ac-wrapper{
+  &+&{
+    border-top: 1px dashed $clrB;
+  }
+}
+
+.mse2-ac-link{
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: #fff !important ;
+  font-weight: normal !important;
+  color: $clrM !important;
+  &.ui-state-active{}
+}
+
+// обёртка для search-tip's
+#ui-id-1{
+  border: 1px solid $clr4;
+  z-index: 1401;
+
+	// debug
+  // display: block !important;
+
+	@include media-breakpoint-up(md){
+	  box-shadow: $bxshf;
+	} // @min-md
+}
+

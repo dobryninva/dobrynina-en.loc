@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6b9b593d21e31df1705e139b6e725970',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1a7f209bf9f79df27d0df9d03044ad70',
+  'native_key' => 'msimportexport.writer_class',
+  'object' => '{"key":"msimportexport.writer_class","value":"{\\"csv\\":{\\"MsieCsvWriter\\":\\"{+core_path}model\\/msimportexport\\/writer\\/msiecsvwriter.class.php\\"},\\"xlsx\\":{\\"MsieExcelWriter\\":\\"{+core_path}model\\/msimportexport\\/writer\\/msieexcelwriter.class.php\\"}}","xtype":"textarea","namespace":"msimportexport","area":"common","editedon":"2019-04-08 19:21:07"}',
+);

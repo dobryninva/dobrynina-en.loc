@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '2eceb45dafade56d94eea879dce41598',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '46aff1777697127b780b28d90be20122',
+  'native_key' => 'mspre_export_weight_format',
+  'object' => '{"key":"mspre_export_weight_format","value":"[3, \\",\\", \\" \\"]","xtype":"textfield","namespace":"mspre","area":"mspre_main","editedon":null}',
+);

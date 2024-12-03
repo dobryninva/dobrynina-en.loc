@@ -1,0 +1,186 @@
+//************************************************************************ common */
+
+.stars_wrap{
+  display: flex;
+  align-items: center;
+  // overflow: hidden;
+  position: relative;
+  // display: inline-block;
+  line-height: 20px;
+
+  .star{
+    // float: left;
+    position: relative;
+    margin-bottom: 0;
+    // padding-right: 5px;
+    // cursor: pointer;
+
+    &:before{
+      content: '\f005';
+      display: block;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      font-size: 13px;
+      // font-family: 'fa5l';
+      font-family: 'fa5f';
+      font-weight: 900;
+      color: $clrD;
+      // cursor: pointer;
+      transition: color .2s ease-out;
+    }
+
+    input{
+      position: absolute;
+      opacity: 0;
+      left: 0;
+      top: 0;
+      cursor: pointer;
+    }
+
+    &.active,
+    &.hovered{
+
+      &:before{
+        // content: '\f005';
+        // font-family: 'fa5f';
+        // font-weight: 900;
+        color: $clr1;
+      }
+    }
+
+    &.unhovered{
+      &:before{
+        // content: '\f005';
+        // font-family: 'fa5l';
+        // font-weight: 300;
+        color: $clrD;
+      }
+    }
+
+    +.star{
+      padding-left: 3px;
+      // margin-left: 5px;
+    }
+  }
+
+  .stars_active{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    line-height: 20px;
+    // white-space: nowrap;
+    display: flex;
+    .star{
+      float: none;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+  }
+}
+
+
+//************************************************************************ reviews_item */
+
+.reviews_item{}
+
+.reviews_item_header{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.reviews_item_auth{
+  font-weight: 600;
+  color: $clrH;
+}
+
+.reviews_item_date{
+  // float: right;
+  margin-left: 9px;
+  line-height: 24px;
+  font-size: 12px;
+}
+
+.reviews_item_text{
+  // text-align: justify;
+}
+
+
+// structures
+
+.reviews_list{
+  .reviews_item{
+    margin-bottom: 18px;
+    // border: 1px dashed #ccc;
+    padding: 18px;
+    color: $clrH;
+    background: $clr3;
+    +.reviews_item{
+      // margin-top: 18px;
+    }
+  }
+  .reviews_item_header{}
+  .reviews_item_auth{}
+  .reviews_item_date{}
+  .reviews_item_text{}
+} // .reviews_list
+
+
+.reviews_grid{
+  .reviews_item{}
+  .reviews_item_header{}
+  .reviews_item_auth{}
+  .reviews_item_date{}
+  .reviews_item_text{}
+} // .reviews_grid
+
+
+// slider
+.reviews_slider{
+  .reviews_item{}
+  .reviews_item_header{}
+  .reviews_item_auth{}
+  .reviews_item_text{}
+  .reviews_item_date{}
+} // .reviews_slider
+
+
+
+//************************************************************************ reviews_form */
+
+.reviews_form_header{
+  // border-radius: 4px;
+  // padding: 18px 18px;
+  margin-bottom: 18px;
+  line-height: $headings-line-height;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  font-size: 20px;
+  color: $clrH;
+  // background: $clr6;
+  // @include gradient-x($clr6,$clr3);
+}
+
+.reviews_form{
+  border-bottom: 1px solid $clrB;
+  margin-bottom: 18px;
+}
+
+.reviews_success_message{
+  display: none;
+  border-radius: 4px;
+  padding: 9px 18px;
+  margin-top: 18px;
+  font-weight: bold;
+  color: $clrH;
+  background: $clr4;
+}
+
+
+
+//======================================================================== MEDIA

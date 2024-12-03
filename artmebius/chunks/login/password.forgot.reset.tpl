@@ -1,0 +1,2 @@
+<p>{$username},</p>
+<p>Ваш пароль успешно сброшен на указанный в письме. Теперь вы можете <a href="javascript:void(0);" data-target="#modalUserAuth" data-toggle="modal">войти</a> под этим паролем. Не забудьте сменить его в профиле.</p>

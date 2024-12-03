@@ -1,0 +1,23 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'mssetincart-2.0.11-beta/xPDOFileVehicle/0ed1cf021513e65349f781c1d55ffdd6/',
+    'target' => 'return MODX_CORE_PATH . \'components/\';',
+    'name' => 'mssetincart',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"type":"php","source":"mssetincart-2.0.11-beta\\/xPDOFileVehicle\\/0ed1cf021513e65349f781c1d55ffdd6.resolve.encryption.resolver","name":"resolve.encryption"}',
+    ),
+  ),
+  'vehicle_package' => 'transport',
+  'guid' => 'ae5e04594260d359925dcfb8d4213330',
+  'package' => '',
+  'signature' => '0ed1cf021513e65349f781c1d55ffdd6',
+  'native_key' => 'ae5e04594260d359925dcfb8d4213330',
+);

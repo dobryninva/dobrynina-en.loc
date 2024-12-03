@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '29affcfee9059997223ff225a98816ee',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1dae961104b968209800ca5f66fe601f',
+  'native_key' => 'msimportexport.import.text_format_method',
+  'object' => '{"key":"msimportexport.import.text_format_method","value":"nl2br","xtype":"textfield","namespace":"msimportexport","area":"import","editedon":null}',
+);

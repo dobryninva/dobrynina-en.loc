@@ -1,0 +1,76 @@
+.cart_mini{
+  position: relative;
+
+  &_link{
+    display: block;
+    height: 23px;
+    color: $clrM;
+    cursor: default;
+    &:hover{
+      text-decoration: none;
+      color: $clrM;
+    }
+
+    .full &{
+      cursor: pointer;
+      &:hover{
+        color: $clr1;
+      }
+    }
+
+    &_icon{
+
+      .full &{
+        display: block;
+        i{
+          &:before{
+            content: '\e60e';
+          }
+        }
+      }
+    }
+
+    &_count{
+      position: absolute;
+      left: 1px;//2px;
+      top: -7px;
+      display: none;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 12px;
+      color: $clrM;
+      // background: $clrM;
+
+      .full &{
+        display: block;
+      }
+    }
+
+  }
+
+
+  // &.full{
+  //   .cart_mini{
+
+  //     &_link{
+  //       // cursor: pointer;
+  //       &:hover{
+  //         // color: $clr1;
+  //       }
+  //     }
+  //     &_icon{
+  //       i{
+  //         &:before{
+  //           // content: '\e60e';
+  //         }
+  //       }
+  //     }
+  //     &_count{}
+
+  //   }
+  // }
+
+}

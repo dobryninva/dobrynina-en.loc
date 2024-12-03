@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'sendex',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'eb14618d2ab6fea8b6a14d80634b9705',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'c8fe91bbb2929d75361dfed21b86ef45',
+  'native_key' => 'sendex_export_fields',
+  'object' => '{"key":"sendex_export_fields","value":"email","xtype":"textfield","namespace":"sendex","area":"sendex_main","editedon":null}',
+);

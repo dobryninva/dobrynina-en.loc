@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'sendex',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '32f66110324d113ea62c0d91248e3c39',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '0add49709ffe95c4efd1cac40b601316',
+  'native_key' => 'sendex_hide_export_button',
+  'object' => '{"key":"sendex_hide_export_button","value":false,"xtype":"combo-boolean","namespace":"sendex","area":"sendex_main","editedon":null}',
+);

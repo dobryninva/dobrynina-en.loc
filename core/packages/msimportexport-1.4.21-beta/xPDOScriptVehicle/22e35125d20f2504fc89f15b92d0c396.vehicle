@@ -1,0 +1,16 @@
+<?php return array (
+  'class' => 'xPDOScriptVehicle',
+  'object' => 
+  array (
+    'source' => 'msimportexport-1.4.21-beta/xPDOScriptVehicle/22e35125d20f2504fc89f15b92d0c396.resolve.encryption.script',
+  ),
+  'vehicle_class' => 'xPDOScriptVehicle',
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => 'bbca0207dc3761e6474db524df5c36a9',
+  'package' => '',
+  'signature' => '22e35125d20f2504fc89f15b92d0c396',
+  'native_key' => 'bbca0207dc3761e6474db524df5c36a9',
+);

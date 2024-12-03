@@ -1,0 +1,40 @@
+//************************************************************************ drop */
+
+nav{
+
+  ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li{}
+  }
+}
+
+.menu{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+//************************************************************************ menu */
+
+.menu{
+
+	&__sub{}
+
+	&__item{}
+	&__item_current{}
+	&__item_parent{}
+	&__item_opened{}
+	&__item_closed{}
+
+	&__link{}
+	&__link-title{}
+}

@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ebaa6339545ec7a315b0bd4fa154e374',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '0410940b915623ae4845e74655406fc9',
+  'native_key' => 'eshoplogistic3_baikal_pick_up_terminal',
+  'object' => '{"key":"eshoplogistic3_baikal_pick_up_terminal","value":1,"xtype":"textfield","namespace":"eshoplogistic3","area":"eshoplogistic3_order_unload_baikal","editedon":null}',
+);

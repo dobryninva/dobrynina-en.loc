@@ -1,0 +1,142 @@
+//************************************************************************ magic */
+
+// ༼ つ◕_◕ ༽つ .quiz-form>(.quiz-form__steps+.quiz-form__pages>(.quiz-form__page>(.quiz-form__question{question $}+.quiz-form__asnwers>p>lorem10))*3)+.quiz-form__controls>.quiz-form__prev-wrap>.quiz-form__prev.btn.btn-black{назад}^.quiz-form__next-wrap>.quiz-form__next.btn.btn-black{вперёд}^.quiz-form__submit-wrap>.quiz-form__submit.btn.btn-main{отправить}
+
+//************************************************************************ .quiz_form */
+
+.quiz-form{
+
+	&__steps{
+	  display: flex;
+	  align-items: center;
+	  // justify-content: space-between;
+	  border-top: 1px solid $clrBi;
+	  border-bottom: 1px solid $clrBi;
+	  padding: 18px 18px;
+	  background: $clr5;
+	}
+
+	&__step{
+	  display: flex;
+	  align-items: center;
+	  flex-grow: 1;
+
+
+	  &:after{
+	    content: '';
+	    flex-grow: 1;
+	    display: block;
+	    height: 2px;
+	    background: $clr4;
+	  }
+
+	  &:last-child{
+	    flex-grow: 0;
+	    flex-shrink: 0;
+
+	    &:after{
+	      display: none;
+	    }
+	  }
+
+	  &.visited{
+
+	    .quiz-form__step-btn{
+	      background: $clr0;
+	    }
+	    &:after{
+	      background: $clr0;
+	    }
+
+	    +.quiz-form__step{
+	      .quiz-form__step-btn{
+	        cursor: pointer;
+	      }
+	    }
+	  }
+
+    &.active{
+
+	    &:after{
+	      background: $clr4;
+	    }
+
+	    ~.visited{
+
+	      .quiz-form__step-btn{
+	        background: $clr1;
+	      }
+
+	      &:after{
+	        background: $clr4;
+	      }
+	    }
+	  }
+	}
+
+	&__step-btn{
+	  flex-shrink: 0;
+	  width: 10px;
+	  height: 10px;
+	  border-radius: 50%;
+	  font-size: 0;
+	  background: $clr4;
+
+	  .visited &{
+	    // background: $clr1;
+	    cursor: pointer;
+	  }
+
+	  .active &{
+	    // background: $clr0;
+	  }
+	}
+
+	&__pages{}
+
+	&__page{
+		padding: 18px;
+	}
+
+	&__question{
+	  margin-bottom: 9px;
+	  font-size: 18px;
+	  font-weight: bold;
+	  color: $clrH;
+	}
+
+	&__asnwers{}
+
+	&__controls{
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  padding: 18px 18px;
+	  border-top: 1px solid $clrBi;
+	}
+
+	&_prev-wrap{
+	  margin-right: auto;
+	}
+
+	&_prev{
+
+	  &.disabled{
+	    display: none;
+	  }
+	}
+
+	&_next-wrap{}
+	&_next{
+
+	  &.disabled{
+	    display: none;
+	  }
+	}
+
+	&_submit-wrap{}
+	&_submit{
+
+	  &.disabled{}
+	}
+}

@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4937dee95c9010c218db827b5abe1e67',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'ad972bdbdab65f2698c07ed4ef062567',
+  'native_key' => 'eshoplogistic3_order_payment_already_paid',
+  'object' => '{"key":"eshoplogistic3_order_payment_already_paid","value":2,"xtype":"numberfield","namespace":"eshoplogistic3","area":"eshoplogistic3_order_automatic_unload","editedon":null}',
+);

@@ -1,0 +1,114 @@
+//************************************************************************ backdrop */
+
+body{
+  &.backdroped{
+    overflow: hidden;
+  }
+}
+
+.backdrop{
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1040 !important;
+}
+
+.backdrop_content{
+  position:fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  height: 100%;
+  max-height: 100%;
+  width: 100%; // 300px; //80%;
+  background: rgba(255, 255, 255, 0.98); // 0.97 - 1
+  z-index: 1040;
+  @include translateZ0();
+
+  &.left_side{
+    left: -100%;
+
+    >.backdrop_close{
+      left: 7px;
+    }
+  }
+
+  &.right_side{
+    right: -100%;
+
+    >.backdrop_close{
+      right: 7px;
+    }
+  }
+
+  // когда нет backdrop_title
+  >.backdrop_close{
+    position: absolute;
+    top: 7px;
+  }
+}
+
+.backdrop_title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 12px 18px 12px;
+  border-bottom: 1px solid $clrB;
+  font-weight: bold;
+  background: $clr5;
+
+  +.backdrop_content_inner{
+    padding: 0px 18px 9px;
+  }
+}
+
+.backdrop_content_inner{
+  padding: 27px 18px 9px;
+}
+
+.backdrop_close{
+  font-size: 16px;//21px;
+  color: $clrM;
+  cursor: pointer;
+  transition: color .2s ease-out;
+
+  &:hover{
+    color: $clr0;
+  }
+
+  &:active{
+    color: $clr0;
+  }
+}
+
+.backdrop_placeholder{
+  display: none;
+}
+
+
+
+//************************************************************************ backdrop content / widgets */
+
+.backdrop_content{
+
+  // content
+  .menu{
+    .menu_item{
+      +.menu_item{}
+      .menu_link{
+        &:hover{}
+        &:active{}
+      }
+      &.active{
+        >.menu_link{}
+      }
+    }
+  }
+
+}

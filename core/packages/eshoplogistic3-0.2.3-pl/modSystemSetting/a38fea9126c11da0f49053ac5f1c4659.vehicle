@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '782dc15252bd31de4c0aae9406ac07ec',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'a38fea9126c11da0f49053ac5f1c4659',
+  'native_key' => 'eshoplogistic3_payment_prepay',
+  'object' => '{"key":"eshoplogistic3_payment_prepay","value":"","xtype":"textfield","namespace":"eshoplogistic3","area":"eshoplogistic3_cart","editedon":null}',
+);

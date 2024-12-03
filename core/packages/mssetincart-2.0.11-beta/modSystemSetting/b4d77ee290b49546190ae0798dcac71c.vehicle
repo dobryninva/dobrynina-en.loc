@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'mssetincart',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5782fd3ed382251570fdc6767240f49a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'b4d77ee290b49546190ae0798dcac71c',
+  'native_key' => 'mssetincart_tpl_order_info',
+  'object' => '{"key":"mssetincart_tpl_order_info","value":"tpl.msSetInCart.info","xtype":"textfield","namespace":"mssetincart","area":"mssetincart_main","editedon":null}',
+);

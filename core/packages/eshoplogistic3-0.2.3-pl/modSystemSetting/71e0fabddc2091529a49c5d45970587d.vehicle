@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '89a666090e9828afd6e0653461e9a1d8',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '71e0fabddc2091529a49c5d45970587d',
+  'native_key' => 'eshoplogistic3_chunk_info',
+  'object' => '{"key":"eshoplogistic3_chunk_info","value":"tpl.eshoplogistic3.orderInfo","xtype":"textfield","namespace":"eshoplogistic3","area":"eshoplogistic3_cart","editedon":null}',
+);

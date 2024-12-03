@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'mvtseodata',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7e8675d6b5e76790a85c16f9af4101d5',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '8b46a75ccfb2a069d3b646daf4f1c6f7',
+  'native_key' => 'mvtSeoDataIndexOnReceivingProductData',
+  'object' => '{"name":"mvtSeoDataIndexOnReceivingProductData","service":1,"groupname":"mvtSeoData"}',
+);

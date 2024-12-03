@@ -1,0 +1,305 @@
+<?php
+/** @var xPDOTransport $transport */
+/** @var array $options */
+/** @var modX $modx */
+if ($transport->xpdo) {
+    $modx =& $transport->xpdo;
+
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_INSTALL:
+        case xPDOTransport::ACTION_UPGRADE:
+            $modx->addPackage('mspre', MODX_CORE_PATH . 'components/mspre/model/');
+
+
+            $dataTvs = array(
+                0 =>
+                    array(
+                        'name' => 'text',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'textfield',
+                        'xtype_grid' => 'mspre-grid-textfield',
+                        'separator' => '',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                1 =>
+                    array(
+                        'name' => 'textarea',
+                        'xtype_old' => 'textarea',
+                        'xtype_new' => 'textarea',
+                        'xtype_grid' => 'mspre-grid-textarea',
+                        'separator' => '',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                2 =>
+                    array(
+                        'name' => 'autotag',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'textfield',
+                        'xtype_grid' => NULL,
+                        'separator' => ',',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => true,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                3 =>
+                    array(
+                        'name' => 'date',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'mspre-xdatetime',
+                        'xtype_grid' => NULL,
+                        'separator' => '',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                4 =>
+                    array(
+                        'name' => 'option',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'mspre-combo-autocomplete-tv',
+                        'xtype_grid' => NULL,
+                        'separator' => '||',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                5 =>
+                    array(
+                        'name' => 'checkbox',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'mspre-combo-autocomplete-tv',
+                        'xtype_grid' => NULL,
+                        'separator' => '||',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => true,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                6 =>
+                    array(
+                        'name' => 'number',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'numberfield',
+                        'xtype_grid' => 'mspre-grid-textarea',
+                        'separator' => '',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                7 =>
+                    array(
+                        'name' => 'email',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'textfield',
+                        'xtype_grid' => 'mspre-grid-textfield',
+                        'separator' => '',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                8 =>
+                    array(
+                        'name' => 'url',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'textfield',
+                        'xtype_grid' => 'mspre-grid-textfield',
+                        'separator' => '',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                9 =>
+                    array(
+                        'name' => 'tag',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'textfield',
+                        'xtype_grid' => NULL,
+                        'separator' => '||',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                10 =>
+                    array(
+                        'name' => 'resourcelist',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'mspre-combo-resource',
+                        'xtype_grid' => NULL,
+                        'separator' => '',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                11 =>
+                    array(
+                        'name' => 'listbox',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'mspre-combo-autocomplete-tv',
+                        'xtype_grid' => NULL,
+                        'separator' => '||',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                12 =>
+                    array(
+                        'name' => 'listbox-multiple',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'mspre-combo-autocomplete-tv',
+                        'xtype_grid' => NULL,
+                        'separator' => '||',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => true,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                13 =>
+                    array(
+                        'name' => 'image',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'textfield',
+                        'xtype_grid' => NULL,
+                        'separator' => '',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                14 =>
+                    array(
+                        'name' => 'richtext',
+                        'xtype_old' => 'textarea',
+                        'xtype_new' => 'textarea',
+                        'xtype_grid' => NULL,
+                        'separator' => '',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                15 =>
+                    array(
+                        'name' => 'list-multiple-legacy',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'mspre-combo-autocomplete-tv',
+                        'xtype_grid' => NULL,
+                        'separator' => '||',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+                16 =>
+                    array(
+                        'name' => 'file',
+                        'xtype_old' => 'mspre-combo-autocomplete-tv',
+                        'xtype_new' => 'textfield',
+                        'xtype_grid' => NULL,
+                        'separator' => '',
+                        'separator_between' => '',
+                        'comment' => NULL,
+                        'createdon' => '-1-11-30 00:00:00',
+                        'updatedon' => '-1-11-30 00:00:00',
+                        'isadd' => false,
+                        'isreplace' => false,
+                        'isclear' => false,
+                        'active' => false,
+                    ),
+            );
+            foreach ($dataTvs as $row) {
+                $name = $row['name'];
+                /* @var mspreTvField $object */
+                if (!$object = $modx->getObject('mspreTvField', array('name' => $name))) {
+                    $object = $modx->newObject('mspreTvField');
+                }
+                $object->fromArray($row, '', true);
+                $save = $object->save();
+            }
+
+            break;
+
+        case xPDOTransport::ACTION_UNINSTALL:
+            break;
+    }
+}
+
+return true;

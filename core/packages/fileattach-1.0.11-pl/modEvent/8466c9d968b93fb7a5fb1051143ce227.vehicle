@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'fileattach',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6e91a82990b570425bac8f33c30e96fe',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '8466c9d968b93fb7a5fb1051143ce227',
+  'native_key' => 'faOnRemove',
+  'object' => '{"name":"faOnRemove","service":6,"groupname":"FileAttach"}',
+);

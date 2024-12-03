@@ -1,0 +1,155 @@
+.labels_wrap{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  // align-items: flex-start;
+  // align-items: flex-end;
+  // flex-direction: column;
+}
+
+.label_block{
+  display: block;
+  border-radius: 5px;
+  padding: 3px 6px;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  background: $clr0;
+  // @include gradient-x(#470404, #770f0f);
+  z-index: 510;
+  &.label_sale{}
+  &.label_new{}
+  &.label_new{}
+
+  +.label_block{
+    // margin-top: 5px;
+    // margin-left: 5px;
+  }
+}
+
+.favorite_compare_group{
+  position: absolute;
+  // left: 5px;
+  // top: 5px;
+  display: flex;
+  align-items: center;
+
+  .item_compare{
+    margin-right: 9px;
+
+    .comparison-link{
+      color: $clrM;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    .compare_icon{
+      cursor: pointer;
+      transition: color .2s ease-out;
+    }
+
+    &.can_compare{
+
+      .comparison-link{
+        color: $clrM;
+
+        &:hover{
+          color: $clr1;
+        }
+      }
+    }
+
+    &.added{
+
+      .comparison-link{
+        color: $clr1;
+      }
+    }
+  }
+
+  .item_favorite{
+
+    .favorite_icon{
+      cursor: pointer;
+      transition: color .2s ease-out;
+    }
+
+    &:hover{
+      color: $clr1;
+    }
+
+    &.active{
+      color: $clr1;
+
+      .favorite_icon{
+
+        &:before{
+          font-family: 'fa5f';
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+
+.count_wrap{
+  display: flex;
+  // background: #fff;
+  // border-radius: 2px;
+
+  .count_input{
+    flex-grow: 1;
+    border-radius: 0;
+    // border: 1px solid $clrB;
+    border-left: none;
+    border-right: none;
+    width: 50px;
+    max-width: 50px;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-align: center;
+    background: #fff;
+
+    &:focus{
+      border-color: $clrBi;
+    }
+  }
+
+  .count_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 30px;
+    padding: 0;
+    font-size: 15px;//17px;
+    color: $clrM;
+    background: #fff;
+
+    &:hover{
+      background: darken($clr1, 10%);
+    }
+
+    &:active{
+      // color: #fff !important;
+      background: darken($clr1, 20%) !important;
+    }
+  }
+  .count_minus{
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .count_plus{
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

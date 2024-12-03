@@ -1,0 +1,40 @@
+//======================================================================== MODAL
+
+.modal-dialog{
+  .modal-content{
+    border-width: 1px;
+    .modal-header{
+      align-items: center;
+      font-weight: normal;
+      font-size: 14px;
+      color: $clrH;
+      background: $bgMdl;
+      .modal-close{
+        // font-size: 21px;
+        color: $clrH;
+        cursor: pointer;
+        @include transition(color .2s ease-out);
+        &:hover{
+          color: $clrLh;
+        }
+      }
+    }
+    .modal-body{}
+    .modal-footer{
+      background: $bgMdl;
+      border-bottom-left-radius: $modal-content-border-radius;
+      border-bottom-right-radius: $modal-content-border-radius;
+    }
+  }
+
+  @include media-breakpoint-up(md){
+
+    &.modal-wide{
+      max-width: 90%;
+      width: 90%;
+      // margin-top: 20px;
+    }
+
+  } // @min-md
+
+}

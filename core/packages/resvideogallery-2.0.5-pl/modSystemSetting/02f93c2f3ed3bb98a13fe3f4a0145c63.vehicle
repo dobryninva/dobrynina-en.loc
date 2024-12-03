@@ -1,0 +1,16 @@
+<?php return array (
+  'vehicle_class' => 'encryptedVehicle',
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'resvideogallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => 'd0423bcd7440ad122960cf5693487f38',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '02f93c2f3ed3bb98a13fe3f4a0145c63',
+  'native_key' => 'resvideogallery.vk_access_token',
+  'object_encrypted' => 'sn2I8/UsY5eD8WgfFf5lQXpgrk1aPJXD+UxL77/Zqmog7At58K31vh66a8fMRR4ZCdKaqFGp5vBkdkvtcBKIIHeKSVwiMN/13W6HDLwEJHQgEmulbYcVhwYpg+pXRoMS2SEGREe4rmer5zMWdtxyGfnDtxtUWrEMMF25XYnlc/PoPnqDa57YRKeS4hyLhy0GsSYJI5qYlFSra0Zkn6VGtvHsuLVXtBMYNHETVSz6H35C4L7onrtzFe/6WiQa/d5q',
+);

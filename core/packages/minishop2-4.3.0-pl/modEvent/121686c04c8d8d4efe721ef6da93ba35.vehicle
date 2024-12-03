@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '372124ae12b32775b291505901a23eca',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '121686c04c8d8d4efe721ef6da93ba35',
+  'native_key' => 'msOnAfterVendorCreate',
+  'object' => '{"name":"msOnAfterVendorCreate","service":6,"groupname":"miniShop2"}',
+);

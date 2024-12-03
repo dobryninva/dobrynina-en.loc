@@ -1,0 +1,25 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'jevix-1.3.2-pl/xPDOFileVehicle/67eca3d2c5f6580dd7a397bc383aaf03/',
+    'target' => 'return MODX_CORE_PATH . \'components/\';',
+    'name' => 'jevix',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'namespace' => 'jevix',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"jevix-1.3.2-pl\\/xPDOFileVehicle\\/67eca3d2c5f6580dd7a397bc383aaf03.resolve.update.resolver","type":"php","name":"resolve.update"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => 'ab38a5210e8324c80b15b6367703a0bd',
+  'package' => '',
+  'signature' => '67eca3d2c5f6580dd7a397bc383aaf03',
+  'native_key' => 'ab38a5210e8324c80b15b6367703a0bd',
+);

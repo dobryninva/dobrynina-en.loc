@@ -1,0 +1,113 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      'd1194d2128a669e033edadec10e397b8' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"compiler","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"if (!$modx->getService(\'compiler\',\'Compiler\', MODX_CORE_PATH.\'components\\/compiler\\/model\\/compiler\\/\')) {\\n    return false;\\n}\\n\\n\\/** @var modX $modx *\\/\\nswitch ($modx->event->name) {\\n    case \\"OnFileManagerFileCreate\\":\\n    case \\"OnFileManagerFileUpdate\\":\\n        if (empty($path)) {\\n            return;\\n        }\\n        \\n        \\/** @var Compiler $Compiler *\\/\\n        $Compiler = new Compiler($modx);\\n        \\n        \\/\\/\\n        $pathinfo = pathinfo($path);\\n        $pathinfo[\'dirpath\'] = $Compiler->cleanUrl($pathinfo[\'dirname\'] . \'\\/\');\\n        $pathinfo[\'dirurl\'] = $Compiler->cleanUrl(\'\\/\' . str_replace(MODX_BASE_PATH, \'\', $pathinfo[\'dirname\']) . \'\\/\');\\n        unset($pathinfo[\'dirname\']);\\n        \\n        \\/\\/\\n        if (\\n            $pathinfo[\'extension\'] == \'scss\'\\n            && strpos($pathinfo[\'dirurl\'], $Compiler->config[\'scssDirFrom\']) === 0\\n            && !($Compiler->config[\'scssSkipUnderscore\'] && substr($pathinfo[\'filename\'], 0, 1) === \'_\')\\n        ) {\\n            \\/\\/ \\u0421\\u043e\\u0437\\u0434\\u0430\\u0451\\u043c \\u0434\\u0438\\u0440\\u0435\\u043a\\u0442\\u043e\\u0440\\u0438\\u044e \\u043d\\u0430\\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u044f\\n            if (!$Compiler->prepareDir($Compiler->config[\'scssDirTo\'])) {\\n                $modx->log(modX::LOG_LEVEL_ERROR, \'[Compiler] Could not create dir \\"\' . $Compiler->config[\'scssDirTo\'] . \'\\"\');\\n                return;\\n            }\\n            \\n            \\/\\/\\n            $fileInnerDir = $Compiler->cleanUrl(\'\\/\' . str_replace($Compiler->config[\'scssDirFrom\'], \'\', $pathinfo[\'dirurl\']) . \'\\/\');\\n            $fileInnerDirUrl = $Compiler->cleanUrl($Compiler->config[\'scssDirTo\'] . $fileInnerDir);\\n            \\n            \\/\\/ \\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u044f\\u0435\\u043c, \\u043c\\u043e\\u0436\\u043d\\u043e \\u043b\\u0438 \\u043a\\u043e\\u043c\\u043f\\u0438\\u043b\\u0438\\u0442\\u044c \\u0432 \\u043f\\u043e\\u0434\\u043f\\u0430\\u043f\\u043a\\u0430\\u0445.\\n            \\/\\/ \\u0415\\u0441\\u043b\\u0438 \\u043d\\u0435\\u043b\\u044c\\u0437\\u044f \\u0438 \\u043c\\u044b \\u0432 \\u043f\\u043e\\u0434\\u043f\\u0430\\u043f\\u043a\\u0435 - \\u043e\\u0441\\u0442\\u0430\\u043d\\u0430\\u0432\\u043b\\u0438\\u0432\\u0430\\u0435\\u043c\\u0441\\u044f.\\n            if (!$Compiler->config[\'scssWithSubdirs\'] && $fileInnerDir != \'\\/\') {\\n                return;\\n            }\\n            \\n            \\/\\/ \\u0421\\u043e\\u0437\\u0434\\u0430\\u0451\\u043c \\u043f\\u043e\\u0434\\u043f\\u0430\\u043f\\u043a\\u0443 \\u043d\\u0430\\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u044f\\n            if (!$Compiler->makeDir($fileInnerDirUrl)) {\\n                $modx->log(modX::LOG_LEVEL_ERROR, \'[Compiler] Could not create dir \\"\' . $fileInnerDirUrl . \'\\"\');\\n                return;\\n            }\\n            \\n            \\/\\/ $options = array(\\n            \\/\\/     \'minify\' => $Compiler->config[\'scssMinify\'] ? \'true\' : \'false\',\\n            \\/\\/ );\\n            \\n            \\/\\/\\n            $cssData = $Compiler->Munee($pathinfo[\'dirurl\'] . $pathinfo[\'basename\']);\\n            $cssData = $cssData ? $cssData : \' \';\\n            \\n            \\/\\/ \\u041f\\u0430\\u0440\\u0441\\u0438\\u043c SCSS \\u0444\\u0430\\u0439\\u043b \\u0434\\u043b\\u044f \\u043f\\u043e\\u0438\\u0441\\u043a\\u0430 \\u043f\\u043e\\u0434\\u043a\\u043b\\u044e\\u0447\\u0430\\u0435\\u043c\\u044b\\u0445 SCSS \\u0434\\u0438\\u0440\\u0435\\u043a\\u0442\\u0438\\u0432\\u043e\\u0439 @import\\n            $scssData = file_get_contents($pathinfo[\'dirpath\'] . $pathinfo[\'basename\']);\\n            if (preg_match_all(\'\\/@import ([^\\\\\'\\";,]*[\\\\\'\\"]+([^\\\\\'\\";]+)[\\\\\'\\"]+[^;]*);\\/is\', $scssData, $import_matches)) {\\n                \\/\\/ \\u0424\\u0438\\u043b\\u044c\\u0442\\u0440\\u0443\\u0435\\u043c \\u0438\\u0437 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043d\\u044b\\u0445 \\u0442\\u043e\\u043b\\u044c\\u043a\\u043e \\u0442\\u0435, \\u0447\\u0442\\u043e \\u043d\\u0430\\u043c \\u043f\\u043e\\u0434\\u0445\\u043e\\u0434\\u044f\\u0442\\n                foreach ($import_matches[1] as $import_match) {\\n                    if (substr($import_match, 0, 3) !== \'url\' &&\\n                        substr($import_match, 1, 5) !== \'http:\' &&\\n                        substr($import_match, 1, 6) !== \'https:\' &&\\n                        substr($import_match, -5, 4) !== \'.css\' &&\\n                        (\\n                            substr($import_match, -1) === \'\\\\\'\' ||\\n                            substr($import_match, -1) === \'\\\\\\"\'\\n                        )\\n                    ) {\\n                        foreach (array_map(\'trim\', explode(\',\', $import_match)) as $file) {\\n                            $file = str_replace(array(\'\\\\\'\', \'\\"\'), \'\', $file);\\n                            \\/\\/ print $file . PHP_EOL;\\n                        }\\n                    }\\n                }\\n            }\\n            \\n            \\/\\/ \\u041f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0435\\u043c \\u043f\\u0443\\u0442\\u044c \\u0434\\u043e \\u043a\\u043e\\u043d\\u0435\\u0447\\u043d\\u043e\\u0433\\u043e CSS \\u0444\\u0430\\u0439\\u043b\\u0430\\n            $fileOutPath = $Compiler->cleanUrl(MODX_BASE_PATH . $fileInnerDirUrl . $pathinfo[\'filename\'] . \'.css\');\\n            \\n            \\/\\/ \\u0421\\u043e\\u0445\\u0440\\u0430\\u043d\\u044f\\u0435\\u043c \\u0444\\u0430\\u0439\\u043b\\n            if (!file_put_contents($fileOutPath, $cssData)) {\\n                $modx->log(modX::LOG_LEVEL_ERROR, \'[Compiler] Could not save cache file \'. $fileOutPath);\\n                return false;\\n            }\\n        }\\n        break;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/compiler\\/elements\\/plugins\\/plugin.system.php","content":"if (!$modx->getService(\'compiler\',\'Compiler\', MODX_CORE_PATH.\'components\\/compiler\\/model\\/compiler\\/\')) {\\n    return false;\\n}\\n\\n\\/** @var modX $modx *\\/\\nswitch ($modx->event->name) {\\n    case \\"OnFileManagerFileCreate\\":\\n    case \\"OnFileManagerFileUpdate\\":\\n        if (empty($path)) {\\n            return;\\n        }\\n        \\n        \\/** @var Compiler $Compiler *\\/\\n        $Compiler = new Compiler($modx);\\n        \\n        \\/\\/\\n        $pathinfo = pathinfo($path);\\n        $pathinfo[\'dirpath\'] = $Compiler->cleanUrl($pathinfo[\'dirname\'] . \'\\/\');\\n        $pathinfo[\'dirurl\'] = $Compiler->cleanUrl(\'\\/\' . str_replace(MODX_BASE_PATH, \'\', $pathinfo[\'dirname\']) . \'\\/\');\\n        unset($pathinfo[\'dirname\']);\\n        \\n        \\/\\/\\n        if (\\n            $pathinfo[\'extension\'] == \'scss\'\\n            && strpos($pathinfo[\'dirurl\'], $Compiler->config[\'scssDirFrom\']) === 0\\n            && !($Compiler->config[\'scssSkipUnderscore\'] && substr($pathinfo[\'filename\'], 0, 1) === \'_\')\\n        ) {\\n            \\/\\/ \\u0421\\u043e\\u0437\\u0434\\u0430\\u0451\\u043c \\u0434\\u0438\\u0440\\u0435\\u043a\\u0442\\u043e\\u0440\\u0438\\u044e \\u043d\\u0430\\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u044f\\n            if (!$Compiler->prepareDir($Compiler->config[\'scssDirTo\'])) {\\n                $modx->log(modX::LOG_LEVEL_ERROR, \'[Compiler] Could not create dir \\"\' . $Compiler->config[\'scssDirTo\'] . \'\\"\');\\n                return;\\n            }\\n            \\n            \\/\\/\\n            $fileInnerDir = $Compiler->cleanUrl(\'\\/\' . str_replace($Compiler->config[\'scssDirFrom\'], \'\', $pathinfo[\'dirurl\']) . \'\\/\');\\n            $fileInnerDirUrl = $Compiler->cleanUrl($Compiler->config[\'scssDirTo\'] . $fileInnerDir);\\n            \\n            \\/\\/ \\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u044f\\u0435\\u043c, \\u043c\\u043e\\u0436\\u043d\\u043e \\u043b\\u0438 \\u043a\\u043e\\u043c\\u043f\\u0438\\u043b\\u0438\\u0442\\u044c \\u0432 \\u043f\\u043e\\u0434\\u043f\\u0430\\u043f\\u043a\\u0430\\u0445.\\n            \\/\\/ \\u0415\\u0441\\u043b\\u0438 \\u043d\\u0435\\u043b\\u044c\\u0437\\u044f \\u0438 \\u043c\\u044b \\u0432 \\u043f\\u043e\\u0434\\u043f\\u0430\\u043f\\u043a\\u0435 - \\u043e\\u0441\\u0442\\u0430\\u043d\\u0430\\u0432\\u043b\\u0438\\u0432\\u0430\\u0435\\u043c\\u0441\\u044f.\\n            if (!$Compiler->config[\'scssWithSubdirs\'] && $fileInnerDir != \'\\/\') {\\n                return;\\n            }\\n            \\n            \\/\\/ \\u0421\\u043e\\u0437\\u0434\\u0430\\u0451\\u043c \\u043f\\u043e\\u0434\\u043f\\u0430\\u043f\\u043a\\u0443 \\u043d\\u0430\\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u044f\\n            if (!$Compiler->makeDir($fileInnerDirUrl)) {\\n                $modx->log(modX::LOG_LEVEL_ERROR, \'[Compiler] Could not create dir \\"\' . $fileInnerDirUrl . \'\\"\');\\n                return;\\n            }\\n            \\n            \\/\\/ $options = array(\\n            \\/\\/     \'minify\' => $Compiler->config[\'scssMinify\'] ? \'true\' : \'false\',\\n            \\/\\/ );\\n            \\n            \\/\\/\\n            $cssData = $Compiler->Munee($pathinfo[\'dirurl\'] . $pathinfo[\'basename\']);\\n            $cssData = $cssData ? $cssData : \' \';\\n            \\n            \\/\\/ \\u041f\\u0430\\u0440\\u0441\\u0438\\u043c SCSS \\u0444\\u0430\\u0439\\u043b \\u0434\\u043b\\u044f \\u043f\\u043e\\u0438\\u0441\\u043a\\u0430 \\u043f\\u043e\\u0434\\u043a\\u043b\\u044e\\u0447\\u0430\\u0435\\u043c\\u044b\\u0445 SCSS \\u0434\\u0438\\u0440\\u0435\\u043a\\u0442\\u0438\\u0432\\u043e\\u0439 @import\\n            $scssData = file_get_contents($pathinfo[\'dirpath\'] . $pathinfo[\'basename\']);\\n            if (preg_match_all(\'\\/@import ([^\\\\\'\\";,]*[\\\\\'\\"]+([^\\\\\'\\";]+)[\\\\\'\\"]+[^;]*);\\/is\', $scssData, $import_matches)) {\\n                \\/\\/ \\u0424\\u0438\\u043b\\u044c\\u0442\\u0440\\u0443\\u0435\\u043c \\u0438\\u0437 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043d\\u044b\\u0445 \\u0442\\u043e\\u043b\\u044c\\u043a\\u043e \\u0442\\u0435, \\u0447\\u0442\\u043e \\u043d\\u0430\\u043c \\u043f\\u043e\\u0434\\u0445\\u043e\\u0434\\u044f\\u0442\\n                foreach ($import_matches[1] as $import_match) {\\n                    if (substr($import_match, 0, 3) !== \'url\' &&\\n                        substr($import_match, 1, 5) !== \'http:\' &&\\n                        substr($import_match, 1, 6) !== \'https:\' &&\\n                        substr($import_match, -5, 4) !== \'.css\' &&\\n                        (\\n                            substr($import_match, -1) === \'\\\\\'\' ||\\n                            substr($import_match, -1) === \'\\\\\\"\'\\n                        )\\n                    ) {\\n                        foreach (array_map(\'trim\', explode(\',\', $import_match)) as $file) {\\n                            $file = str_replace(array(\'\\\\\'\', \'\\"\'), \'\', $file);\\n                            \\/\\/ print $file . PHP_EOL;\\n                        }\\n                    }\\n                }\\n            }\\n            \\n            \\/\\/ \\u041f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0435\\u043c \\u043f\\u0443\\u0442\\u044c \\u0434\\u043e \\u043a\\u043e\\u043d\\u0435\\u0447\\u043d\\u043e\\u0433\\u043e CSS \\u0444\\u0430\\u0439\\u043b\\u0430\\n            $fileOutPath = $Compiler->cleanUrl(MODX_BASE_PATH . $fileInnerDirUrl . $pathinfo[\'filename\'] . \'.css\');\\n            \\n            \\/\\/ \\u0421\\u043e\\u0445\\u0440\\u0430\\u043d\\u044f\\u0435\\u043c \\u0444\\u0430\\u0439\\u043b\\n            if (!file_put_contents($fileOutPath, $cssData)) {\\n                $modx->log(modX::LOG_LEVEL_ERROR, \'[Compiler] Could not save cache file \'. $fileOutPath);\\n                return false;\\n            }\\n        }\\n        break;\\n}"}',
+        'guid' => 'd51bc5c9f8ce6db6f7265251b9279fa7',
+        'native_key' => NULL,
+        'signature' => '5693b6ff7d15c2c43bac24ba761a8fcb',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'aa8f397c9f6e5a836ac0bf9b65c976c1' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnFileManagerFileCreate","priority":0,"propertyset":0}',
+              'guid' => 'a27a0c3b1bb6971a879c3dc7ca131faa',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnFileManagerFileCreate',
+              ),
+              'signature' => '1d172d6ecc934fd5f2b0c157670cad34',
+            ),
+            '35c42f61b68a4cfd6b99690abe529fce' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnFileManagerFileUpdate","priority":0,"propertyset":0}',
+              'guid' => 'eea361bc5479a17d57e7f70558807281',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnFileManagerFileUpdate',
+              ),
+              'signature' => '41e70c93bc9c58ff09daa6c3d632d0b7',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'compiler',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"compiler-1.0.5-beta\\/modCategory\\/250cfca2b54f611ddb2698b216070ad9\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"compiler"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"compiler-1.0.5-beta\\/modCategory\\/250cfca2b54f611ddb2698b216070ad9\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"compiler"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"compiler-1.0.5-beta\\/modCategory\\/250cfca2b54f611ddb2698b216070ad9.resolve.files.resolver","type":"php","name":"resolve.files"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c2691de7939914a4ea700a559b86e916',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '250cfca2b54f611ddb2698b216070ad9',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"Compiler","rank":0}',
+);

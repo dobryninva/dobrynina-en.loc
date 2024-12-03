@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '441f05ab1bc95213d3fb4247ae59068d',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '987034220647a925deeff17b9246a686',
+  'native_key' => 'msimportexport.export.ym.sales_notes_field',
+  'object' => '{"key":"msimportexport.export.ym.sales_notes_field","value":"","xtype":"textfield","namespace":"msimportexport","area":"export","editedon":"2018-12-14 17:57:28"}',
+);

@@ -1,0 +1,164 @@
+.menu_side{
+
+	@include media-breakpoint-up(md){
+
+	  .menu__item{
+
+	    .menu__link{
+	      position: relative;
+	      display: block;
+	      padding-left: 24px;
+	      padding-top: 9px;
+	      padding-bottom: 8px;
+	      border-bottom: 1px solid #d1d2d5;
+	      line-height: 1.2;
+	      color: $clrM;
+	      text-decoration: none;
+
+	      // &:before{
+	      //   content: '\f138';
+	      //   position: absolute;
+	      //   left: 0;
+	      //   top: 9px;
+	      //   display: block;
+	      //   font-family: 'fa5l';
+	      //   font-size: 15px;
+	      // }
+
+	      // .menu__count{
+	      //   margin-left: 3px;
+	      //   font-size: 13px;
+	      //   color: $clrD;
+	      //   &:before{
+	      //     content: '(';
+	      //   }
+	      //   &:after{
+	      //     content: ')';
+	      //   }
+	      // }
+
+	      &:hover{
+	        color: $clrLh;
+	      }
+	    }
+
+	    &:hover{
+
+	      >.menu__link{}
+	    }
+	    &.active{
+
+	      .menu__link{
+	        color: $clr1;
+	      }
+
+	      >.menu__link{
+	        >.menu_title{
+	          // text-decoration: underline;
+	        }
+	      }
+	    }
+	    &.current{
+
+	      >.menu__link{
+	        cursor: default;
+	      }
+	    }
+	    +.menu__item{
+
+	      &:before{}
+	      .menu__link{}
+	    }
+	    &:last-child{
+
+	      >.menu__link{
+	        border-bottom: none;
+	      }
+	    }
+	    .menu__sub{
+	      .menu__item{
+	        +.menu__item{}
+	      }
+	    }
+	  }
+
+	  /* lvl 1 */
+	  >.menu__item{
+	    >.menu__link{
+	      &:hover{}
+	    }
+	    &:hover{
+	      >.menu__link{}
+	    }
+	    &.active{
+	      >.menu__link{}
+	    }
+	    +.menu__item{
+	      >.menu__link{}
+	    }
+
+	    /* lvl 2 */
+	    .menu__sub{}
+	  }
+	}// @min-md
+
+
+	@include media-breakpoint-down(sm){
+
+	  .menu__item{
+
+	    .menu__link{
+	      display: block;
+	      margin-left: -9px;
+	      margin-right: -9px;
+	      padding: 9px 9px;
+	      border-bottom: 1px solid $clrB;
+	      text-decoration: none;
+	      color:$clrM;
+
+	      &:hover{}
+	    }
+
+	    &:hover{
+
+	      >.menu__link{}
+	    }
+	    &.active{
+
+	      >.menu__link{
+	        color: $clr0;
+	      }
+	    }
+	    +.menu__item{
+
+	      &:before{}
+	      .menu__link{}
+	    }
+	    .menu__sub{}
+	  }
+
+	  /* lvl 1 */
+	  >.menu__item{
+
+	    >.menu__link{
+	      &:hover{}
+	    }
+
+	    &:hover{
+
+	      >.menu__link{}
+	    }
+	    &.active{
+
+	      >.menu__link{}
+	    }
+	    +.menu__item{
+
+	      >.menu__link{}
+	    }
+
+	    /* lvl 2 */
+	    .menu__sub{}
+	  }
+	} // @max-sm
+} // .menu_side

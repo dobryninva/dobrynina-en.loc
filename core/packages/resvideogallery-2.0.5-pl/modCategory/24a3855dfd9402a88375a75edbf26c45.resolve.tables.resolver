@@ -1,0 +1,24 @@
+<?php
+$pkgName = 'ResVideoGallery';
+$pkgNameLower = mb_strtolower($pkgName);
+if ($object->xpdo) {
+    $modx =& $object->xpdo;
+    $modelPath = $modx->getOption("{$pkgNameLower}.core_path", null, $modx->getOption('core_path') . "components/{$pkgNameLower}/") . 'model/';
+    $modx->addPackage($pkgNameLower, $modelPath);
+    $manager = $modx->getManager();
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_INSTALL:
+            $manager->createObjectContainer('RvgVideos');
+            $manager->createObjectContainer('RvgVideosTags');
+            break;
+        case xPDOTransport::ACTION_UPGRADE:
+            $manager->addField('RvgVideos', 'mime_type', array('before' => 'provider'));
+            $manager->addField('RvgVideos', 'src', array('before' => 'provider'));
+            break;
+        case xPDOTransport::ACTION_UNINSTALL:/*
+			$manager->removeObjectContainer('RvgVideos');
+			$manager->removeObjectContainer('RvgVideosTags');*/
+            break;
+    }
+}
+return true;

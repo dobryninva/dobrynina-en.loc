@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '74950f4941e79d96a0adf1001379e51f',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '9b18f6c72bc3e3555b355378e1c33fe1',
+  'native_key' => 'msieimport.export.column_auto_size',
+  'object' => '{"key":"msieimport.export.column_auto_size","value":"0","xtype":"combo-boolean","namespace":"msimportexport","area":"export Excel","editedon":"2019-03-15 20:45:51"}',
+);

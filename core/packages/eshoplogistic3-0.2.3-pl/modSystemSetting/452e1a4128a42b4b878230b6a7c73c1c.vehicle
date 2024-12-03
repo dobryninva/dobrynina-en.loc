@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '31d5a2490f2ca69af7a3357a106063b8',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '452e1a4128a42b4b878230b6a7c73c1c',
+  'native_key' => 'eshoplogistic3_place_vat_rate',
+  'object' => '{"key":"eshoplogistic3_place_vat_rate","value":10,"xtype":"numberfield","namespace":"eshoplogistic3","area":"eshoplogistic3_order_unload","editedon":null}',
+);

@@ -1,0 +1,27 @@
+.gallery{
+
+	&__header{
+
+		&_video{
+			margin-bottom: 18px;
+			font-size: 24px;
+			font-family: $ffH;
+		}
+	}
+
+	&__images{
+
+		+*{
+			margin-top: 27px;
+		}
+	}
+
+	&__videos{
+
+		+*{
+			margin-top: 27px;
+		}
+	}
+
+	&__content{}
+}

@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5a79e5324de0a8ce388dcb505f60059e',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'ed055d8d4dbc71553484c51c294afa85',
+  'native_key' => 'mspre_status_purchased_goods',
+  'object' => '{"key":"mspre_status_purchased_goods","value":"2","xtype":"textfield","namespace":"mspre","area":"mspre_main","editedon":null}',
+);

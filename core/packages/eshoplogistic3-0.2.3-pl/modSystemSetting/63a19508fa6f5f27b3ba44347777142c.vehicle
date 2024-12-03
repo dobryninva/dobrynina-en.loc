@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '2251b4be2f75250edc98a2d4cddf61e8',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '63a19508fa6f5f27b3ba44347777142c',
+  'native_key' => 'eshoplogistic3_order_payment_cash_on_receipt',
+  'object' => '{"key":"eshoplogistic3_order_payment_cash_on_receipt","value":0,"xtype":"numberfield","namespace":"eshoplogistic3","area":"eshoplogistic3_order_automatic_unload","editedon":null}',
+);

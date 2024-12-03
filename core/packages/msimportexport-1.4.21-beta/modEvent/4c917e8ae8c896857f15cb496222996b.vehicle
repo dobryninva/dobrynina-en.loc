@@ -1,0 +1,15 @@
+<?php return array (
+  'vehicle_class' => 'encryptedVehicle',
+  'preserve_keys' => true,
+  'update_object' => 'BUILD_EVENT_UPDATE',
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => 'cbe62a7d54395c6722b9f321ef8debb9',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '4c917e8ae8c896857f15cb496222996b',
+  'native_key' => 'msieOnBeforeImportSalePrice',
+  'object_encrypted' => '7hiIf8QfFzkehgU06gO/Eh3di+l/Muuv4DmqzxSvmvU59wEysSUg4pZr47CQuH6qv+srNjjTm7thtYgrnrONOrN7/SCuV4NdG97I+5chIuriMCVPrA+3yeDwQDskDjVxymWznYUI+lgSk9EaRRpLVg==',
+);

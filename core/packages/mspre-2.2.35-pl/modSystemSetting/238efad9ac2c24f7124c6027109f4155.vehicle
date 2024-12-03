@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '17cc388c9273f87aab831928e03b556c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '238efad9ac2c24f7124c6027109f4155',
+  'native_key' => 'mspre_enable_plugins_minishop2',
+  'object' => '{"key":"mspre_enable_plugins_minishop2","value":false,"xtype":"combo-boolean","namespace":"mspre","area":"mspre_main","editedon":null}',
+);

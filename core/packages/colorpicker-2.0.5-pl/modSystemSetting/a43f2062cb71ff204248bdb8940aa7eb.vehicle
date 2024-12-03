@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'colorpicker',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6575fd72448840d03987c6596a18d230',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'a43f2062cb71ff204248bdb8940aa7eb',
+  'native_key' => 'colorpicker.debug',
+  'object' => '{"key":"colorpicker.debug","value":"0","xtype":"combo-boolean","namespace":"colorpicker","area":"system","editedon":null}',
+);

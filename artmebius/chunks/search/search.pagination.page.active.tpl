@@ -1,0 +1,1 @@
+<li class="page-item active"><span class="page-link"><span>{$text}</span></span></li>

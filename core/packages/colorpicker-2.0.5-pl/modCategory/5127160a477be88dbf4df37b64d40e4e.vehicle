@@ -1,0 +1,236 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      'aecd99c03942af15f9163adda3b6a958' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '0a518a2dddcd14ea458fcc216b686c43' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageBeforeRender","priority":0,"propertyset":0}',
+              'guid' => '6377add1afc49fbda294dd2ee2f01074',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageBeforeRender',
+              ),
+              'signature' => '75ba35e3552b107164d57078224e51b3',
+            ),
+            '67563d87c26ca06707d0fd98b4159719' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVInputPropertiesList","priority":0,"propertyset":0}',
+              'guid' => 'fc91685a560b19d0f6fd7626227bd1d0',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVInputPropertiesList',
+              ),
+              'signature' => 'f68b66c074bd378bb4101edcc17cf9bf',
+            ),
+            'fa7bd207e0959b367f61fcd5d3c3bece' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVInputRenderList","priority":0,"propertyset":0}',
+              'guid' => 'f67cc9788808b5db89a727d2de748cc1',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVInputRenderList',
+              ),
+              'signature' => 'd60c84c887d4c8aaa00061f04e27f269',
+            ),
+            '29f13ff8a5e35a44e76f57b4ed628b37' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVOutputRenderList","priority":0,"propertyset":0}',
+              'guid' => 'a0e18c647c5a2e56021adf58e05b97f5',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVOutputRenderList',
+              ),
+              'signature' => '56ee206824940f10fa24e573d24dc811',
+            ),
+            '4c1b797ff3a8ae5794341713ff1931fb' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVOutputRenderPropertiesList","priority":0,"propertyset":0}',
+              'guid' => 'eb9b3086d2e66aebfcb14f4838a5bb8c',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVOutputRenderPropertiesList',
+              ),
+              'signature' => '99f58ac235dcc31d8e24e596d8ca8357',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"ColorPicker","description":"ColorPicker runtime hooks - registers custom TV input & output types and includes javascripts on document edit pages.","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * ColorPicker Runtime Hooks\\n *\\n * @package colorpicker\\n * @subpackage plugin\\n *\\n * @var modX $modx\\n * @var array $scriptProperties\\n *\\/\\n\\n$className = \'TreehillStudio\\\\ColorPicker\\\\Plugins\\\\Events\\\\\\\\\' . $modx->event->name;\\n\\n$corePath = $modx->getOption(\'colorpicker.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/colorpicker\\/\');\\n\\/** @var ColorPicker $colorpicker *\\/\\n$colorpicker = $modx->getService(\'colorpicker\', \'ColorPicker\', $corePath . \'model\\/colorpicker\\/\', [\\n    \'core_path\' => $corePath\\n]);\\n\\nif ($colorpicker) {\\n    if (class_exists($className)) {\\n        $handler = new $className($modx, $scriptProperties);\\n        if (get_class($handler) == $className) {\\n            $handler->run();\\n        } else {\\n            $modx->log(xPDO::LOG_LEVEL_ERROR, $className. \' could not be initialized!\', \'\', \'ColorPicker Plugin\');\\n        }\\n    } else {\\n        $modx->log(xPDO::LOG_LEVEL_ERROR, $className. \' was not found!\', \'\', \'ColorPicker Plugin\');\\n    }\\n}\\n\\nreturn;","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * ColorPicker Runtime Hooks\\n *\\n * @package colorpicker\\n * @subpackage plugin\\n *\\n * @var modX $modx\\n * @var array $scriptProperties\\n *\\/\\n\\n$className = \'TreehillStudio\\\\ColorPicker\\\\Plugins\\\\Events\\\\\\\\\' . $modx->event->name;\\n\\n$corePath = $modx->getOption(\'colorpicker.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/colorpicker\\/\');\\n\\/** @var ColorPicker $colorpicker *\\/\\n$colorpicker = $modx->getService(\'colorpicker\', \'ColorPicker\', $corePath . \'model\\/colorpicker\\/\', [\\n    \'core_path\' => $corePath\\n]);\\n\\nif ($colorpicker) {\\n    if (class_exists($className)) {\\n        $handler = new $className($modx, $scriptProperties);\\n        if (get_class($handler) == $className) {\\n            $handler->run();\\n        } else {\\n            $modx->log(xPDO::LOG_LEVEL_ERROR, $className. \' could not be initialized!\', \'\', \'ColorPicker Plugin\');\\n        }\\n    } else {\\n        $modx->log(xPDO::LOG_LEVEL_ERROR, $className. \' was not found!\', \'\', \'ColorPicker Plugin\');\\n    }\\n}\\n\\nreturn;"}',
+        'guid' => 'fe78d6660abdded1a69f5193bd910eb6',
+        'native_key' => NULL,
+        'signature' => 'e5c55622cb92ad2d308e5b18dc25ebfa',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Children' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'parent',
+        1 => 'category',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'colorpicker',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"colorpicker-2.0.5-pl\\/modCategory\\/5127160a477be88dbf4df37b64d40e4e\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"colorpicker"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"colorpicker-2.0.5-pl\\/modCategory\\/5127160a477be88dbf4df37b64d40e4e\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"colorpicker"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"colorpicker-2.0.5-pl\\/modCategory\\/5127160a477be88dbf4df37b64d40e4e.resolve.composer.resolver","type":"php","name":"resolve.composer"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"colorpicker-2.0.5-pl\\/modCategory\\/5127160a477be88dbf4df37b64d40e4e.resolve.version.resolver","type":"php","name":"resolve.version"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"colorpicker-2.0.5-pl\\/modCategory\\/5127160a477be88dbf4df37b64d40e4e.resolve.cleanup.resolver","type":"php","name":"resolve.cleanup"}',
+    ),
+    5 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"colorpicker-2.0.5-pl\\/modCategory\\/5127160a477be88dbf4df37b64d40e4e.resolve.treehillstudio.resolver","type":"php","name":"resolve.treehillstudio"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '8ca268f553ecbf57d5ed675bb77fc65e',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '5127160a477be88dbf4df37b64d40e4e',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"ColorPicker","rank":0}',
+);

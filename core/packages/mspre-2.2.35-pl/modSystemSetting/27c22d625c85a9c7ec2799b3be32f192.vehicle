@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '09ee8f2affb6872e4482429e492992a4',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '27c22d625c85a9c7ec2799b3be32f192',
+  'native_key' => 'mspre_tree_default_sort',
+  'object' => '{"key":"mspre_tree_default_sort","value":"menuindex","xtype":"textfield","namespace":"mspre","area":"mspre_resource_tree","editedon":null}',
+);

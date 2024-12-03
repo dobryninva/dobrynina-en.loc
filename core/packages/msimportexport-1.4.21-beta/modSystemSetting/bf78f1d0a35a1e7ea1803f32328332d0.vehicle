@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '61b4d9c990084705d7fdcc663e0d7a35',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'bf78f1d0a35a1e7ea1803f32328332d0',
+  'native_key' => 'msimportexport.gallery.remove_before_import',
+  'object' => '{"key":"msimportexport.gallery.remove_before_import","value":"0","xtype":"combo-boolean","namespace":"msimportexport","area":"gallery","editedon":"2019-03-22 17:31:37"}',
+);

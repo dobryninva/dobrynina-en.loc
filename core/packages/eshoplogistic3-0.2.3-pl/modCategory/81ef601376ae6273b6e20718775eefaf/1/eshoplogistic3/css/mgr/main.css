@@ -1,0 +1,57 @@
+.delivery-edit-info {
+    padding: 15px 0;
+}
+#widgetContainer {
+    margin-top: 1em
+}
+.eshoplogistic-theme-services-list {
+    grid-template-columns: repeat(auto-fill,260px) !important;
+    margin: 0 1em 0 0 !important;
+    padding: 0 0 1em !important;
+}
+.eshoplogistic-theme-service__comment,
+.eshoplogistic-theme-tooltip-root,
+.eshoplogistic-theme-filter-button__wrap-variants,
+.eshoplogistic-theme-filter-button__info__time,
+.eshoplogistic-theme-form-group,
+.eshoplogistic-theme-h2 {
+    display: none !important;
+}
+.eshoplogistic-widget-block .eshoplogistic-theme-service__wrapper {
+    padding: 0 0.5rem !important;
+}
+.eshoplogistic-theme-picture {
+    max-width: 4rem !important;
+}
+.eshoplogistic-theme-service__logo-wrapper {
+    padding: 0 !important;
+}
+.eshoplogistic-theme-picture {
+    padding: 5px 0 0 0;
+}
+.eshoplogistic-widget-block .eshoplogistic-theme-yandex-map__root {
+    height: 300px !important;
+}
+.eshoplogistic-widget-block .eshoplogistic-theme-yandex-map {
+    height: 350px !important;
+}
+.eshoplogistic-theme-yandex-map__filters {
+    font-size: 0.8em !important;
+}
+.eshoplogistic-widget-block .eshoplogistic-theme-input_size-medium {
+    padding: 0.2rem 0.5rem !important;
+}
+.eshoplogistic-widget-block .eshoplogistic-theme-checkbox[type=checkbox] {
+    height: 1.2rem !important;
+}
+#eshoplogistic3-grid-unload-places {
+    padding: 0 !important;
+}
+#eshoplogistic3-grid-unload-places .btn.icon,
+#eshoplogistic3-upload-additional-tab .btn.icon {
+    padding: 3px 6px !important;
+}
+.eshoplogistic3-row-actions li {
+    max-width: 35px;
+    display: inline-block;
+}

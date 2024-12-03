@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b8db8fa910d87268bdabe08cfae36f4b',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '8ac20b1f6ac36eaa2a7f3e170a44b619',
+  'native_key' => 'msimportexport.export.ym.currency_rate',
+  'object' => '{"key":"msimportexport.export.ym.currency_rate","value":"CBRF","xtype":"textfield","namespace":"msimportexport","area":"export \\u042f\\u043d\\u0434\\u0435\\u043a\\u0441.\\u041c\\u0430\\u0440\\u043a\\u0435\\u0442\\u0435","editedon":null}',
+);

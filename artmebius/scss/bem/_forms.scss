@@ -1,0 +1,29 @@
+//************************************************************************ reviews_form */
+
+.reviews_form_header{
+  // border-radius: 4px;
+  // padding: 18px 18px;
+  margin-bottom: 18px;
+  line-height: $headings-line-height;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  font-size: 20px;
+  color: $clrH;
+  // background: $clr6;
+  // @include gradient-x($clr6,$clr3);
+}
+
+.reviews_form{
+  border-bottom: 1px solid $clrB;
+  margin-bottom: 18px;
+}
+
+.reviews_success_message{
+  display: none;
+  border-radius: 4px;
+  padding: 9px 18px;
+  margin-top: 18px;
+  font-weight: bold;
+  color: $clrH;
+  background: $clr4;
+}

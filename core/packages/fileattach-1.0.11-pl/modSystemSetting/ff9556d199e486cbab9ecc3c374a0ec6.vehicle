@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'fileattach',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b8dae63ff0ebbb47bf46596acef90d2a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'ff9556d199e486cbab9ecc3c374a0ec6',
+  'native_key' => 'fileattach.put_docid',
+  'object' => '{"key":"fileattach.put_docid","value":false,"xtype":"combo-boolean","namespace":"fileattach","area":"file","editedon":null,"name":"setting_fileattach.put_docid","description":"setting_fileattach.put_docid_desc","lexicon":"fileattach:setting"}',
+);

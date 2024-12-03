@@ -1,0 +1,16 @@
+<?php return array (
+  'class' => 'xPDOScriptVehicle',
+  'object' => 
+  array (
+    'source' => 'ms2gallery-2.0.12-pl/xPDOScriptVehicle/3339c86a962b5134b267bef9c959342a.resolve.encryption.script',
+  ),
+  'vehicle_class' => 'xPDOScriptVehicle',
+  'namespace' => 'ms2gallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => 'ae0ac6a20c24ae1b3621056f721e18fc',
+  'package' => '',
+  'signature' => '3339c86a962b5134b267bef9c959342a',
+  'native_key' => 'ae0ac6a20c24ae1b3621056f721e18fc',
+);

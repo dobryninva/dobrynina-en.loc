@@ -1,0 +1,12 @@
+.search_main{
+  .ctgs_col{
+    &.ctgs_col_first{
+      &:before{
+        content: '<div class="clear"></div>';
+      }
+    }
+  }
+  .ctgs_block{
+    height: auto !important;
+  }
+}

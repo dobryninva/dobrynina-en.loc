@@ -1,0 +1,61 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => true,
+  'related_object_attributes' => 
+  array (
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'seoroom',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"seoroom-1.0.6-beta\\/modCategory\\/a60639b233672caf4903355cc7ccb054\\/0\\/","target":"return \\"\\".MODX_CORE_PATH.\\"components\\/\\";","name":"seoroom"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"seoroom-1.0.6-beta\\/modCategory\\/a60639b233672caf4903355cc7ccb054\\/1\\/","target":"return \\"\\".MODX_ASSETS_PATH.\\"components\\/\\";","name":"seoroom"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"seoroom-1.0.6-beta\\/modCategory\\/a60639b233672caf4903355cc7ccb054.setupresolver.options.resolver","type":"php","name":"setupresolver.options"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7a502e74f5b4a185fe7fa6a4ef917ba8',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'a60639b233672caf4903355cc7ccb054',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"SEOroom"}',
+);

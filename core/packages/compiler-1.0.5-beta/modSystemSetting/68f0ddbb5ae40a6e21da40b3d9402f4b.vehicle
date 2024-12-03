@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'compiler',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '2dfce41f7a7fd31c72557ff401f991a3',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '68f0ddbb5ae40a6e21da40b3d9402f4b',
+  'native_key' => 'compiler_scss_with_subdirs',
+  'object' => '{"key":"compiler_scss_with_subdirs","value":false,"xtype":"combo-boolean","namespace":"compiler","area":"compiler_scss","editedon":null}',
+);

@@ -1,0 +1,88 @@
+//************************************************************************ faq_main */
+
+.faq_main{
+
+  .question_block{
+    margin-bottom: 18px;
+    // padding-top: 9px;
+    // padding-bottom: 9px;
+    &:target{
+      // background: #F9F9F9;
+      .item_quest{
+        // color: $clr2;
+      }
+      .item_answer{
+        color: $clrH;
+      }
+    }
+  }
+  .item_quest{
+    color: $clrH;
+    @include transition(color .2s ease-out);
+  }
+  .item_answer{
+    text-align: justify;
+    @include transition(color .2s ease-out);
+  }
+}
+
+.menu_quest{
+  margin-bottom: $mbM;
+  li{
+    a{
+      text-decoration: none;
+      border-bottom: 1px dotted $clr2;
+      &:hover{
+        border-color: $clrLh;
+      }
+    }
+  }
+
+} // faq_main
+
+
+
+//lg
+@media (min-width: $screen-lg) and (max-width: $screen-lg-max) { // 1024 and 1279
+
+.faq_main{
+
+} // .faq_main
+
+} // @lg
+
+//md
+@media (min-width: $screen-md) and (max-width: $screen-md-max) { // 768 and 1023
+
+.faq_main{
+
+} // .faq_main
+
+} // @md
+
+//sm
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) { // 480 and 767
+
+.faq_main{
+
+} // .faq_main
+
+} // @sm
+
+//sm-max
+@media (max-width: $screen-sm-max) { // 767
+
+.faq_main{
+
+} // .faq_main
+
+} // @xs
+
+//xs
+@media (max-width: $screen-xs-max) { // 479
+
+.faq_main{
+
+} // .faq_main
+
+} // @xs

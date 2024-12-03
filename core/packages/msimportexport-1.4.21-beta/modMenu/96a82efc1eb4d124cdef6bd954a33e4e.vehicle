@@ -1,0 +1,16 @@
+<?php return array (
+  'vehicle_class' => 'encryptedVehicle',
+  'preserve_keys' => true,
+  'update_object' => 'BUILD_MENU_UPDATE',
+  'unique_key' => 'text',
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => 'ac5b2184903adfe1981a7f4e8d19157e',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '96a82efc1eb4d124cdef6bd954a33e4e',
+  'native_key' => 'msimportexport.cmenu.export',
+  'object_encrypted' => 'hzJVTUAmHJOED7weOmlk1QWPUyGLbLw80FAFDxo5KVqR/FGhBAI2LR6ou6JwnUmksKC5ImyMSsRQmztvqWgkMNGH29jdPEW304H0jEpTGkVfrv/1LqLQ+ZaXwuMYXctcf3CmT6c4w3ihRmTLdQOfh+qI+taRdEvsDUJSuiSNgknOKppWgnJAVTu+HdqB9yZZJZKO0xW6bZsOY/3TUNoMVGdmZ2rkw6BAU1GhMFVmKniLt3LmQm13wQPdX17u4jSm9kc8OSJKJZhJLfInSvI7ZPKzJSp4AKU5gln+rq2trhHZOyufJK+/1zB7JdgvUCW2kxGZ2b0qCGripewnSO+cNjdMIC1TtjLRlSrOXhHjLfA=',
+);

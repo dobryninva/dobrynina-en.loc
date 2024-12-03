@@ -1,0 +1,15 @@
+<?php return array (
+  'class' => 'xPDOScriptVehicle',
+  'object' => 
+  array (
+    'source' => 'mspre-2.2.35-pl/xPDOScriptVehicle/9c7f4482354f979a6e3e2f24b7cdaaf6.encryption.script',
+  ),
+  'vehicle_class' => 'xPDOScriptVehicle',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => '93b06c643ef8b80df5fbf9c13effc524',
+  'package' => '',
+  'signature' => '9c7f4482354f979a6e3e2f24b7cdaaf6',
+  'native_key' => '93b06c643ef8b80df5fbf9c13effc524',
+);

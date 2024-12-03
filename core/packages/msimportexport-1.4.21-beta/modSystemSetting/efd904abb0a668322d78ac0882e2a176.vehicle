@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'dee60d71ad840aad869bf233c31a18fe',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'efd904abb0a668322d78ac0882e2a176',
+  'native_key' => 'msimportexport.import.csv_encoding',
+  'object' => '{"key":"msimportexport.import.csv_encoding","value":"cp1251","xtype":"textfield","namespace":"msimportexport","area":"import","editedon":null}',
+);

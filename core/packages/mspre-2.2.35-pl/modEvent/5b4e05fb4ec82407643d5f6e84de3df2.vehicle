@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a4f1d4a7a6e7d95bbe6d3dfd6716b1ee',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '5b4e05fb4ec82407643d5f6e84de3df2',
+  'native_key' => 'msPreExportToArrayAfter',
+  'object' => '{"name":"msPreExportToArrayAfter","service":6,"groupname":"mspre"}',
+);

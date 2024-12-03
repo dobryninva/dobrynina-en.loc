@@ -1,0 +1,86 @@
+.order_item{}
+.order_item_title{
+  margin-bottom: 5px;
+}
+
+.order_item_title_link{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.order_item_title_link_text{}
+
+.order_item_info{
+  // display: flex;
+  // flex-wrap: wrap;
+  margin: 0 0 15px;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+  // padding: 15px 25px;
+
+  >div{
+    // display: flex;
+    // align-items: center;
+  }
+}
+
+.order_item_info_title{
+  // width: 160px;
+}
+.order_item_info_value{}
+
+.order_item_date{}
+.order_item_date_title{}
+.order_item_date_value{}
+.order_item_status{}
+.order_item_status_title{}
+.order_item_status_value{}
+.order_item_delivery{}
+.order_item_status_title{}
+.order_item_status_value{}
+.order_item_payment{}
+.order_item_payment_title{}
+.order_item_payment_value{}
+.order_item_summary{}
+.order_item_summary_title{}
+.order_item_summary_value{
+  font-weight: 700;
+  // color: $clr1;
+}
+
+
+//************************************************************************ media */
+
+@include media-breakpoint-up(md){
+
+  .order_item_info{
+    padding: 15px 25px;
+
+    >div{
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .order_item_info_title{
+    width: 160px;
+  }
+  .order_item_info_value{}
+
+} // @min-md
+
+@include media-breakpoint-down(sm){
+
+  .order_item_info{
+    padding: 12px 9px;
+  }
+
+  .order_item_info_title{
+    // display: block;
+  }
+  .order_item_info_value{
+    // display: block;
+  }
+
+
+} // @max-sm

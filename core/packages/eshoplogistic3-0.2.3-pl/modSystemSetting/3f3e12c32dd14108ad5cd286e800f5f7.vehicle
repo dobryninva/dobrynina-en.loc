@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'cdce61677441908f9e16f6f493ffef9c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '3f3e12c32dd14108ad5cd286e800f5f7',
+  'native_key' => 'eshoplogistic3_api_url',
+  'object' => '{"key":"eshoplogistic3_api_url","value":"https:\\/\\/api.esplc.ru","xtype":"textfield","namespace":"eshoplogistic3","area":"eshoplogistic3_main","editedon":null}',
+);

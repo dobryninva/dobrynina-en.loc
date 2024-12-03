@@ -1,0 +1,17 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => true,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'de163292d32c63d4c74c3f489fb1c9b3',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => 'ea856d638900a934a3ef18adc8b1be83',
+  'native_key' => 'mspre_product',
+  'object' => '{"text":"mspre_product","parent":"mspre","action":"product","description":"mspre_product_desc","icon":"","menuindex":0,"params":"","handler":"","permissions":"","namespace":"mspre"}',
+);

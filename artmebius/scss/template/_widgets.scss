@@ -1,0 +1,215 @@
+// main
+
+.categories_on_main{}
+
+.products_with_label{}
+
+.advantages_main{}
+
+.brands_slider{
+  .ctrl-prev{}
+  .ctrl-next{}
+  .ctrl-dots{}
+}
+
+.consultation_form{}
+
+
+// sidebar
+
+.side_filter{}
+
+
+// common
+
+.breadcrumbs_top{
+  margin-bottom: 9px;
+  ul{
+    padding: 0;
+    margin-bottom: 0;
+    li{
+      // margin-right: 9px;
+      &.separator{
+        // color: $clr1;
+      }
+    }
+  }
+  a{
+    // text-transform: uppercase;
+    // text-decoration: none;
+    // color: $clrM;
+    &:hover{
+      // color: $clrLh;
+    }
+  }
+  .sepapator{
+    // color: $clrM;
+  }
+
+}
+
+.catalog_tags{
+  .btn{}
+}
+
+// блок поделиться от Яндекса
+// .ya-share2__list{
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+//   &.ya-share2__list_direction_horizontal{
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   .ya-share2__item{
+//     display: block;
+//     margin-right: 5px;
+
+//     &.ya-share2__item_service_vkontakte{
+//       .ya-share2__icon{
+//         &:before{
+//           content: '\f189';
+
+//         }
+//       }
+//     }
+//     &.ya-share2__item_service_facebook{
+//       .ya-share2__icon{
+//         &:before{
+//           content: '\f39e'; // f09a
+
+//         }
+//       }
+//     }
+//     &.ya-share2__item_service_twitter{
+//       .ya-share2__icon{
+//         &:before{
+//           content: '\f099';
+
+//         }
+//       }
+//     }
+//   }
+
+//   .ya-share2__link{
+//     display: block;
+//     text-decoration: none;
+//     color: $clrH;
+//     background: $clr4;
+//     &:hover{
+//       color: #fff;
+//       background: $clr1;
+//     }
+//   }
+
+//   .ya-share2__badge{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 48px;
+//     height: 48px;
+//     text-align: center;
+//   }
+//   .ya-share2__title{
+//     display: none;
+//   }
+//   .ya-share2__icon{
+//     position: relative;
+//     &:before{
+//       content: '';
+//       display: block;
+//       font-family: 'fa5b';
+//       font-weight: 400;
+//     }
+//   }
+// }
+// .ya-share2__copied-tooltip{
+//   display: none;
+// }
+
+
+// product
+
+.product_siblings{
+  .ctrl-dots{}
+}
+
+
+
+//======================================================================== @MEDIA
+
+@include media-breakpoint-up(md){
+
+  .go2top{
+    display: none;
+    position: fixed;
+    bottom: 14px;
+    right: 14px;
+    border-radius: 2px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 19px;
+    color: #fff;
+    background: $clr1;
+    // @include transition(background .2s ease-out, opacity .2s ease-out);
+    @include transition(background .2s ease-out);
+    @include translateZ0();
+    &:hover{
+      text-decoration: none;
+      color: #fff;
+      background: $clrLh;
+    }
+  }
+
+  .grecaptcha-badge{
+    box-shadow: none !important;
+    z-index: 550;
+    // or
+    // opacity: .5;
+    &:hover{
+      // opacity: 1;
+    }
+  }
+
+} // @min-md
+
+
+@include media-breakpoint-down(sm){
+
+  .go2top{
+    position: static;
+    bottom: auto;
+    right: auto;
+    display: block !important;
+    border-radius: 0;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+    background: $clr0;
+    // transition: none;
+    &:hover{
+      text-decoration: none;
+      color: #fff;
+      // background: $clrLh; // darken($clr1, 10%);
+    }
+    &:active{
+      color: #fff;
+      background: $clrLh;
+    }
+  }
+
+  // why not? cmon! plsss!!!
+  .grecaptcha-badge{
+    // display: none !important;
+  }
+
+
+} // @max-sm

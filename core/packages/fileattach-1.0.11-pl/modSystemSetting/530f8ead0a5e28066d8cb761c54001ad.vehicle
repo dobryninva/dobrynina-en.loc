@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'fileattach',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '413c8b5492b90e49eeb8abdee2d18e48',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '530f8ead0a5e28066d8cb761c54001ad',
+  'native_key' => 'fileattach.translit',
+  'object' => '{"key":"fileattach.translit","value":false,"xtype":"combo-boolean","namespace":"fileattach","area":"","editedon":null,"name":"setting_fileattach.translit","description":"setting_fileattach.translit_desc","lexicon":"fileattach:setting"}',
+);

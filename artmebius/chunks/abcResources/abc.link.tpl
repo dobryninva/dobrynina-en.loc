@@ -1,0 +1,1 @@
+<li class="abc_link_row"><a href="{$link}" {$link_attributes}>{$pagetitle}</a></li>

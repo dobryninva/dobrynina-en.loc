@@ -1,0 +1,6 @@
+{
+    "require": {
+        "vkcom/vk-php-sdk": "^5.80",
+        "google/apiclient": "^2.0"
+    }
+}

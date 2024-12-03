@@ -1,0 +1,48 @@
+.sorting{
+
+	&__header{}
+
+	&__switcher{}
+	&__switcher-status{}
+
+	&__body{}
+
+	&__link{
+
+		&.active{}
+	}
+
+	&__link-dir{
+
+		[data-default="asc"] &{
+	    &:before{
+	      content: '\f107';
+	    }
+	  }
+
+	  [data-default="desc"] &{
+	    &:before{
+	      content: '\f106';
+	    }
+	  }
+
+	  [data-dir=""] &{
+	    &:before{
+	      content: '';
+	    }
+	  }
+
+	  [data-dir="asc"] &{
+	    &:before{
+	      content: '\f106';
+	    }
+	  }
+
+	  [data-dir="desc"] &{
+	    &:before{
+	      content: '\f107';
+	    }
+	  }
+	}
+
+}

@@ -1,0 +1,115 @@
+.page {
+  position: relative;
+  display: flex;
+
+	// v1 + .page-top
+  // flex-wrap: wrap;
+  // align-content: space-between;
+  //
+  // v2 + footer mt:a
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height:100%;
+  min-width: 320px;
+  background: $bgM;
+
+	// общие элементы для всех шаблонов
+	&__gallery{
+		margin-top: 27px;
+	}
+
+	&__header{}
+	&__content{}
+	&__more{}
+
+	&__pagination{}
+
+	// секции
+	&__sect-wrap{}
+	&__sect-container{}
+
+	&__sect{}
+	&__sect_breadcrumbs{}
+	&__sect_main{}
+	&__sect_side{}
+
+
+	// # main - шаблон главной
+	// секции
+	&__sect_slider{}
+	&__sect_reviews{}
+
+	// заголовки виджетов
+	&__header_hit{}
+	&__header_new{}
+	&__header_sale{}
+	&__header_brands{}
+	&__header_news{}
+	&__header_reviews{}
+
+
+	// # catalog.category
+	// заголовки виджетов
+	&__header_add{}
+	&__header_category-articles{}
+
+	// виджеты (элементы страницы отвечающие за позиционирование)
+	&__tags-mdu{}
+	&__tags-smd{}
+
+	&__filter-mdu{}
+	&__filter-smd{}
+
+	&__sub-categories-mdu{}
+	&__sub-categories-smd{}
+
+
+	// # catalog.product
+	// заголовки виджетов
+	&__header_siblings{}
+	&__header_recommended{}
+}
+
+// модификаторы блока page, характеризующие шаблон
+.page_inner{}
+.page_product{}
+
+//************************************************************************ mix's */
+
+.page-top{
+  width: 100%;
+}
+
+.page-content{
+
+  img{
+    margin-bottom: 9px;
+  }
+
+  .lightbox{
+  	img{
+  		margin-bottom: 0;
+  	}
+  }
+
+	p{
+		margin-bottom: 18px;
+	}
+}
+
+@include media-breakpoint-down(sm){
+
+  .page-content{
+
+    p,div{
+      text-align: justify !important;
+      @include hyphenate();
+    }
+
+    img{
+      margin-bottom: 16px;
+    }
+  }
+
+} // @max-sm

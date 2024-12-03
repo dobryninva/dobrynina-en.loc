@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5213beddeb9e2dbb7fcd8030e69847c6',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'b079953f0c440861bcd1e7388160414e',
+  'native_key' => 'eshoplogistic3_pecom_pick_up_terminal',
+  'object' => '{"key":"eshoplogistic3_pecom_pick_up_terminal","value":"","xtype":"textfield","namespace":"eshoplogistic3","area":"eshoplogistic3_order_unload_pecom","editedon":null}',
+);

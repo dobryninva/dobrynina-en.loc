@@ -1,0 +1,19 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'namespace' => 'fileattach',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '072361c5d1962ed21651bacc0da090ae',
+  'package' => 'modx',
+  'class' => 'modAccessPolicy',
+  'signature' => '71a24968efb5aef2af6d01d23bd8a02c',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"File Attach Download","description":"A policy for downloading attached files to resources.","parent":0,"template":0,"class":"","data":"{\\"fileattach.download\\":true}","lexicon":"fileattach:permissions"}',
+);

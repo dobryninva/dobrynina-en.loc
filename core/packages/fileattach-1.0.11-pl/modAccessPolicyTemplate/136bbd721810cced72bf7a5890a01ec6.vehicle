@@ -1,0 +1,113 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => false,
+  'related_objects' => 
+  array (
+    'Permissions' => 
+    array (
+      '2b20643580e913c05404f14dc8ca5086' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"fileattach.totallist","description":"perm.fileattach_all","value":1}',
+        'guid' => '97284847dbc095e8e34b341750d69755',
+        'native_key' => NULL,
+        'signature' => 'c3faaa557ad3959d224aeee8522ed418',
+      ),
+      '8812900da2ed726107019e1cfd06b9cd' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"fileattach.doclist","description":"perm.fileattach_doc","value":1}',
+        'guid' => '9e1bb92a7ab50be272b80ba6dd6e2d6f',
+        'native_key' => NULL,
+        'signature' => 'ee0498763761f2dd9ef22bfeaa0124a5',
+      ),
+      '2e76e9f92858a788a3937b4212e948ea' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"fileattach.download","description":"perm.fileattach_download","value":1}',
+        'guid' => 'ac0f523000e13d1b5592bed7cf45d4f6',
+        'native_key' => NULL,
+        'signature' => 'c830556b523991bf557818381b1d1531',
+      ),
+      'c3a2219231252678f07c843f304fbcd5' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"fileattach.list","description":"perm.fileattach_list","value":1}',
+        'guid' => 'd7cc739581c083ea27b4cac9235d1d52',
+        'native_key' => NULL,
+        'signature' => '183d447e9fc6a9d56e6393b6d2998bb3',
+      ),
+      'da9fd7c90520251a63aaf4d661549697' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"fileattach.remove","description":"perm.fileattach_remove","value":1}',
+        'guid' => '92e4ad93bff145f6d9c63d6cd244b060',
+        'native_key' => NULL,
+        'signature' => '69c1d0691c042d427364fb1da7aff691',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Permissions' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'template',
+        1 => 'name',
+      ),
+    ),
+  ),
+  'namespace' => 'fileattach',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9f8b849e336d6efe0f00e3d6544c4a93',
+  'package' => 'modx',
+  'class' => 'modAccessPolicyTemplate',
+  'signature' => '136bbd721810cced72bf7a5890a01ec6',
+  'native_key' => NULL,
+  'object' => '{"id":null,"template_group":1,"name":"FileAttachTemplate","description":"A policy template for attached files containers.","lexicon":"fileattach:permissions"}',
+);

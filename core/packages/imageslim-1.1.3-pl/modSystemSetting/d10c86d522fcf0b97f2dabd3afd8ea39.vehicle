@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'imageslim',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ab7f568cc34a06381eab295f8b199dbc',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd10c86d522fcf0b97f2dabd3afd8ea39',
+  'native_key' => 'imageslim.use_resizer',
+  'object' => '{"key":"imageslim.use_resizer","value":true,"xtype":"combo-boolean","namespace":"imageslim","area":"","editedon":null}',
+);

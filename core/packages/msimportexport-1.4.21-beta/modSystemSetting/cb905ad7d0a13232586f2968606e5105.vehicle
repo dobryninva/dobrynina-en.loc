@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '37a0378930bf5de05488dc48be4282a2',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'cb905ad7d0a13232586f2968606e5105',
+  'native_key' => 'msimportexport.price.timeout',
+  'object' => '{"key":"msimportexport.price.timeout","value":"180","xtype":"textfield","namespace":"msimportexport","area":"price","editedon":null}',
+);

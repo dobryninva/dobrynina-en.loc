@@ -1,0 +1,379 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      'e054f96ca17b141c479f15a8858381e0' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"tpl.eshoplogistic3.order","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"<div id=\\"eShopLogisticWidgetCart\\" data-key=\\"{$widget_key}\\" data-target=\\"{$widget_target}\\" data-region=\\"{$widget_region}\\" data-lazy-load=\\"true\\" {if $widget_controller?}data-controller=\\"{$widget_controller}\\"{\\/if}><\\/div>\\r\\n<script src=\\"{$source_url}\\"><\\/script>","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/eshoplogistic3\\/elements\\/chunks\\/order.tpl","content":"<div id=\\"eShopLogisticWidgetCart\\" data-key=\\"{$widget_key}\\" data-target=\\"{$widget_target}\\" data-region=\\"{$widget_region}\\" data-lazy-load=\\"true\\" {if $widget_controller?}data-controller=\\"{$widget_controller}\\"{\\/if}><\\/div>\\r\\n<script src=\\"{$source_url}\\"><\\/script>","file":"order"}',
+        'guid' => 'f2d86f6cf2d5179cd1033efdd76e6820',
+        'native_key' => 0,
+        'signature' => '2a937cb20684ee429bdcd229179fc4fa',
+      ),
+      '39583a1be8bc22422dd86451ccec6b66' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"tpl.eshoplogistic3.widgetForm","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"<div id=\\"eShopLogisticWidgetForm\\" class=\\"eshoplogistic-widget-calculate\\"\\r\\n     {if $widget_controller?}data-controller=\\"{$widget_controller}\\"{\\/if}\\r\\n    {*data-from=\\"\\u041c\\u043e\\u0441\\u043a\\u0432\\u0430\\" data-dimensions=\\"25*15*10\\" data-price=\\"1500\\" data-weight=\\"1\\"*}\\r\\n     data-lazy-load=\\"false\\"\\r\\n     data-ip=\\"{$.server.REMOTE_ADDR}\\"\\r\\n     data-title=\\"\\u0420\\u0430\\u0441\\u0447\\u0451\\u0442 \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438\\"\\r\\n     data-key=\\"{$widget_key}\\">\\r\\n<\\/div>\\r\\n<script src=\\"https:\\/\\/api.esplc.ru\\/widgets\\/form\\/app.js\\"><\\/script>","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/eshoplogistic3\\/elements\\/chunks\\/widget_form.tpl","content":"<div id=\\"eShopLogisticWidgetForm\\" class=\\"eshoplogistic-widget-calculate\\"\\r\\n     {if $widget_controller?}data-controller=\\"{$widget_controller}\\"{\\/if}\\r\\n    {*data-from=\\"\\u041c\\u043e\\u0441\\u043a\\u0432\\u0430\\" data-dimensions=\\"25*15*10\\" data-price=\\"1500\\" data-weight=\\"1\\"*}\\r\\n     data-lazy-load=\\"false\\"\\r\\n     data-ip=\\"{$.server.REMOTE_ADDR}\\"\\r\\n     data-title=\\"\\u0420\\u0430\\u0441\\u0447\\u0451\\u0442 \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438\\"\\r\\n     data-key=\\"{$widget_key}\\">\\r\\n<\\/div>\\r\\n<script src=\\"https:\\/\\/api.esplc.ru\\/widgets\\/form\\/app.js\\"><\\/script>","file":"widget_form"}',
+        'guid' => 'e41d0a5171cc4c76d9e3f01a82c8e611',
+        'native_key' => 0,
+        'signature' => 'c5fa9d8fb8fb69012dc7c8b36800fd70',
+      ),
+      '9c4ec381fe2ee5b519d15dc0228ada12' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"tpl.eshoplogistic3.widgetBlock","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"<div id=\\"eShopLogisticWidgetBlock\\" {if $widget_controller?}data-controller=\\"{$widget_controller}\\"{\\/if}\\r\\n     data-key=\\"{$widget_key}\\"\\r\\n     data-lazy-load=\\"true\\"\\r\\n     data-ip=\\"{$.server.REMOTE_ADDR}\\"\\r\\n     data-offers=\'{$offers}\'>\\r\\n<\\/div>\\r\\n<script src=\\"https:\\/\\/api.esplc.ru\\/widgets\\/block\\/app.js\\"><\\/script>\\r\\n<script>\\r\\n    document.addEventListener(\'DOMContentLoaded\', () => {\\r\\n        \\/\\/ \\u0430\\u043a\\u0442\\u0438\\u0432\\u0430\\u0446\\u0438\\u044f \\u0432\\u0438\\u0434\\u0436\\u0435\\u0442\\u0430 \\u043f\\u0440\\u0438 \\u043f\\u0435\\u0440\\u0435\\u0445\\u043e\\u0434\\u0435 \\u043d\\u0430 \\u0432\\u043a\\u043b\\u0430\\u0434\\u043a\\u0443 \\u00ab\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430\\u00bb\\r\\n        document.getElementById(\'pills-product-2-tab\').addEventListener(\'click\', event => {\\r\\n            document.getElementById(\'eShopLogisticWidgetBlock\').dispatchEvent(new CustomEvent(\'eShopLogisticWidgetBlock:loadApp\'))\\r\\n        })\\r\\n    })\\r\\n<\\/script>","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/eshoplogistic3\\/elements\\/chunks\\/widget_block.tpl","content":"<div id=\\"eShopLogisticWidgetBlock\\" {if $widget_controller?}data-controller=\\"{$widget_controller}\\"{\\/if}\\r\\n     data-key=\\"{$widget_key}\\"\\r\\n     data-lazy-load=\\"true\\"\\r\\n     data-ip=\\"{$.server.REMOTE_ADDR}\\"\\r\\n     data-offers=\'{$offers}\'>\\r\\n<\\/div>\\r\\n<script src=\\"https:\\/\\/api.esplc.ru\\/widgets\\/block\\/app.js\\"><\\/script>\\r\\n<script>\\r\\n    document.addEventListener(\'DOMContentLoaded\', () => {\\r\\n        \\/\\/ \\u0430\\u043a\\u0442\\u0438\\u0432\\u0430\\u0446\\u0438\\u044f \\u0432\\u0438\\u0434\\u0436\\u0435\\u0442\\u0430 \\u043f\\u0440\\u0438 \\u043f\\u0435\\u0440\\u0435\\u0445\\u043e\\u0434\\u0435 \\u043d\\u0430 \\u0432\\u043a\\u043b\\u0430\\u0434\\u043a\\u0443 \\u00ab\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430\\u00bb\\r\\n        document.getElementById(\'pills-product-2-tab\').addEventListener(\'click\', event => {\\r\\n            document.getElementById(\'eShopLogisticWidgetBlock\').dispatchEvent(new CustomEvent(\'eShopLogisticWidgetBlock:loadApp\'))\\r\\n        })\\r\\n    })\\r\\n<\\/script>","file":"widget_block"}',
+        'guid' => 'b78d5224cf881b8f08d59f8a30e36b00',
+        'native_key' => 0,
+        'signature' => '3eab7730718b229f4d23576d320fcf5b',
+      ),
+      'f5e7102e40bd7251802ad190cd8fb614' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"tpl.eshoplogistic3.widgetModal","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"<button data-esl-widget data-title=\\"\\u0411\\u044b\\u0441\\u0442\\u0440\\u044b\\u0439 \\u0437\\u0430\\u043a\\u0430\\u0437 \\u0441 \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u043e\\u0439\\" class=\\"my-3 btn btn-primary\\">\\u0411\\u044b\\u0441\\u0442\\u0440\\u044b\\u0439 \\u0437\\u0430\\u043a\\u0430\\u0437 \\u0441 \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u043e\\u0439<\\/button>\\r\\n<div id=\\"eShopLogisticWidgetModal\\" {if $widget_controller?}data-controller=\\"{$widget_controller}\\"{\\/if}\\r\\n     data-key=\\"{$widget_key}\\"\\r\\n     data-lazy-load=\\"true\\"\\r\\n     data-ip=\\"{$.server.REMOTE_ADDR}\\"\\r\\n     data-offers=\'{$offers}\'>\\r\\n<\\/div>\\r\\n<script src=\\"https:\\/\\/api.esplc.ru\\/widgets\\/modal\\/app.js\\"><\\/script>","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/eshoplogistic3\\/elements\\/chunks\\/widget_modal.tpl","content":"<button data-esl-widget data-title=\\"\\u0411\\u044b\\u0441\\u0442\\u0440\\u044b\\u0439 \\u0437\\u0430\\u043a\\u0430\\u0437 \\u0441 \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u043e\\u0439\\" class=\\"my-3 btn btn-primary\\">\\u0411\\u044b\\u0441\\u0442\\u0440\\u044b\\u0439 \\u0437\\u0430\\u043a\\u0430\\u0437 \\u0441 \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u043e\\u0439<\\/button>\\r\\n<div id=\\"eShopLogisticWidgetModal\\" {if $widget_controller?}data-controller=\\"{$widget_controller}\\"{\\/if}\\r\\n     data-key=\\"{$widget_key}\\"\\r\\n     data-lazy-load=\\"true\\"\\r\\n     data-ip=\\"{$.server.REMOTE_ADDR}\\"\\r\\n     data-offers=\'{$offers}\'>\\r\\n<\\/div>\\r\\n<script src=\\"https:\\/\\/api.esplc.ru\\/widgets\\/modal\\/app.js\\"><\\/script>","file":"widget_modal"}',
+        'guid' => 'b82075a949123a60f0cecf944c59c87a',
+        'native_key' => 0,
+        'signature' => '5288d0aee2750b24da591838d843486b',
+      ),
+      '01ef854a84fc1bc076581b994bf8314f' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"tpl.eshoplogistic3.cart","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"<form class=\\"ms2_form\\" id=\\"msOrder\\" method=\\"post\\">\\r\\n    <div class=\\"row\\">\\r\\n        <div class=\\"col-9\\">\\r\\n\\r\\n            {* \\u043f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0442\\u0435\\u043b\\u044c *}\\r\\n            <div class=\\"row\\">\\r\\n                <div class=\\"col-12\\">\\r\\n                    <p class=\\"h5\\">{\'ms2_frontend_credentials\' | lexicon}:<\\/p>\\r\\n                    {foreach [\'email\',\'receiver\',\'phone\'] as $field}\\r\\n                        <div class=\\"form-floating d-inline-block\\">\\r\\n                            <input type=\\"text\\" id=\\"{$field}\\" placeholder=\\"{(\'ms2_frontend_\' ~ $field) | lexicon}\\"\\r\\n                                   name=\\"{$field}\\" value=\\"{$form[$field]}\\"\\r\\n                                   class=\\"form-control{($field in list $errors) ? \' error\' : \'\'}\\">\\r\\n                            <label for=\\"{$field}\\">\\r\\n                                {(\'ms2_frontend_\' ~ $field) | lexicon} <span class=\\"required-star\\">*<\\/span>\\r\\n                            <\\/label>\\r\\n                        <\\/div>\\r\\n                    {\\/foreach}\\r\\n\\r\\n                    {*<div class=\\"form-floating\\">\\r\\n                        <textarea name=\\"comment\\" id=\\"comment\\" placeholder=\\"{\'ms2_frontend_comment\' | lexicon}\\"\\r\\n                                  class=\\"form-control{(\'comment\' in list $errors) ? \' error\' : \'\'}\\">{$form.comment}<\\/textarea>\\r\\n                        <label for=\\"comment\\">\\r\\n                            {\'ms2_frontend_comment\' | lexicon} <span class=\\"required-star\\">*<\\/span>\\r\\n                        <\\/label>\\r\\n                    <\\/div>*}\\r\\n                <\\/div>\\r\\n            <\\/div>\\r\\n\\r\\n            <hr>\\r\\n\\r\\n            {* \\u0430\\u0434\\u0440\\u0435\\u0441 *}\\r\\n            <div class=\\"row\\">\\r\\n                <div class=\\"col-12\\">\\r\\n                    <p class=\\"h5\\">{\'ms2_frontend_address\' | lexicon}:<\\/p>\\r\\n                    {foreach [\'region\',\'city\', \'street\', \'building\', \'room\'] as $field}\\r\\n                        <div class=\\"form-floating d-inline-block\\">\\r\\n                            <input type=\\"text\\" id=\\"{$field}\\" placeholder=\\"{(\'ms2_frontend_\' ~ $field) | lexicon}\\"\\r\\n                                   name=\\"{$field}\\" value=\\"{$form[$field]}\\"\\r\\n                                   class=\\"form-control{($field in list $errors) ? \' error\' : \'\'}\\">\\r\\n                            <label for=\\"{$field}\\">\\r\\n                                {(\'ms2_frontend_\' ~ $field) | lexicon} <span class=\\"required-star\\">*<\\/span>\\r\\n                            <\\/label>\\r\\n                        <\\/div>\\r\\n                    {\\/foreach}\\r\\n\\r\\n                    {*<div class=\\"form-group row input-parent\\">\\r\\n                        <label class=\\"col-md-4 col-form-label\\" for=\\"text_address\\">\\r\\n                            {\'ms2_frontend_text_address\' | lexicon} <span class=\\"required-star\\">*<\\/span>\\r\\n                        <\\/label>\\r\\n                        <div class=\\"col-md-8\\">\\r\\n                                <textarea name=\\"text_address\\" id=\\"text_address\\" placeholder=\\"{\'ms2_frontend_text_address\' | lexicon}\\"\\r\\n                                          class=\\"form-control{(\'text_address\' in list $errors) ? \' error\' : \'\'}\\">{$form.text_address}<\\/textarea>\\r\\n                        <\\/div>\\r\\n                    <\\/div>*}\\r\\n                <\\/div>\\r\\n            <\\/div>\\r\\n\\r\\n            <hr>\\r\\n\\r\\n            {* \\u0441\\u043f\\u043e\\u0441\\u043e\\u0431\\u044b \\u043e\\u043f\\u043b\\u0430\\u0442\\u044b *}\\r\\n            <div class=\\"row\\">\\r\\n                <div class=\\"col-12\\" id=\\"payments\\">\\r\\n                    <p class=\\"h5\\">{\'ms2_frontend_payments\' | lexicon}:<\\/p>\\r\\n                    {foreach $payments as $payment index=$index}\\r\\n                        {var $checked = !($order.payment in keys $payments) && $index == 0 || $payment.id == $order.payment}\\r\\n                        <div class=\\"form-check form-check-inline\\">\\r\\n                            <input type=\\"radio\\" class=\\"form-check-input\\"  name=\\"payment\\" value=\\"{$payment.id}\\" id=\\"payment_{$payment.id}\\"{$checked ? \'checked\' : \'\'}>\\r\\n                            <label class=\\"form-check-label\\" for=\\"payment_{$payment.id}\\">{$payment.name}<\\/label>\\r\\n                            {*if $payment.logo?}\\r\\n                                <img src=\\"{$payment.logo}\\" alt=\\"{$payment.name}\\" title=\\"{$payment.name}\\" class=\\"mw-100\\"\\/>\\r\\n                            {else}\\r\\n                                {$payment.name}\\r\\n                            {\\/if}\\r\\n                            {if $payment.description?}\\r\\n                                <p class=\\"small\\">{$payment.description}<\\/p>\\r\\n                            {\\/if*}\\r\\n                        <\\/div>\\r\\n                    {\\/foreach}\\r\\n                <\\/div>\\r\\n            <\\/div>\\r\\n\\r\\n            <hr>\\r\\n\\r\\n            {* \\u0441\\u043f\\u043e\\u0441\\u043e\\u0431\\u044b \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438 *}\\r\\n            <div class=\\"row\\">\\r\\n                <div class=\\"col-12 mb-5\\" id=\\"deliveries\\">\\r\\n                    <p class=\\"h5\\">{\'ms2_frontend_deliveries\' | lexicon}:<\\/p>\\r\\n                    {foreach $deliveries as $delivery index=$index}\\r\\n                        {var $checked = !($order.delivery in keys $deliveries) && $index == 0 || $delivery.id == $order.delivery}\\r\\n                        <div class=\\"form-check form-check-inline\\">\\r\\n                            <input type=\\"radio\\" class=\\"form-check-input\\" name=\\"delivery\\" value=\\"{$delivery.id}\\" id=\\"delivery_{$delivery.id}\\"\\r\\n                                   data-payments=\\"{$delivery.payments | json_encode}\\"\\r\\n                                    {$checked ? \'checked\' : \'\'}>\\r\\n                            <label class=\\"form-check-label\\" for=\\"delivery_{$delivery.id}\\">{$delivery.name}<\\/label>\\r\\n                            {*if $delivery.logo?}\\r\\n                                        <img src=\\"{$delivery.logo}\\" alt=\\"{$delivery.name}\\" title=\\"{$delivery.name}\\"\\/>\\r\\n                                    {else}\\r\\n                                        {$delivery.name}\\r\\n                                    {\\/if}\\r\\n                                    {if $delivery.description?}\\r\\n                                        <p class=\\"small\\">\\r\\n                                            {$delivery.description}\\r\\n                                        <\\/p>\\r\\n                                    {\\/if*}\\r\\n                        <\\/div>\\r\\n                    {\\/foreach}\\r\\n                <\\/div>\\r\\n            <\\/div>\\r\\n\\r\\n            {\'!eshoplogistic3Order\' | snippet}\\r\\n\\r\\n        <\\/div>\\r\\n        <div class=\\"col-3\\">\\r\\n            <div class=\\"cart-data\\">\\r\\n                <p class=\\"h4\\">\\u041a\\u043e\\u0440\\u0437\\u0438\\u043d\\u0430<\\/p>\\r\\n                <p>\\u0421\\u0442\\u043e\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432: <span id=\\"ms2_order_cart_cost\\">{$order.cart_cost ?: 0}<\\/span> {\'ms2_frontend_currency\' | lexicon}<\\/p>\\r\\n                <p>\\u0421\\u0442\\u043e\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438: <span id=\\"ms2_order_delivery_cost\\">{$order.delivery_cost ?: 0}<\\/span> {\'ms2_frontend_currency\' | lexicon}<\\/p>\\r\\n\\r\\n                <div id=\\"eShopLogistic3Info\\"><\\/div>\\r\\n\\r\\n                <p class=\\"mt-3\\">\\u0418\\u0442\\u043e\\u0433\\u043e: <strong><span id=\\"ms2_order_cost\\">{$order.cost ?: 0}<\\/span> {\'ms2_frontend_currency\' | lexicon}<\\/strong><\\/p>\\r\\n                <hr>\\r\\n                <div class=\\"text-center\\">\\r\\n                    <button type=\\"submit\\" name=\\"ms2_action\\" value=\\"order\\/submit\\" class=\\"btn btn-lg btn-primary ml-md-2 ms2_link\\">\\r\\n                        \\u041e\\u0442\\u043f\\u0440\\u0430\\u0432\\u0438\\u0442\\u044c \\u0437\\u0430\\u043a\\u0430\\u0437\\r\\n                    <\\/button>\\r\\n                <\\/div>\\r\\n            <\\/div>\\r\\n        <\\/div>\\r\\n    <\\/div>\\r\\n<\\/form>","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/eshoplogistic3\\/elements\\/chunks\\/cart.tpl","content":"<form class=\\"ms2_form\\" id=\\"msOrder\\" method=\\"post\\">\\r\\n    <div class=\\"row\\">\\r\\n        <div class=\\"col-9\\">\\r\\n\\r\\n            {* \\u043f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0442\\u0435\\u043b\\u044c *}\\r\\n            <div class=\\"row\\">\\r\\n                <div class=\\"col-12\\">\\r\\n                    <p class=\\"h5\\">{\'ms2_frontend_credentials\' | lexicon}:<\\/p>\\r\\n                    {foreach [\'email\',\'receiver\',\'phone\'] as $field}\\r\\n                        <div class=\\"form-floating d-inline-block\\">\\r\\n                            <input type=\\"text\\" id=\\"{$field}\\" placeholder=\\"{(\'ms2_frontend_\' ~ $field) | lexicon}\\"\\r\\n                                   name=\\"{$field}\\" value=\\"{$form[$field]}\\"\\r\\n                                   class=\\"form-control{($field in list $errors) ? \' error\' : \'\'}\\">\\r\\n                            <label for=\\"{$field}\\">\\r\\n                                {(\'ms2_frontend_\' ~ $field) | lexicon} <span class=\\"required-star\\">*<\\/span>\\r\\n                            <\\/label>\\r\\n                        <\\/div>\\r\\n                    {\\/foreach}\\r\\n\\r\\n                    {*<div class=\\"form-floating\\">\\r\\n                        <textarea name=\\"comment\\" id=\\"comment\\" placeholder=\\"{\'ms2_frontend_comment\' | lexicon}\\"\\r\\n                                  class=\\"form-control{(\'comment\' in list $errors) ? \' error\' : \'\'}\\">{$form.comment}<\\/textarea>\\r\\n                        <label for=\\"comment\\">\\r\\n                            {\'ms2_frontend_comment\' | lexicon} <span class=\\"required-star\\">*<\\/span>\\r\\n                        <\\/label>\\r\\n                    <\\/div>*}\\r\\n                <\\/div>\\r\\n            <\\/div>\\r\\n\\r\\n            <hr>\\r\\n\\r\\n            {* \\u0430\\u0434\\u0440\\u0435\\u0441 *}\\r\\n            <div class=\\"row\\">\\r\\n                <div class=\\"col-12\\">\\r\\n                    <p class=\\"h5\\">{\'ms2_frontend_address\' | lexicon}:<\\/p>\\r\\n                    {foreach [\'region\',\'city\', \'street\', \'building\', \'room\'] as $field}\\r\\n                        <div class=\\"form-floating d-inline-block\\">\\r\\n                            <input type=\\"text\\" id=\\"{$field}\\" placeholder=\\"{(\'ms2_frontend_\' ~ $field) | lexicon}\\"\\r\\n                                   name=\\"{$field}\\" value=\\"{$form[$field]}\\"\\r\\n                                   class=\\"form-control{($field in list $errors) ? \' error\' : \'\'}\\">\\r\\n                            <label for=\\"{$field}\\">\\r\\n                                {(\'ms2_frontend_\' ~ $field) | lexicon} <span class=\\"required-star\\">*<\\/span>\\r\\n                            <\\/label>\\r\\n                        <\\/div>\\r\\n                    {\\/foreach}\\r\\n\\r\\n                    {*<div class=\\"form-group row input-parent\\">\\r\\n                        <label class=\\"col-md-4 col-form-label\\" for=\\"text_address\\">\\r\\n                            {\'ms2_frontend_text_address\' | lexicon} <span class=\\"required-star\\">*<\\/span>\\r\\n                        <\\/label>\\r\\n                        <div class=\\"col-md-8\\">\\r\\n                                <textarea name=\\"text_address\\" id=\\"text_address\\" placeholder=\\"{\'ms2_frontend_text_address\' | lexicon}\\"\\r\\n                                          class=\\"form-control{(\'text_address\' in list $errors) ? \' error\' : \'\'}\\">{$form.text_address}<\\/textarea>\\r\\n                        <\\/div>\\r\\n                    <\\/div>*}\\r\\n                <\\/div>\\r\\n            <\\/div>\\r\\n\\r\\n            <hr>\\r\\n\\r\\n            {* \\u0441\\u043f\\u043e\\u0441\\u043e\\u0431\\u044b \\u043e\\u043f\\u043b\\u0430\\u0442\\u044b *}\\r\\n            <div class=\\"row\\">\\r\\n                <div class=\\"col-12\\" id=\\"payments\\">\\r\\n                    <p class=\\"h5\\">{\'ms2_frontend_payments\' | lexicon}:<\\/p>\\r\\n                    {foreach $payments as $payment index=$index}\\r\\n                        {var $checked = !($order.payment in keys $payments) && $index == 0 || $payment.id == $order.payment}\\r\\n                        <div class=\\"form-check form-check-inline\\">\\r\\n                            <input type=\\"radio\\" class=\\"form-check-input\\"  name=\\"payment\\" value=\\"{$payment.id}\\" id=\\"payment_{$payment.id}\\"{$checked ? \'checked\' : \'\'}>\\r\\n                            <label class=\\"form-check-label\\" for=\\"payment_{$payment.id}\\">{$payment.name}<\\/label>\\r\\n                            {*if $payment.logo?}\\r\\n                                <img src=\\"{$payment.logo}\\" alt=\\"{$payment.name}\\" title=\\"{$payment.name}\\" class=\\"mw-100\\"\\/>\\r\\n                            {else}\\r\\n                                {$payment.name}\\r\\n                            {\\/if}\\r\\n                            {if $payment.description?}\\r\\n                                <p class=\\"small\\">{$payment.description}<\\/p>\\r\\n                            {\\/if*}\\r\\n                        <\\/div>\\r\\n                    {\\/foreach}\\r\\n                <\\/div>\\r\\n            <\\/div>\\r\\n\\r\\n            <hr>\\r\\n\\r\\n            {* \\u0441\\u043f\\u043e\\u0441\\u043e\\u0431\\u044b \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438 *}\\r\\n            <div class=\\"row\\">\\r\\n                <div class=\\"col-12 mb-5\\" id=\\"deliveries\\">\\r\\n                    <p class=\\"h5\\">{\'ms2_frontend_deliveries\' | lexicon}:<\\/p>\\r\\n                    {foreach $deliveries as $delivery index=$index}\\r\\n                        {var $checked = !($order.delivery in keys $deliveries) && $index == 0 || $delivery.id == $order.delivery}\\r\\n                        <div class=\\"form-check form-check-inline\\">\\r\\n                            <input type=\\"radio\\" class=\\"form-check-input\\" name=\\"delivery\\" value=\\"{$delivery.id}\\" id=\\"delivery_{$delivery.id}\\"\\r\\n                                   data-payments=\\"{$delivery.payments | json_encode}\\"\\r\\n                                    {$checked ? \'checked\' : \'\'}>\\r\\n                            <label class=\\"form-check-label\\" for=\\"delivery_{$delivery.id}\\">{$delivery.name}<\\/label>\\r\\n                            {*if $delivery.logo?}\\r\\n                                        <img src=\\"{$delivery.logo}\\" alt=\\"{$delivery.name}\\" title=\\"{$delivery.name}\\"\\/>\\r\\n                                    {else}\\r\\n                                        {$delivery.name}\\r\\n                                    {\\/if}\\r\\n                                    {if $delivery.description?}\\r\\n                                        <p class=\\"small\\">\\r\\n                                            {$delivery.description}\\r\\n                                        <\\/p>\\r\\n                                    {\\/if*}\\r\\n                        <\\/div>\\r\\n                    {\\/foreach}\\r\\n                <\\/div>\\r\\n            <\\/div>\\r\\n\\r\\n            {\'!eshoplogistic3Order\' | snippet}\\r\\n\\r\\n        <\\/div>\\r\\n        <div class=\\"col-3\\">\\r\\n            <div class=\\"cart-data\\">\\r\\n                <p class=\\"h4\\">\\u041a\\u043e\\u0440\\u0437\\u0438\\u043d\\u0430<\\/p>\\r\\n                <p>\\u0421\\u0442\\u043e\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432: <span id=\\"ms2_order_cart_cost\\">{$order.cart_cost ?: 0}<\\/span> {\'ms2_frontend_currency\' | lexicon}<\\/p>\\r\\n                <p>\\u0421\\u0442\\u043e\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438: <span id=\\"ms2_order_delivery_cost\\">{$order.delivery_cost ?: 0}<\\/span> {\'ms2_frontend_currency\' | lexicon}<\\/p>\\r\\n\\r\\n                <div id=\\"eShopLogistic3Info\\"><\\/div>\\r\\n\\r\\n                <p class=\\"mt-3\\">\\u0418\\u0442\\u043e\\u0433\\u043e: <strong><span id=\\"ms2_order_cost\\">{$order.cost ?: 0}<\\/span> {\'ms2_frontend_currency\' | lexicon}<\\/strong><\\/p>\\r\\n                <hr>\\r\\n                <div class=\\"text-center\\">\\r\\n                    <button type=\\"submit\\" name=\\"ms2_action\\" value=\\"order\\/submit\\" class=\\"btn btn-lg btn-primary ml-md-2 ms2_link\\">\\r\\n                        \\u041e\\u0442\\u043f\\u0440\\u0430\\u0432\\u0438\\u0442\\u044c \\u0437\\u0430\\u043a\\u0430\\u0437\\r\\n                    <\\/button>\\r\\n                <\\/div>\\r\\n            <\\/div>\\r\\n        <\\/div>\\r\\n    <\\/div>\\r\\n<\\/form>","file":"cart"}',
+        'guid' => '93c1ebb16165522261e3c1120ac2bb93',
+        'native_key' => 0,
+        'signature' => 'aaae30ce606b6924086b9c4c7b1b394b',
+      ),
+      '5e34fb2ea0c7ec63ff60a16a97d2f2b3' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"tpl.eshoplogistic3.orderInfo","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"{if $data.price.value!}\\r\\n    {*<p class=\\"eShopLogistic-price\\">\\u0421\\u0442\\u043e\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438: <span>{$data.price.value} {$data.price.unit}<\\/span><\\/p>*}\\r\\n    <p class=\\"eShopLogistic-time\\">\\u0421\\u0440\\u043e\\u043a \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438: <span>{$data.time.text}<\\/span><\\/p>\\r\\n    <p class=\\"eShopLogistic-service\\">\\u0422\\u0440\\u0430\\u043d\\u0441\\u043f\\u043e\\u0440\\u0442\\u043d\\u0430\\u044f \\u043a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u044f: <span>{$data.service.name}<\\/span><\\/p>\\r\\n    {set $type = ($data.type == \'terminal\') ? \'\\u0434\\u043e \\u043f\\u0443\\u043d\\u043a\\u0442\\u0430 \\u0441\\u0430\\u043c\\u043e\\u0432\\u044b\\u0432\\u043e\\u0437\\u0430\' : \'\\u043a\\u0443\\u0440\\u044c\\u0435\\u0440\'}\\r\\n    <p class=\\"eShopLogistic-type\\">\\u0422\\u0438\\u043f \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438: <span>{$type}<\\/span><\\/p>\\r\\n    {if $data.terminal.address?}<p class=\\"eShopLogistic-terminal\\">\\u041f\\u0443\\u043d\\u043a\\u0442 \\u0441\\u0430\\u043c\\u043e\\u0432\\u044b\\u0432\\u043e\\u0437\\u0430: <span>{$data.terminal.address}<\\/span><\\/p>{\\/if}\\r\\n    {if $data.comment?}<p class=\\"eShopLogistic-comment\\">\\u041a\\u043e\\u043c\\u043c\\u0435\\u043d\\u0442\\u0430\\u0440\\u0438\\u0439: <span>{$data.comment}<\\/span><\\/p>{\\/if}\\r\\n{\\/if}","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/eshoplogistic3\\/elements\\/chunks\\/info.tpl","content":"{if $data.price.value!}\\r\\n    {*<p class=\\"eShopLogistic-price\\">\\u0421\\u0442\\u043e\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438: <span>{$data.price.value} {$data.price.unit}<\\/span><\\/p>*}\\r\\n    <p class=\\"eShopLogistic-time\\">\\u0421\\u0440\\u043e\\u043a \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438: <span>{$data.time.text}<\\/span><\\/p>\\r\\n    <p class=\\"eShopLogistic-service\\">\\u0422\\u0440\\u0430\\u043d\\u0441\\u043f\\u043e\\u0440\\u0442\\u043d\\u0430\\u044f \\u043a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u044f: <span>{$data.service.name}<\\/span><\\/p>\\r\\n    {set $type = ($data.type == \'terminal\') ? \'\\u0434\\u043e \\u043f\\u0443\\u043d\\u043a\\u0442\\u0430 \\u0441\\u0430\\u043c\\u043e\\u0432\\u044b\\u0432\\u043e\\u0437\\u0430\' : \'\\u043a\\u0443\\u0440\\u044c\\u0435\\u0440\'}\\r\\n    <p class=\\"eShopLogistic-type\\">\\u0422\\u0438\\u043f \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438: <span>{$type}<\\/span><\\/p>\\r\\n    {if $data.terminal.address?}<p class=\\"eShopLogistic-terminal\\">\\u041f\\u0443\\u043d\\u043a\\u0442 \\u0441\\u0430\\u043c\\u043e\\u0432\\u044b\\u0432\\u043e\\u0437\\u0430: <span>{$data.terminal.address}<\\/span><\\/p>{\\/if}\\r\\n    {if $data.comment?}<p class=\\"eShopLogistic-comment\\">\\u041a\\u043e\\u043c\\u043c\\u0435\\u043d\\u0442\\u0430\\u0440\\u0438\\u0439: <span>{$data.comment}<\\/span><\\/p>{\\/if}\\r\\n{\\/if}","file":"info"}',
+        'guid' => 'af60f3f747dffebb07c96d757ba0b95b',
+        'native_key' => 0,
+        'signature' => '0904b317680d3b4c36d54afc4707cd65',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      '9e7bdbf622f0a396a752d4a868ee644c' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"eshoplogistic3Order","description":"\\u0412\\u043a\\u043b\\u044e\\u0447\\u0430\\u0435\\u0442 \\u0432\\u0438\\u0434\\u0436\\u0435\\u0442 \\u043d\\u0430 \\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0435 \\u043e\\u0444\\u043e\\u0440\\u043c\\u043b\\u0435\\u043d\\u0438\\u044f \\u0437\\u0430\\u043a\\u0430\\u0437\\u0430","editor_type":0,"category":0,"cache_type":0,"snippet":"if (!$eshoplogistic3 = $modx->getService(\'eshoplogistic3\', \'eshoplogistic3\', $modx->getOption(\'eshoplogistic3_core_path\', null,\\n        $modx->getOption(\'core_path\') . \'components\\/eshoplogistic3\\/\') . \'model\\/eshoplogistic3\\/\', $scriptProperties)\\n) {\\n    return \'Could not load eshoplogistic3 class!\';\\n}\\n\\n$pdo = $modx->getService(\'pdoTools\');\\n\\n$eshoplogistic3->initialize(\'web\');\\n\\n\\n$tpl = $modx->getOption(\'tpl\', $scriptProperties, \'tpl.eshoplogistic3.order\');\\n$fias = $modx->getOption(\'fias\', $scriptProperties, \'\');\\n$city = $modx->getOption(\'city\', $scriptProperties, \'\');\\n$region = $modx->getOption(\'region\', $scriptProperties, \'\');\\n\\n$data = $eshoplogistic3->initCheckout($fias, $city, $region);\\n\\nreturn $pdo->getChunk($tpl, $data);","locked":0,"properties":"a:3:{s:3:\\"tpl\\";a:7:{s:4:\\"name\\";s:3:\\"tpl\\";s:4:\\"desc\\";s:23:\\"eshoplogistic3_prop_tpl\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:24:\\"tpl.eshoplogistic3.order\\";s:7:\\"lexicon\\";s:25:\\"eshoplogistic3:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:4:\\"city\\";a:7:{s:4:\\"name\\";s:4:\\"city\\";s:4:\\"desc\\";s:24:\\"eshoplogistic3_prop_city\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:25:\\"eshoplogistic3:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:4:\\"fias\\";a:7:{s:4:\\"name\\";s:4:\\"fias\\";s:4:\\"desc\\";s:24:\\"eshoplogistic3_prop_fias\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:25:\\"eshoplogistic3:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"core\\/components\\/eshoplogistic3\\/elements\\/snippets\\/order.php","content":"if (!$eshoplogistic3 = $modx->getService(\'eshoplogistic3\', \'eshoplogistic3\', $modx->getOption(\'eshoplogistic3_core_path\', null,\\n        $modx->getOption(\'core_path\') . \'components\\/eshoplogistic3\\/\') . \'model\\/eshoplogistic3\\/\', $scriptProperties)\\n) {\\n    return \'Could not load eshoplogistic3 class!\';\\n}\\n\\n$pdo = $modx->getService(\'pdoTools\');\\n\\n$eshoplogistic3->initialize(\'web\');\\n\\n\\n$tpl = $modx->getOption(\'tpl\', $scriptProperties, \'tpl.eshoplogistic3.order\');\\n$fias = $modx->getOption(\'fias\', $scriptProperties, \'\');\\n$city = $modx->getOption(\'city\', $scriptProperties, \'\');\\n$region = $modx->getOption(\'region\', $scriptProperties, \'\');\\n\\n$data = $eshoplogistic3->initCheckout($fias, $city, $region);\\n\\nreturn $pdo->getChunk($tpl, $data);","file":"order"}',
+        'guid' => '8b8daf411a481f58dc92cef38931f14f',
+        'native_key' => 0,
+        'signature' => '86a6335984ca0f65fd51488dd7867640',
+      ),
+      '2177ab061eb11b98e98a6da2ef0ef8bb' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"eshoplogistic3Widget","description":"\\u0412\\u043a\\u043b\\u044e\\u0447\\u0430\\u0435\\u0442 \\u0432\\u0438\\u0434\\u0436\\u0435\\u0442 \\u043d\\u0430 \\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430","editor_type":0,"category":0,"cache_type":0,"snippet":"if (!$eshoplogistic3 = $modx->getService(\'eshoplogistic3\', \'eshoplogistic3\', $modx->getOption(\'eshoplogistic3_core_path\', null,\\n        $modx->getOption(\'core_path\') . \'components\\/eshoplogistic3\\/\') . \'model\\/eshoplogistic3\\/\', $scriptProperties)\\n) {\\n    return \'Could not load eshoplogistic3 class!\';\\n}\\n\\n$pdo = $modx->getService(\'pdoTools\');\\n\\n$eshoplogistic3->initialize(\'web\');\\n\\n$tpl = $modx->getOption(\'tpl\', $scriptProperties, \'tpl.eshoplogistic3.widgetBlock\');\\n$widget_key = $modx->getOption(\'widget_key\', $scriptProperties, \'\');\\n$product_id = $modx->getOption(\'product_id\', $scriptProperties,  $modx->resource->get(\'id\'));\\n$options = $modx->getOption(\'options\', $scriptProperties,  \'\');\\n\\n$data = array_merge(\\n    $eshoplogistic3->initWidget($product_id, array_map(\'trim\', explode(\',\', $options))),\\n    [\'widget_key\' => $widget_key]\\n);\\n\\nreturn $pdo->getChunk($tpl, $data);","locked":0,"properties":"a:4:{s:3:\\"tpl\\";a:7:{s:4:\\"name\\";s:3:\\"tpl\\";s:4:\\"desc\\";s:23:\\"eshoplogistic3_prop_tpl\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:30:\\"tpl.eshoplogistic3.widgetBlock\\";s:7:\\"lexicon\\";s:25:\\"eshoplogistic3:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:10:\\"widget_key\\";a:7:{s:4:\\"name\\";s:10:\\"widget_key\\";s:4:\\"desc\\";s:30:\\"eshoplogistic3_prop_widget_key\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:25:\\"eshoplogistic3:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:10:\\"product_id\\";a:7:{s:4:\\"name\\";s:10:\\"product_id\\";s:4:\\"desc\\";s:30:\\"eshoplogistic3_prop_product_id\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:25:\\"eshoplogistic3:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:7:\\"options\\";a:7:{s:4:\\"name\\";s:7:\\"options\\";s:4:\\"desc\\";s:27:\\"eshoplogistic3_prop_options\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:25:\\"eshoplogistic3:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"core\\/components\\/eshoplogistic3\\/elements\\/snippets\\/widget.php","content":"if (!$eshoplogistic3 = $modx->getService(\'eshoplogistic3\', \'eshoplogistic3\', $modx->getOption(\'eshoplogistic3_core_path\', null,\\n        $modx->getOption(\'core_path\') . \'components\\/eshoplogistic3\\/\') . \'model\\/eshoplogistic3\\/\', $scriptProperties)\\n) {\\n    return \'Could not load eshoplogistic3 class!\';\\n}\\n\\n$pdo = $modx->getService(\'pdoTools\');\\n\\n$eshoplogistic3->initialize(\'web\');\\n\\n$tpl = $modx->getOption(\'tpl\', $scriptProperties, \'tpl.eshoplogistic3.widgetBlock\');\\n$widget_key = $modx->getOption(\'widget_key\', $scriptProperties, \'\');\\n$product_id = $modx->getOption(\'product_id\', $scriptProperties,  $modx->resource->get(\'id\'));\\n$options = $modx->getOption(\'options\', $scriptProperties,  \'\');\\n\\n$data = array_merge(\\n    $eshoplogistic3->initWidget($product_id, array_map(\'trim\', explode(\',\', $options))),\\n    [\'widget_key\' => $widget_key]\\n);\\n\\nreturn $pdo->getChunk($tpl, $data);","file":"widget"}',
+        'guid' => 'dbe8bbdc5a347e7aceb1c343ae8f1abd',
+        'native_key' => 0,
+        'signature' => '07c09cdd2a2b5055078bd1b1cfd0b2e1',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      '91ba9ba92ca1311fa9dfcddef551977a' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'e7cb246e3ac63415975b63d946263335' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"msOnCreateOrder","priority":0,"propertyset":0}',
+              'guid' => '507b1ef9165cd099f3bb84ad7001d403',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'msOnCreateOrder',
+              ),
+              'signature' => '57266b1ca06b4059a69e69a33ec352b1',
+            ),
+            '3e25d82c4e0ded4164cc3038dccb765d' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"msOnSubmitOrder","priority":0,"propertyset":0}',
+              'guid' => 'ed09964694398f19b8ad3bda217d3b3e',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'msOnSubmitOrder',
+              ),
+              'signature' => '2f7f583128f6764678b6406f65a936f9',
+            ),
+            'bad26017050e775387886d56e1461197' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"eshoplogistic3OnGetOffers","priority":0,"propertyset":0}',
+              'guid' => 'a52852a34b61ac5f07dc01c8762044b9',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'eshoplogistic3OnGetOffers',
+              ),
+              'signature' => '0aedea5e3fca89bdbe7124dcb756c184',
+            ),
+            '6b321d8718363245e80aabf514ecadcc' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"eshoplogistic3BeforeUnloadOrder","priority":0,"propertyset":0}',
+              'guid' => 'ae1af3dd59672f36d13ecdedcedcb6fd',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'eshoplogistic3BeforeUnloadOrder',
+              ),
+              'signature' => '61c096ac7578db945f983b5d5e8c6372',
+            ),
+            'ba5683c038303ba2c01e878fb3611c3a' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"eshoplogistic3OnGetOrderStatus","priority":0,"propertyset":0}',
+              'guid' => '16b8335ba8e024c9d2b0ecd25ae684b5',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'eshoplogistic3OnGetOrderStatus',
+              ),
+              'signature' => '24548767d986e5b0d9d9f06f49225af0',
+            ),
+            '29d13636c8aefca78a622425b87f7340' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"eshoplogistic3UnloadOrder","priority":0,"propertyset":0}',
+              'guid' => '8e140a4d93dad331e1c273d353784ab1',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'eshoplogistic3UnloadOrder',
+              ),
+              'signature' => 'e75482769dac75ac9224bd3e357585c8',
+            ),
+            '450ee31ca856a4ad88ef462b737f0c93' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"msOnManagerCustomCssJs","priority":0,"propertyset":0}',
+              'guid' => '8fefdb29378141291b5a3c57536332ac',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'msOnManagerCustomCssJs',
+              ),
+              'signature' => 'fe758c17497bb29b9907eaee47c1e9ee',
+            ),
+            'f4af87506e96e263935210f3916a8ece' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageBeforeRender","priority":0,"propertyset":0}',
+              'guid' => 'd8ccf1528f47651393cb402ce9939319',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageBeforeRender',
+              ),
+              'signature' => '8a6273d830f2b5344161bb7609ad3b33',
+            ),
+            '48a1955879b23d4eef6ba2b23b1cb84c' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"msOnChangeOrderStatus","priority":0,"propertyset":0}',
+              'guid' => '4391184a29f0b57dec255ba4fc57d080',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'msOnChangeOrderStatus',
+              ),
+              'signature' => '054e62f72eea7766f8f886ebd6ee7dbf',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => true,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"eshoplogistic3","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"$eshoplogistic3 = $modx->getService(\'eshoplogistic3\', \'eshoplogistic3\', $modx->getOption(\'core_path\') . \'components\\/eshoplogistic3\\/model\\/eshoplogistic3\\/\', $scriptProperties ?? []);\\n\\nswitch ($modx->event->name) {\\n\\n    case \'msOnManagerCustomCssJs\':\\n        if (!empty($scriptProperties[\'page\'])) {\\n            if ($scriptProperties[\'page\'] == \'orders\') {\\n                $modx->controller->addLexiconTopic(\'eshoplogistic3:default\');\\n                $modx->controller->addCss($eshoplogistic3->config[\'cssUrl\'] . \'mgr\\/main.css\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/eshoplogistic3.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/misc\\/utils.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/misc\\/combo.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/upload-common.tab.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/upload-receiver.tab.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/upload-places.window.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/upload-places.tab.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/upload-additional.window.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/upload-additional.tab.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/unload.window.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/delivery.window.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/delivery.panel.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/inject\\/order.tab.js\');\\n                $modx->regClientStartupScript(\'<script>eshoplogistic3.config.connector_url = \\"\' . $eshoplogistic3->config[\'connectorUrl\'] . \'\\";<\\/script>\');\\n                #$modx->controller->addHtml(\'<div id=\\"eShopLogisticWidgetBlock\\" data-order=\\"false\\" data-lazy-load=\\"true\\"><\\/div>\');\\n                #$modx->regClientStartupScript(\'https:\\/\\/api.esplc.ru\\/widgets\\/block\\/app.js\');\\n                $modx->controller->addHtml(\'<div id=\\"eShopLogisticWidgetModal\\" data-order=\\"false\\" data-lazy-load=\\"true\\"><\\/div>\');\\n                $modx->regClientStartupScript(\'https:\\/\\/api.esplc.ru\\/widgets\\/modal\\/app.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/widget-run.js\');\\n            }\\n        }\\n        break;\\n\\n\\n    case \'msOnCreateOrder\':\\n        if(empty($esl_mode_widget)) {\\n            $order_data = $order->get();\\n            if(!empty($order_data[\'eshoplogistic3_data\'])) {\\n                if($esl_data = json_decode($order_data[\'eshoplogistic3_data\'], 1)) {\\n                    $eshoplogistic3->setEslData($msOrder, $esl_data);\\n                }\\n            }\\n        }\\n        break;\\n\\n\\n    case \'msOnChangeOrderStatus\':\\n        $eshoplogistic3->orderUnload($order, $status);\\n        break;\\n\\n\\n    # \\u0430\\u0432\\u0442\\u043e\\u0440 Ivan Klimchuk\\n    case \'OnManagerPageBeforeRender\':\\n        if ($_GET[\'a\'] !== \'system\\/settings\') {\\n            return;\\n        }\\n        $pathPrefix = MODX_ASSETS_URL . \'components\\/eshoplogistic3\\/js\\/mgr\\/misc\\/\';\\n        $modx->controller->addLastJavascript($pathPrefix . \'weight.combo.js\');\\n        $modx->controller->addLastJavascript($pathPrefix . \'ss-xtypes-loader.js\');\\n        break;\\n\\n\\n    # \\u0443\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u043e\\u0431\\u044f\\u0437\\u0430\\u0442\\u0435\\u043b\\u044c\\u043d\\u044b\\u0445 \\u043f\\u043e\\u043b\\u0435\\u0439 \\u0434\\u043b\\u044f \\u043a\\u0443\\u0440\\u044c\\u0435\\u0440\\u0430\\n    case \'msOnSubmitOrder\':\\n        $order_data = $order->get();\\n        if(!empty($order_data[\'eshoplogistic3_data\'])) {\\n            if($eshoplogistic3_data = json_decode($order_data[\'eshoplogistic3_data\'], 1)) {\\n                if(is_array($eshoplogistic3_data)) {\\n\\n                    if(isset($eshoplogistic3_data[\'type\'])) {\\n                        if($eshoplogistic3_data[\'type\'] == \'door\') {\\n                            if(empty($data[\'street\']) || empty($data[\'building\']) || empty($data[\'room\'])) {\\n                                $modx->event->output(strip_tags($modx->lexicon(\'eshoplogistic3_need_address_message\')));\\n                            }\\n                        }\\n                        else {\\n                            if(empty($eshoplogistic3_data[\'terminal\'][\'code\'])) {\\n                                $modx->event->output(strip_tags($modx->lexicon(\'eshoplogistic3_need_pvz_message\')));\\n                            }\\n                        }\\n                    }\\n                }\\n            }\\n        }\\n        break;\\n\\n    \\/*\\n    # \\u041f\\u043e\\u043b\\u0443\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0434\\u0430\\u043d\\u043d\\u044b\\u0445 \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432. \\u041c\\u043e\\u0436\\u043d\\u043e \\u0434\\u043e\\u0431\\u0430\\u0432\\u0438\\u0442\\u044c \\u0433\\u0430\\u0431\\u0430\\u0440\\u0438\\u0442\\u044b, \\u0438\\u0437\\u043c\\u0435\\u043d\\u0438\\u0442\\u044c \\u0432\\u0435\\u0441 \\u0438 \\u0442.\\u0434.\\n    case \'eshoplogistic3OnGetOffers\':\\n        foreach($offers as $k => $offer) {\\n            # \\u041d\\u0430\\u043f\\u0440\\u0438\\u043c\\u0435\\u0440, \\u0432 \\u043f\\u043e\\u043b\\u0435 weight_packing msProductData \\u0443 \\u043d\\u0430\\u0441 \\u0445\\u0440\\u0430\\u043d\\u044f\\u0442\\u0441\\u044f \\u043f\\u0430\\u0440\\u0430\\u043c\\u0435\\u0442\\u0440\\u044b \\u0432\\u0435\\u0441\\u0430 \\u0443\\u043f\\u0430\\u043a\\u043e\\u0432\\u043a\\u0438: \\u0432\\u043e\\u0437\\u044c\\u043c\\u0451\\u043c \\u0435\\u0451 \\u0432\\u0435\\u0441 \\u0432\\u043c\\u0435\\u0441\\u0442\\u043e \\u0448\\u0442\\u0430\\u0442\\u043d\\u043e\\u0433\\u043e \\u043f\\u043e\\u043b\\u044f weight\\n            if($productData = $modx->getObject(\'msProductData\', $offer[\'article\'])) {\\n                $offers[$k][\'weight\'] = (int)$productData->get(\'weight_packing\') ?? 5;\\n            }\\n            # \\u041d\\u0430\\u043f\\u0440\\u0438\\u043c\\u0435\\u0440, \\u0432 \\u043f\\u043e\\u043b\\u0435 dimensions msProductData \\u0443 \\u043d\\u0430\\u0441 \\u0445\\u0440\\u0430\\u043d\\u044f\\u0442\\u0441\\u044f \\u0433\\u0430\\u0431\\u0430\\u0440\\u0438\\u0442\\u044b \\u0442\\u043e\\u0432\\u0430\\u0440, \\u0444\\u043e\\u0440\\u043c\\u0430\\u0442 \\u0414*\\u0428*\\u0412 (25*15*10), \\u0432 \\u0441\\u0430\\u043d\\u0442\\u0438\\u043c\\u0435\\u0442\\u0440\\u0430\\u0445\\n            if($productData = $modx->getObject(\'msProductData\', $offer[\'article\'])) {\\n                $offers[$k][\'dimensions\'] = $productData->get(\'dimensions\');\\n            }\\n        }\\n        $modx->event->output([\'offers\' => $offers]);\\n        break;\\n    *\\/\\n\\n\\n\\n    \\/*\\n    # \\u0441\\u0440\\u0430\\u0431\\u0430\\u0442\\u044b\\u0432\\u0430\\u0435\\u0442 \\u043f\\u0435\\u0440\\u0435\\u0434 \\u0432\\u044b\\u0433\\u0440\\u0443\\u0437\\u043a\\u043e\\u0439 \\u0437\\u0430\\u043a\\u0430\\u0437\\u0430 \\u0432 \\u043a\\u0430\\u0431\\u0438\\u043d\\u0435\\u0442 \\u0442\\u0440\\u0430\\u043d\\u0441\\u043f\\u043e\\u0440\\u0442\\u043d\\u043e\\u0439 \\u043a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u0438, \\u043c\\u043e\\u0436\\u043d\\u043e \\u0438\\u0437\\u043c\\u0435\\u043d\\u0438\\u0442\\u044c \\u0434\\u0430\\u043d\\u043d\\u044b\\u0435 \\u0437\\u0430\\u043a\\u0430\\u0437\\u0430\\n    case \'eshoplogistic3BeforeUnloadOrder\':\\n        $modx->log(1, print_r($query_data, 1));\\n        $query_data[\'sender\'][\'company\'] = \'\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435 \\u043a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u0438\';\\n        $modx->event->output([\'query_data\' => $query_data]);\\n        break;\\n    *\\/\\n\\n\\n\\n    \\/*\\n    # \\u0441\\u0440\\u0430\\u0431\\u0430\\u0442\\u044b\\u0432\\u0430\\u0435\\u0442 \\u043f\\u043e\\u0441\\u043b\\u0435 \\u0432\\u044b\\u0433\\u0440\\u0443\\u0437\\u043a\\u0438 \\u0437\\u0430\\u043a\\u0430\\u0437\\u0430 \\u0432 \\u043a\\u0430\\u0431\\u0438\\u043d\\u0435\\u0442 \\u0442\\u0440\\u0430\\u043d\\u0441\\u043f\\u043e\\u0440\\u0442\\u043d\\u043e\\u0439 \\u043a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u0438\\n    case \'eshoplogistic3UnloadOrder\':\\n        $modx->log(1, print_r($query_data, 1));\\n        $modx->log(1, print_r($response, 1));\\n        break;\\n    *\\/\\n\\n\\n\\n    \\/*\\n    # \\u0412\\u044b\\u043f\\u043e\\u043b\\u043d\\u044f\\u0435\\u0442\\u0441\\u044f \\u043f\\u043e\\u0441\\u043b\\u0435 \\u043e\\u0431\\u043d\\u043e\\u0432\\u043b\\u0435\\u043d\\u0438\\u044f \\u0441\\u0442\\u0430\\u0442\\u0443\\u0441\\u0430 \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438 \\u0432\\u044b\\u0433\\u0440\\u0436\\u0435\\u043d\\u043d\\u043e\\u0433\\u043e \\u0437\\u0430\\u043a\\u0430\\u0437\\u0430\\n    case \'eshoplogistic3OnGetOrderStatus\':\\n        #$modx->log(1, print_r($response, 1));\\n        # \\u0432 \\u0437\\u0430\\u0432\\u0438\\u0441\\u0438\\u043c\\u043e\\u0441\\u0442\\u0438 \\u043e\\u0442 \\u043e\\u0442\\u0432\\u0435\\u0442\\u0430 \\u043c\\u043e\\u0436\\u043d\\u043e \\u0447\\u0442\\u043e-\\u0442\\u043e \\u0434\\u0435\\u043b\\u0430\\u0442\\u044c; \\u043d\\u0430\\u043f\\u0440\\u0438\\u043c\\u0435\\u0440 \\u0438\\u0437\\u043c\\u0435\\u043d\\u0438\\u0442\\u044c \\u0441\\u0442\\u0430\\u0442\\u0443\\u0441 \\u0437\\u0430\\u043a\\u0430\\u0437\\u0430:\\n        if(isset($status[\'new\'])) {\\n            if($status[\'new\'] == \'taken\') {\\n                $miniShop2 = $this->modx->getService(\'miniShop2\');\\n                $miniShop2->changeOrderStatus($order->id, 5);\\n            }\\n        }\\n        break;\\n    *\\/\\n\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/eshoplogistic3\\/elements\\/plugins\\/eshoplogistic3.php","content":"$eshoplogistic3 = $modx->getService(\'eshoplogistic3\', \'eshoplogistic3\', $modx->getOption(\'core_path\') . \'components\\/eshoplogistic3\\/model\\/eshoplogistic3\\/\', $scriptProperties ?? []);\\n\\nswitch ($modx->event->name) {\\n\\n    case \'msOnManagerCustomCssJs\':\\n        if (!empty($scriptProperties[\'page\'])) {\\n            if ($scriptProperties[\'page\'] == \'orders\') {\\n                $modx->controller->addLexiconTopic(\'eshoplogistic3:default\');\\n                $modx->controller->addCss($eshoplogistic3->config[\'cssUrl\'] . \'mgr\\/main.css\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/eshoplogistic3.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/misc\\/utils.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/misc\\/combo.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/upload-common.tab.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/upload-receiver.tab.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/upload-places.window.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/upload-places.tab.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/upload-additional.window.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/upload-additional.tab.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/unload.window.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/delivery.window.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/delivery.panel.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/inject\\/order.tab.js\');\\n                $modx->regClientStartupScript(\'<script>eshoplogistic3.config.connector_url = \\"\' . $eshoplogistic3->config[\'connectorUrl\'] . \'\\";<\\/script>\');\\n                #$modx->controller->addHtml(\'<div id=\\"eShopLogisticWidgetBlock\\" data-order=\\"false\\" data-lazy-load=\\"true\\"><\\/div>\');\\n                #$modx->regClientStartupScript(\'https:\\/\\/api.esplc.ru\\/widgets\\/block\\/app.js\');\\n                $modx->controller->addHtml(\'<div id=\\"eShopLogisticWidgetModal\\" data-order=\\"false\\" data-lazy-load=\\"true\\"><\\/div>\');\\n                $modx->regClientStartupScript(\'https:\\/\\/api.esplc.ru\\/widgets\\/modal\\/app.js\');\\n                $modx->regClientStartupScript($eshoplogistic3->config[\'jsUrl\'] . \'mgr\\/widgets\\/widget-run.js\');\\n            }\\n        }\\n        break;\\n\\n\\n    case \'msOnCreateOrder\':\\n        if(empty($esl_mode_widget)) {\\n            $order_data = $order->get();\\n            if(!empty($order_data[\'eshoplogistic3_data\'])) {\\n                if($esl_data = json_decode($order_data[\'eshoplogistic3_data\'], 1)) {\\n                    $eshoplogistic3->setEslData($msOrder, $esl_data);\\n                }\\n            }\\n        }\\n        break;\\n\\n\\n    case \'msOnChangeOrderStatus\':\\n        $eshoplogistic3->orderUnload($order, $status);\\n        break;\\n\\n\\n    # \\u0430\\u0432\\u0442\\u043e\\u0440 Ivan Klimchuk\\n    case \'OnManagerPageBeforeRender\':\\n        if ($_GET[\'a\'] !== \'system\\/settings\') {\\n            return;\\n        }\\n        $pathPrefix = MODX_ASSETS_URL . \'components\\/eshoplogistic3\\/js\\/mgr\\/misc\\/\';\\n        $modx->controller->addLastJavascript($pathPrefix . \'weight.combo.js\');\\n        $modx->controller->addLastJavascript($pathPrefix . \'ss-xtypes-loader.js\');\\n        break;\\n\\n\\n    # \\u0443\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u043e\\u0431\\u044f\\u0437\\u0430\\u0442\\u0435\\u043b\\u044c\\u043d\\u044b\\u0445 \\u043f\\u043e\\u043b\\u0435\\u0439 \\u0434\\u043b\\u044f \\u043a\\u0443\\u0440\\u044c\\u0435\\u0440\\u0430\\n    case \'msOnSubmitOrder\':\\n        $order_data = $order->get();\\n        if(!empty($order_data[\'eshoplogistic3_data\'])) {\\n            if($eshoplogistic3_data = json_decode($order_data[\'eshoplogistic3_data\'], 1)) {\\n                if(is_array($eshoplogistic3_data)) {\\n\\n                    if(isset($eshoplogistic3_data[\'type\'])) {\\n                        if($eshoplogistic3_data[\'type\'] == \'door\') {\\n                            if(empty($data[\'street\']) || empty($data[\'building\']) || empty($data[\'room\'])) {\\n                                $modx->event->output(strip_tags($modx->lexicon(\'eshoplogistic3_need_address_message\')));\\n                            }\\n                        }\\n                        else {\\n                            if(empty($eshoplogistic3_data[\'terminal\'][\'code\'])) {\\n                                $modx->event->output(strip_tags($modx->lexicon(\'eshoplogistic3_need_pvz_message\')));\\n                            }\\n                        }\\n                    }\\n                }\\n            }\\n        }\\n        break;\\n\\n    \\/*\\n    # \\u041f\\u043e\\u043b\\u0443\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0434\\u0430\\u043d\\u043d\\u044b\\u0445 \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432. \\u041c\\u043e\\u0436\\u043d\\u043e \\u0434\\u043e\\u0431\\u0430\\u0432\\u0438\\u0442\\u044c \\u0433\\u0430\\u0431\\u0430\\u0440\\u0438\\u0442\\u044b, \\u0438\\u0437\\u043c\\u0435\\u043d\\u0438\\u0442\\u044c \\u0432\\u0435\\u0441 \\u0438 \\u0442.\\u0434.\\n    case \'eshoplogistic3OnGetOffers\':\\n        foreach($offers as $k => $offer) {\\n            # \\u041d\\u0430\\u043f\\u0440\\u0438\\u043c\\u0435\\u0440, \\u0432 \\u043f\\u043e\\u043b\\u0435 weight_packing msProductData \\u0443 \\u043d\\u0430\\u0441 \\u0445\\u0440\\u0430\\u043d\\u044f\\u0442\\u0441\\u044f \\u043f\\u0430\\u0440\\u0430\\u043c\\u0435\\u0442\\u0440\\u044b \\u0432\\u0435\\u0441\\u0430 \\u0443\\u043f\\u0430\\u043a\\u043e\\u0432\\u043a\\u0438: \\u0432\\u043e\\u0437\\u044c\\u043c\\u0451\\u043c \\u0435\\u0451 \\u0432\\u0435\\u0441 \\u0432\\u043c\\u0435\\u0441\\u0442\\u043e \\u0448\\u0442\\u0430\\u0442\\u043d\\u043e\\u0433\\u043e \\u043f\\u043e\\u043b\\u044f weight\\n            if($productData = $modx->getObject(\'msProductData\', $offer[\'article\'])) {\\n                $offers[$k][\'weight\'] = (int)$productData->get(\'weight_packing\') ?? 5;\\n            }\\n            # \\u041d\\u0430\\u043f\\u0440\\u0438\\u043c\\u0435\\u0440, \\u0432 \\u043f\\u043e\\u043b\\u0435 dimensions msProductData \\u0443 \\u043d\\u0430\\u0441 \\u0445\\u0440\\u0430\\u043d\\u044f\\u0442\\u0441\\u044f \\u0433\\u0430\\u0431\\u0430\\u0440\\u0438\\u0442\\u044b \\u0442\\u043e\\u0432\\u0430\\u0440, \\u0444\\u043e\\u0440\\u043c\\u0430\\u0442 \\u0414*\\u0428*\\u0412 (25*15*10), \\u0432 \\u0441\\u0430\\u043d\\u0442\\u0438\\u043c\\u0435\\u0442\\u0440\\u0430\\u0445\\n            if($productData = $modx->getObject(\'msProductData\', $offer[\'article\'])) {\\n                $offers[$k][\'dimensions\'] = $productData->get(\'dimensions\');\\n            }\\n        }\\n        $modx->event->output([\'offers\' => $offers]);\\n        break;\\n    *\\/\\n\\n\\n\\n    \\/*\\n    # \\u0441\\u0440\\u0430\\u0431\\u0430\\u0442\\u044b\\u0432\\u0430\\u0435\\u0442 \\u043f\\u0435\\u0440\\u0435\\u0434 \\u0432\\u044b\\u0433\\u0440\\u0443\\u0437\\u043a\\u043e\\u0439 \\u0437\\u0430\\u043a\\u0430\\u0437\\u0430 \\u0432 \\u043a\\u0430\\u0431\\u0438\\u043d\\u0435\\u0442 \\u0442\\u0440\\u0430\\u043d\\u0441\\u043f\\u043e\\u0440\\u0442\\u043d\\u043e\\u0439 \\u043a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u0438, \\u043c\\u043e\\u0436\\u043d\\u043e \\u0438\\u0437\\u043c\\u0435\\u043d\\u0438\\u0442\\u044c \\u0434\\u0430\\u043d\\u043d\\u044b\\u0435 \\u0437\\u0430\\u043a\\u0430\\u0437\\u0430\\n    case \'eshoplogistic3BeforeUnloadOrder\':\\n        $modx->log(1, print_r($query_data, 1));\\n        $query_data[\'sender\'][\'company\'] = \'\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435 \\u043a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u0438\';\\n        $modx->event->output([\'query_data\' => $query_data]);\\n        break;\\n    *\\/\\n\\n\\n\\n    \\/*\\n    # \\u0441\\u0440\\u0430\\u0431\\u0430\\u0442\\u044b\\u0432\\u0430\\u0435\\u0442 \\u043f\\u043e\\u0441\\u043b\\u0435 \\u0432\\u044b\\u0433\\u0440\\u0443\\u0437\\u043a\\u0438 \\u0437\\u0430\\u043a\\u0430\\u0437\\u0430 \\u0432 \\u043a\\u0430\\u0431\\u0438\\u043d\\u0435\\u0442 \\u0442\\u0440\\u0430\\u043d\\u0441\\u043f\\u043e\\u0440\\u0442\\u043d\\u043e\\u0439 \\u043a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u0438\\n    case \'eshoplogistic3UnloadOrder\':\\n        $modx->log(1, print_r($query_data, 1));\\n        $modx->log(1, print_r($response, 1));\\n        break;\\n    *\\/\\n\\n\\n\\n    \\/*\\n    # \\u0412\\u044b\\u043f\\u043e\\u043b\\u043d\\u044f\\u0435\\u0442\\u0441\\u044f \\u043f\\u043e\\u0441\\u043b\\u0435 \\u043e\\u0431\\u043d\\u043e\\u0432\\u043b\\u0435\\u043d\\u0438\\u044f \\u0441\\u0442\\u0430\\u0442\\u0443\\u0441\\u0430 \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438 \\u0432\\u044b\\u0433\\u0440\\u0436\\u0435\\u043d\\u043d\\u043e\\u0433\\u043e \\u0437\\u0430\\u043a\\u0430\\u0437\\u0430\\n    case \'eshoplogistic3OnGetOrderStatus\':\\n        #$modx->log(1, print_r($response, 1));\\n        # \\u0432 \\u0437\\u0430\\u0432\\u0438\\u0441\\u0438\\u043c\\u043e\\u0441\\u0442\\u0438 \\u043e\\u0442 \\u043e\\u0442\\u0432\\u0435\\u0442\\u0430 \\u043c\\u043e\\u0436\\u043d\\u043e \\u0447\\u0442\\u043e-\\u0442\\u043e \\u0434\\u0435\\u043b\\u0430\\u0442\\u044c; \\u043d\\u0430\\u043f\\u0440\\u0438\\u043c\\u0435\\u0440 \\u0438\\u0437\\u043c\\u0435\\u043d\\u0438\\u0442\\u044c \\u0441\\u0442\\u0430\\u0442\\u0443\\u0441 \\u0437\\u0430\\u043a\\u0430\\u0437\\u0430:\\n        if(isset($status[\'new\'])) {\\n            if($status[\'new\'] == \'taken\') {\\n                $miniShop2 = $this->modx->getService(\'miniShop2\');\\n                $miniShop2->changeOrderStatus($order->id, 5);\\n            }\\n        }\\n        break;\\n    *\\/\\n\\n}","file":"eshoplogistic3","events":{"msOnCreateOrder":[],"msOnSubmitOrder":[],"eshoplogistic3OnGetOffers":[],"eshoplogistic3BeforeUnloadOrder":[],"eshoplogistic3OnGetOrderStatus":[],"eshoplogistic3UnloadOrder":[],"msOnManagerCustomCssJs":[],"OnManagerPageBeforeRender":[],"msOnChangeOrderStatus":[]}}',
+        'guid' => '9947ee3c6dc1a5bfc28864ba1fb5b800',
+        'native_key' => NULL,
+        'signature' => 'fc92ab2e2de013d73be48595dc90e3cd',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => true,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'eshoplogistic3',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"eshoplogistic3-0.2.3-pl\\/modCategory\\/81ef601376ae6273b6e20718775eefaf\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"eshoplogistic3"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"eshoplogistic3-0.2.3-pl\\/modCategory\\/81ef601376ae6273b6e20718775eefaf\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"eshoplogistic3"}',
+    ),
+    2 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"eshoplogistic3-0.2.3-pl\\/modCategory\\/81ef601376ae6273b6e20718775eefaf\\/2\\/","target":"return MODX_CORE_PATH . \'components\\/minishop2\\/custom\\/\';","name":"delivery"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"eshoplogistic3-0.2.3-pl\\/modCategory\\/81ef601376ae6273b6e20718775eefaf.setup.resolver","type":"php","name":"setup"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"eshoplogistic3-0.2.3-pl\\/modCategory\\/81ef601376ae6273b6e20718775eefaf.symlinks.resolver","type":"php","name":"symlinks"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd6b5e1256fe89d981ca8d4e7b7e734c3',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '81ef601376ae6273b6e20718775eefaf',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"eShopLogistic3","rank":0}',
+);

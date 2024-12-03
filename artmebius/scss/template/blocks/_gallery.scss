@@ -1,0 +1,138 @@
+@include media-breakpoint-up(xs){
+
+  .album_item{}
+
+  .album_item_preview{
+    text-align: center;
+  }
+
+  .album_item_preview_link{
+    display: block;
+    // display: inline-block; // tt
+    // border: 1px solid $clrB;
+    // padding: 1px;
+    text-align: center;
+    font-size: 0;
+
+
+
+    // hover border
+    // &:hover{
+    //   border-color: $clrBa;
+    // }
+
+
+
+    // hover spot
+    position: relative;
+
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      top: 0px;
+      display: block;
+      background: rgba(0, 0, 0, .2);
+      opacity: 0;
+      // @extend %posa_full;
+      // @include transition(opacity ease-out .2s);
+      transition: opacity .2s ease-out, background .2s ease-out;
+    }
+
+    &:after{
+      position: absolute;
+      // left: 0px;
+      // right: 0px;
+      // bottom: 0px;
+      // top: 0px;
+      width: 60px;
+      height: 60px;
+      left: 50%;
+      top: 50%;
+      margin-left: -30px;
+      margin-top: -30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      content: '\f00e';
+      font-family: 'fa5l';
+      font-weight: 300;
+      font-size: 30px;
+      color: #fff;
+      background: rgba(0, 0, 0, .3);
+      opacity: 0;
+      transition: opacity .2s ease-out;
+    }
+
+    &:hover{
+      // border-style: solid;
+      &:before{
+        // opacity: 0;
+        // background: rgba(255, 255, 255, .2);
+      }
+      &:after{
+        // opacity: 1;
+      }
+    }
+
+
+
+    // hover shadow
+    // &:hover{
+    //   box-shadow: 0 3px 5px -3px rgba(0, 0, 0, 0.5);
+    // }
+
+
+
+    // hover scale
+    // overflow: hidden;
+    // &:hover{
+    //   .album_item_img{
+    //     transform: scale(1.1);
+    //   }
+    // }
+  }
+
+  .album_item_img{
+    width: 100%;
+    @include transition(transform 0.2s ease-out, opacity 0.2s ease-out);
+  }
+
+
+  .photos_grid{}
+
+
+} // @min-xs
+
+@include media-breakpoint-up(md){
+
+  .album_item_preview_link{
+
+    // hover spot
+    &:before{
+      opacity: 1;
+    }
+
+    &:after{
+      opacity: 0;
+    }
+
+    &:hover{
+
+      &:before{
+        opacity: 0;
+      }
+
+      &:after{
+        opacity: 1;
+      }
+    }
+
+  }
+
+} // @min-md
+
+

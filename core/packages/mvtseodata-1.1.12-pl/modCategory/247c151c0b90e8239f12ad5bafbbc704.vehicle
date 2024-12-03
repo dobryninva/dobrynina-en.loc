@@ -1,0 +1,163 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      'db39b7fcda061d1c4dbd45dd924d627c' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"mvtSeoData","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"if ($mvtSeoData = $modx->getService(\'mvtseodata\', \'mvtSeoData\', $modx->getOption(\'msbaskets_core_path\', null,\\n\\t$modx->getOption(\'core_path\') . \'components\\/mvtseodata\\/\') . \'model\\/mvtseodata\\/\', $scriptProperties)\\n) {\\n\\n\\treturn $mvtSeoData->Run($modx->resource);\\n}\\nreturn [];","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"core\\/components\\/mvtseodata\\/elements\\/snippets\\/snippet.mvtseodata.php","content":"if ($mvtSeoData = $modx->getService(\'mvtseodata\', \'mvtSeoData\', $modx->getOption(\'msbaskets_core_path\', null,\\n\\t$modx->getOption(\'core_path\') . \'components\\/mvtseodata\\/\') . \'model\\/mvtseodata\\/\', $scriptProperties)\\n) {\\n\\n\\treturn $mvtSeoData->Run($modx->resource);\\n}\\nreturn [];"}',
+        'guid' => '0f1a06b7ca0ab5fe8b383fdf1bbf03df',
+        'native_key' => 0,
+        'signature' => '5d67a852ba1e53eb82ff5ebc6b51fc6f',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      '238a9d06fdd566fc547cc51a729fe837' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"mvtSeoData","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"if ($mvtSeoData = $modx->getService(\'mvtseodata\', \'mvtSeoData\', $modx->getOption(\'mvtseodata_core_path\', null,\\n        $modx->getOption(\'core_path\') . \'components\\/mvtseodata\\/\') . \'model\\/mvtseodata\\/\', array())\\n    ) {\\n                      \\n    switch ($modx->event->name) {\\n\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\/*\\n\\t\\t* \\u041c\\u043e\\u0436\\u043d\\u043e \\u043f\\u043e\\u0434\\u043c\\u0435\\u043d\\u044f\\u0442\\u044c \\u0448\\u0442\\u0430\\u0442\\u043d\\u044b\\u0435 \\u0438\\u043b\\u0438 \\u0434\\u043e\\u0431\\u0430\\u0432\\u043b\\u044f\\u0442\\u044c \\u043d\\u0443\\u0436\\u043d\\u044b\\u0435 \\u043f\\u043b\\u0435\\u0439\\u0441\\u0445\\u043e\\u043b\\u0434\\u0435\\u0440\\u044b  \\"\\u043d\\u0430 \\u043b\\u0435\\u0442\\u0443\\"\\t\\n\\t\\t* \\u041d\\u043e \\u043f\\u043e\\u043c\\u043d\\u0438\\u0442\\u0435 \\u043e \\u043a\\u044d\\u0448\\u0435: \\u0441\\u0438\\u0441\\u0442\\u0435\\u043c\\u043d\\u044b\\u0439 \\u043a\\u044d\\u0448 \\u043e\\u0431\\u043d\\u043e\\u0432\\u043b\\u044f\\u0435\\u0442\\u0441\\u044f \\u043f\\u0440\\u0438 \\u043f\\u0435\\u0440\\u0432\\u043e\\u043c \\u0437\\u0430\\u043f\\u0440\\u043e\\u0441\\u0435 \\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u044b.\\n\\t\\t* \\u0415\\u0441\\u043b\\u0438 \\u043e\\u0431\\u044f\\u0437\\u0430\\u0442\\u0435\\u043b\\u044c\\u043d\\u043e \\u0443\\u0436\\u0435 \\u043f\\u0440\\u0438 \\u043f\\u0435\\u0440\\u0432\\u043e\\u043c \\u0437\\u0430\\u043f\\u0440\\u043e\\u0441\\u0435 \\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u044b \\u043d\\u0443\\u0436\\u043d\\u044b \\u0434\\u0430\\u043d\\u043d\\u044b\\u0435 \\u0438\\u0437 \\u043c\\u043e\\u0434\\u0443\\u043b\\u044f (\\u043d\\u0430\\u043f\\u0440\\u0438\\u043c\\u0435\\u0440 \\u0434\\u043b\\u044f \\"\\u0441\\u043a\\u0430\\u0440\\u043c\\u043b\\u0438\\u0432\\u0430\\u043d\\u0438\\u044f\\" \\u043f\\u043e\\u0438\\u0441\\u043a\\u043e\\u0432\\u0438\\u043a\\u0443), \\n\\t\\t*    \\u0438\\u0441\\u043f\\u043e\\u043b\\u044c\\u0437\\u0443\\u0439\\u0442\\u0435 \\u0441\\u043d\\u0438\\u043f\\u043f\\u0435\\u0442 mvtSeoData: {set $seoData = \'!mvtSeoData\' | snippet} , $seoData \\u0441\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u0442 \\u0434\\u0430\\u043d\\u043d\\u044b\\u0435 \\u0438\\u0437 \\u043c\\u043e\\u0434\\u0443\\u043b\\u044f.\\n\\t\\t*\\/\\n    \\tcase \'OnLoadWebDocument\': \\n\\t\\t\\t$seoData = $mvtSeoData->Run($modx->resource);\\n\\t\\t\\tif(is_array($seoData)) {\\n\\t\\t\\t\\tforeach($seoData as $k => $v) {\\t\\n\\t\\t\\t\\t\\tif($k == \'content\') {\\n\\t\\t\\t\\t\\t    $modx->resource->set($k, $v);\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\telse {\\n\\t\\t\\t\\t\\t    if(!empty($v)) {\\n\\t\\t\\t\\t\\t\\t    $modx->resource->set($k, $v); \\n\\t\\t\\t\\t\\t    }\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t\\tbreak;\\n\\t\\t\\n\\t\\t\\t\\n\\n\\t\\t\\/*\\n\\t\\t* \\u041f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0435\\u0442 \\u0434\\u0430\\u043d\\u043d\\u044b\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430 \\u043f\\u0440\\u0438 \\u0438\\u043d\\u0434\\u0435\\u043a\\u0441\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u0438\\u0438. \\n\\t\\t*\\/\\n\\t\\tcase \'mvtSeoDataIndexOnReceivingProductData\':\\n\\t\\t\\t\\/*if(!empty($product)) {\\n\\t\\t\\t\\t$data = [];\\n\\t\\t\\t\\t# \\u043f\\u0435\\u0440\\u0435\\u0432\\u043e\\u0434 \\u0432 \\u0433\\u0440\\u0430\\u043c\\u043c\\u044b - \\u044d\\u0442\\u043e \\u0437\\u0430\\u043c\\u0435\\u043d\\u0438\\u0442 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0432\\u0435\\u0441\\u0430\\n\\t\\t\\t\\t$data[\'weight\'] = $product->get(\'weight\') * 1000;\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t# \\u0438\\u0437\\u043c\\u0435\\u043d\\u0435\\u043d\\u0438\\u0435 \\u0446\\u0435\\u043d\\u044b - \\u044d\\u0442\\u043e \\u0437\\u0430\\u043c\\u0435\\u043d\\u0438\\u0442 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0446\\u0435\\u043d\\u044b\\n\\t\\t\\t\\t$data[\'price\'] = $product->get(\'price\') + 10;\\n\\t\\t\\t}\\n\\t\\t\\t*\\/\\n\\t\\t\\tif(!empty($data)) {\\n\\t\\t\\t\\t$modx->event->output($data);\\n\\t\\t\\t}\\n\\t\\t\\tbreak;\\n\\t\\t\\n\\t\\t\\t\\n\\t\\t\\t\\n\\t\\t\\/*\\n\\t\\t* \\u041f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0435\\u0442 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044e \\u043f\\u0440\\u0438 \\u0438\\u043d\\u0434\\u0435\\u043a\\u0441\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u0438\\u0438. \\n\\t\\t* $category - \\u043e\\u0431\\u044a\\u0435\\u043a\\u0442 \\u0440\\u0435\\u0441\\u0443\\u0440\\u0441\\u0430, $products - \\u043c\\u0430\\u0441\\u0441\\u0438\\u0432 \\u0441\\u043e\\u0431\\u0440\\u0430\\u043d\\u043d\\u044b\\u0445 \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432 \\u0434\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\\n\\t\\t*\\/\\n\\t\\tcase \'mvtSeoDataIndexOnReceivingCategoryData\':\\n\\t\\t\\t$modx->event->output([\\n\\t\\t\\t\\t\'products\' => $products\\n\\t\\t\\t]);\\n\\t\\t\\tbreak;\\n    }\\n    \\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/mvtseodata\\/elements\\/plugins\\/plugin.mvtseodata.php","content":"if ($mvtSeoData = $modx->getService(\'mvtseodata\', \'mvtSeoData\', $modx->getOption(\'mvtseodata_core_path\', null,\\n        $modx->getOption(\'core_path\') . \'components\\/mvtseodata\\/\') . \'model\\/mvtseodata\\/\', array())\\n    ) {\\n                      \\n    switch ($modx->event->name) {\\n\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\/*\\n\\t\\t* \\u041c\\u043e\\u0436\\u043d\\u043e \\u043f\\u043e\\u0434\\u043c\\u0435\\u043d\\u044f\\u0442\\u044c \\u0448\\u0442\\u0430\\u0442\\u043d\\u044b\\u0435 \\u0438\\u043b\\u0438 \\u0434\\u043e\\u0431\\u0430\\u0432\\u043b\\u044f\\u0442\\u044c \\u043d\\u0443\\u0436\\u043d\\u044b\\u0435 \\u043f\\u043b\\u0435\\u0439\\u0441\\u0445\\u043e\\u043b\\u0434\\u0435\\u0440\\u044b  \\"\\u043d\\u0430 \\u043b\\u0435\\u0442\\u0443\\"\\t\\n\\t\\t* \\u041d\\u043e \\u043f\\u043e\\u043c\\u043d\\u0438\\u0442\\u0435 \\u043e \\u043a\\u044d\\u0448\\u0435: \\u0441\\u0438\\u0441\\u0442\\u0435\\u043c\\u043d\\u044b\\u0439 \\u043a\\u044d\\u0448 \\u043e\\u0431\\u043d\\u043e\\u0432\\u043b\\u044f\\u0435\\u0442\\u0441\\u044f \\u043f\\u0440\\u0438 \\u043f\\u0435\\u0440\\u0432\\u043e\\u043c \\u0437\\u0430\\u043f\\u0440\\u043e\\u0441\\u0435 \\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u044b.\\n\\t\\t* \\u0415\\u0441\\u043b\\u0438 \\u043e\\u0431\\u044f\\u0437\\u0430\\u0442\\u0435\\u043b\\u044c\\u043d\\u043e \\u0443\\u0436\\u0435 \\u043f\\u0440\\u0438 \\u043f\\u0435\\u0440\\u0432\\u043e\\u043c \\u0437\\u0430\\u043f\\u0440\\u043e\\u0441\\u0435 \\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u044b \\u043d\\u0443\\u0436\\u043d\\u044b \\u0434\\u0430\\u043d\\u043d\\u044b\\u0435 \\u0438\\u0437 \\u043c\\u043e\\u0434\\u0443\\u043b\\u044f (\\u043d\\u0430\\u043f\\u0440\\u0438\\u043c\\u0435\\u0440 \\u0434\\u043b\\u044f \\"\\u0441\\u043a\\u0430\\u0440\\u043c\\u043b\\u0438\\u0432\\u0430\\u043d\\u0438\\u044f\\" \\u043f\\u043e\\u0438\\u0441\\u043a\\u043e\\u0432\\u0438\\u043a\\u0443), \\n\\t\\t*    \\u0438\\u0441\\u043f\\u043e\\u043b\\u044c\\u0437\\u0443\\u0439\\u0442\\u0435 \\u0441\\u043d\\u0438\\u043f\\u043f\\u0435\\u0442 mvtSeoData: {set $seoData = \'!mvtSeoData\' | snippet} , $seoData \\u0441\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u0442 \\u0434\\u0430\\u043d\\u043d\\u044b\\u0435 \\u0438\\u0437 \\u043c\\u043e\\u0434\\u0443\\u043b\\u044f.\\n\\t\\t*\\/\\n    \\tcase \'OnLoadWebDocument\': \\n\\t\\t\\t$seoData = $mvtSeoData->Run($modx->resource);\\n\\t\\t\\tif(is_array($seoData)) {\\n\\t\\t\\t\\tforeach($seoData as $k => $v) {\\t\\n\\t\\t\\t\\t\\tif($k == \'content\') {\\n\\t\\t\\t\\t\\t    $modx->resource->set($k, $v);\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\telse {\\n\\t\\t\\t\\t\\t    if(!empty($v)) {\\n\\t\\t\\t\\t\\t\\t    $modx->resource->set($k, $v); \\n\\t\\t\\t\\t\\t    }\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t\\tbreak;\\n\\t\\t\\n\\t\\t\\t\\n\\n\\t\\t\\/*\\n\\t\\t* \\u041f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0435\\u0442 \\u0434\\u0430\\u043d\\u043d\\u044b\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430 \\u043f\\u0440\\u0438 \\u0438\\u043d\\u0434\\u0435\\u043a\\u0441\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u0438\\u0438. \\n\\t\\t*\\/\\n\\t\\tcase \'mvtSeoDataIndexOnReceivingProductData\':\\n\\t\\t\\t\\/*if(!empty($product)) {\\n\\t\\t\\t\\t$data = [];\\n\\t\\t\\t\\t# \\u043f\\u0435\\u0440\\u0435\\u0432\\u043e\\u0434 \\u0432 \\u0433\\u0440\\u0430\\u043c\\u043c\\u044b - \\u044d\\u0442\\u043e \\u0437\\u0430\\u043c\\u0435\\u043d\\u0438\\u0442 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0432\\u0435\\u0441\\u0430\\n\\t\\t\\t\\t$data[\'weight\'] = $product->get(\'weight\') * 1000;\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t# \\u0438\\u0437\\u043c\\u0435\\u043d\\u0435\\u043d\\u0438\\u0435 \\u0446\\u0435\\u043d\\u044b - \\u044d\\u0442\\u043e \\u0437\\u0430\\u043c\\u0435\\u043d\\u0438\\u0442 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0446\\u0435\\u043d\\u044b\\n\\t\\t\\t\\t$data[\'price\'] = $product->get(\'price\') + 10;\\n\\t\\t\\t}\\n\\t\\t\\t*\\/\\n\\t\\t\\tif(!empty($data)) {\\n\\t\\t\\t\\t$modx->event->output($data);\\n\\t\\t\\t}\\n\\t\\t\\tbreak;\\n\\t\\t\\n\\t\\t\\t\\n\\t\\t\\t\\n\\t\\t\\/*\\n\\t\\t* \\u041f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0435\\u0442 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044e \\u043f\\u0440\\u0438 \\u0438\\u043d\\u0434\\u0435\\u043a\\u0441\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u0438\\u0438. \\n\\t\\t* $category - \\u043e\\u0431\\u044a\\u0435\\u043a\\u0442 \\u0440\\u0435\\u0441\\u0443\\u0440\\u0441\\u0430, $products - \\u043c\\u0430\\u0441\\u0441\\u0438\\u0432 \\u0441\\u043e\\u0431\\u0440\\u0430\\u043d\\u043d\\u044b\\u0445 \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432 \\u0434\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\\n\\t\\t*\\/\\n\\t\\tcase \'mvtSeoDataIndexOnReceivingCategoryData\':\\n\\t\\t\\t$modx->event->output([\\n\\t\\t\\t\\t\'products\' => $products\\n\\t\\t\\t]);\\n\\t\\t\\tbreak;\\n    }\\n    \\n}"}',
+        'guid' => 'e1d79a076c29bbcb9bb6558253a23b34',
+        'native_key' => NULL,
+        'signature' => '664bf8b71f9a8abda861ee75d40ea4b0',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'e966d0d6a677249a1b9a068281913aa6' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnLoadWebDocument","priority":0,"propertyset":0}',
+              'guid' => '9e0b9c5385037fd04193130cae6b21f1',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnLoadWebDocument',
+              ),
+              'signature' => 'd211f6f737641952515e6a2d3053ef76',
+            ),
+            '60486823dadc17d9494b838ea9ab0948' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"mvtSeoDataIndexOnReceivingProductData","priority":0,"propertyset":0}',
+              'guid' => '77c4684ad8b5e5c15c5afba0ae8be2c6',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'mvtSeoDataIndexOnReceivingProductData',
+              ),
+              'signature' => '5cd7849e5ba098b1786adf89bf4c619e',
+            ),
+            'f2719b55a1b1ef3fd3b23081230aed64' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"mvtSeoDataIndexOnReceivingCategoryData","priority":0,"propertyset":0}',
+              'guid' => '1cef1dee08a23373b42ca4a8fc13a269',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'mvtSeoDataIndexOnReceivingCategoryData',
+              ),
+              'signature' => '5dc0a03d1a613f4397b578254699b9d6',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'mvtseodata',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"mvtseodata-1.1.12-pl\\/modCategory\\/247c151c0b90e8239f12ad5bafbbc704\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"mvtseodata"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"mvtseodata-1.1.12-pl\\/modCategory\\/247c151c0b90e8239f12ad5bafbbc704\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"mvtseodata"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"mvtseodata-1.1.12-pl\\/modCategory\\/247c151c0b90e8239f12ad5bafbbc704.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"mvtseodata-1.1.12-pl\\/modCategory\\/247c151c0b90e8239f12ad5bafbbc704.resolve.setup.resolver","type":"php","name":"resolve.setup"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a9b666b4cfef3e837173cf23b96e2bcc',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '247c151c0b90e8239f12ad5bafbbc704',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"mvtSeoData","rank":0}',
+);

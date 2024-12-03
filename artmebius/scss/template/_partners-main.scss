@@ -1,0 +1,61 @@
+//************************************************************************ partners_main */
+
+.partners_main{
+  .partners_block{
+    text-align: center;
+    background: $clr4;
+    .item_link{
+      display: block;
+      text-decoration: none;
+    }
+  }
+} // end partners_main
+
+
+
+//======================================================================== @MEDIA
+
+//lg
+@media (min-width: $screen-lg) and (max-width: $screen-lg-max) { // 1024 and 1279
+
+.partners_main{
+
+} // .partners_main
+
+} // @lg
+
+//md
+@media (min-width: $screen-md) and (max-width: $screen-md-max) { // 768 and 1023
+
+.partners_main{
+
+} // .partners_main
+
+} // @md
+
+//sm
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) { // 480 and 767
+
+.partners_main{
+
+} // .partners_main
+
+} // @sm
+
+//sm-max
+@media (max-width: $screen-sm-max) { // 767
+
+.partners_main{
+
+} // .partners_main
+
+} // @xs
+
+//xs
+@media (max-width: $screen-xs-max) { // 479
+
+.partners_main{
+
+} // .partners_main
+
+} // @xs

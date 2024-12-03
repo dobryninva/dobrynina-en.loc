@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f0ae71ca385e7c85de931369cdcf30db',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '93895cda903df7b2f5dd8cfc1fe17409',
+  'native_key' => 'msimportexport.export.ym.description_fields',
+  'object' => '{"key":"msimportexport.export.ym.description_fields","value":"description,introtext,content","xtype":"textfield","namespace":"msimportexport","area":"export \\u042f\\u043d\\u0434\\u0435\\u043a\\u0441.\\u041c\\u0430\\u0440\\u043a\\u0435\\u0442\\u0435","editedon":null}',
+);

@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ee559c698a3de13abe19dff143e24db7',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'a1f4f49e2dec7acae8113dc01df58897',
+  'native_key' => 'mspre_max_records_processed_all',
+  'object' => '{"key":"mspre_max_records_processed_all","value":5000,"xtype":"numberfield","namespace":"mspre","area":"mspre_main","editedon":null}',
+);

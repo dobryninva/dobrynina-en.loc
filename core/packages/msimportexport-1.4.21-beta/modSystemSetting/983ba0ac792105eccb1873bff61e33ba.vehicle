@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '142a9b99d44c9216be0b63a75aae2b40',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '983ba0ac792105eccb1873bff61e33ba',
+  'native_key' => 'msimportexport.export.head_category_style',
+  'object' => '{"key":"msimportexport.export.head_category_style","value":"{\\"font\\":{\\"size\\":14,\\"bold\\":true,\\"color\\":{\\"rgb\\":\\"000000\\"}}}","xtype":"textarea","namespace":"msimportexport","area":"export Excel","editedon":"2019-05-04 00:47:20"}',
+);

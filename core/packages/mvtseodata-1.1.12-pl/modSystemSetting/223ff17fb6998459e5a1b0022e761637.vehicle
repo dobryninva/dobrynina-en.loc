@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'mvtseodata',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a1d9a4518b5c649c09c0b1cdadf341c2',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '223ff17fb6998459e5a1b0022e761637',
+  'native_key' => 'mvtseodata_product_indexing_where',
+  'object' => '{"key":"mvtseodata_product_indexing_where","value":"","xtype":"textfield","namespace":"mvtseodata","area":"mvtseodata_main","editedon":null}',
+);

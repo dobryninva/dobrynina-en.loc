@@ -1,0 +1,99 @@
+.hidden_switcher{
+  transition: color .2s ease-out, background .2s ease-out, border .2s ease-out;
+  &:hover{
+    color: $clr1;
+  }
+  &:active{
+    color: $clr1;
+  }
+  // &:before{
+  //   animation: fadeIn 0.2s;
+  //   content: '';
+  //   display: none;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   bottom: -10px;
+  //   position: absolute;
+  //   width: 0;
+  //   height: 0;
+  //   border-left: 10px solid transparent;
+  //   border-right: 10px solid transparent;
+  //   border-bottom: 10px solid $clr1;
+  //   z-index: 701;
+  // }
+  // &:after{
+  //   animation: fadeIn 0.2s;
+  //   content: '';
+  //   display: none;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   bottom: -10px;
+  //   position: absolute;
+  //   width: 0;
+  //   height: 0;
+  //   border-left: 9px solid transparent;
+  //   border-right: 9px solid transparent;
+  //   border-bottom: 9px solid #fff;
+  //   z-index: 702;
+  // }
+  .switcher_icon{}
+  &.active{
+    .switcher_icon{}
+  }
+}
+
+.hidden_block{
+  display: none;
+
+  &.hidden_popover{
+    position: absolute;
+    margin-top: 4px;//10px;
+    top: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    border: 1px solid $clr1;
+    background: #fff;
+    z-index: 1040;
+
+    &:before{
+      // animation: fadeIn 0.2s;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid $clr1;
+      z-index: 1041;
+    }
+    &:after{
+      // animation: fadeIn 0.2s;
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      border-bottom: 9px solid #fff;
+      z-index: 1042;
+    }
+  }
+}
+
+.hidden_close{
+  transition: color .2s ease-out, background .2s ease-out, border .2s ease-out;
+  &:hover{
+    color: $clr0;
+  }
+  &:active{
+    color: $clr0;
+  }
+}

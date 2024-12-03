@@ -1,0 +1,2 @@
+<div id="eShopLogisticWidgetCart" data-key="{$widget_key}" data-target="{$widget_target}" data-region="{$widget_region}" data-lazy-load="true" {if $widget_controller?}data-controller="{$widget_controller}"{/if}></div>
+<script src="{$source_url}"></script>

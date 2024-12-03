@@ -1,0 +1,157 @@
+// @RE - то, что нужно переделать (кттс)
+
+@import "fonts";
+
+@import "functions";
+@import "variables";
+@import "mixins";
+
+// BOOTSTRAP
+@import "bootstrap/root"; // +
+@import "reset"; //
+
+@import "bootstrap/type"; // +/- (md)
+@import "bootstrap/images"; // +/- (sm)
+@import "bootstrap/code"; // + (sm)
+@import "bootstrap/grid"; // + (lg)
+@import "bootstrap/tables"; // +/- (lg)
+@import "bootstrap/forms"; // +/- (lg)
+@import "bootstrap/buttons"; // +/- (??)
+@import "bootstrap/transitions"; // + (sm)
+@import "bootstrap/dropdown"; // tt
+// @import "bootstrap/button-group"; // -
+@import "bootstrap/input-group"; // +?-
+@import "bootstrap/custom-forms"; // +?- (lg)
+// @import "bootstrap/nav"; // +?- menu ?
+// @import "bootstrap/navbar"; // -
+// @import "bootstrap/card"; // ???
+// @import "bootstrap/breadcrumb"; // + (sm)
+@import "bootstrap/pagination"; // + (md)
+// @import "bootstrap/badge"; // -
+// @import "bootstrap/jumbotron"; // -
+@import "bootstrap/alert"; // +/-
+// @import "bootstrap/progress"; // -
+@import "bootstrap/media"; // + (sm)
+// @import "bootstrap/list-group"; // +?- menu ?
+@import "bootstrap/close"; // + (sm)
+// @import "bootstrap/toasts"; // -
+@import "bootstrap/modal"; // + (lg)
+@import "bootstrap/tooltip"; // + (md)
+@import "bootstrap/popover"; // + (lg)
+// @import "bootstrap/carousel"; // -
+// @import "bootstrap/spinners"; // -
+
+// Utilities
+@import "utilities"; // folder
+
+
+// SIDE COMPONENTS
+@import "fontawesome/fontawesome";
+// @import "themify/themify";
+@import "fancybox/fancybox";
+@import "slick/slick";
+// @import "swiper/bundle";
+@import "jgrowl/jgrowl";
+
+
+// ANIMATIONS
+@import "animate";
+
+
+// TEMPLATE STYLES
+
+// BEM
+@import "bem/mini-blocks"; // небольшие блоки, недостойные отдельного включения :D
+
+@import "bem/spotdrop"; // подсветка элемента на странице
+@import "bem/backdrop"; // выезжалка на мобилке (и не только на мобилке)
+
+@import "bem/btn"; // кнопки // @RE
+
+@import "bem/menu"; // базовые стили меню
+@import "bem/menu-mods"; // модификации меню
+@import "bem/menu_main"; // главное меню
+@import "bem/menu_side"; // боковое меню
+
+@import "bem/logo"; // логотип
+@import "bem/phones"; // телефон[ы]
+@import "bem/schedule"; // расписание
+@import "bem/address"; // адрес
+@import "bem/socials"; // ссылки на социалки
+@import "bem/contacts"; // контакты
+
+@import "bem/login"; // блок авторизации
+@import "bem/cart-mini"; // мини корзина
+@import "bem/tabs"; // табы
+@import "bem/sliders"; // элементы слайдеры
+@import "bem/slider-main"; // слайдер (главный)
+@import "bem/search-form"; // форма поиска
+@import "bem/search-tip"; // подсказки формы поиска
+
+@import "bem/labels"; // метки товара
+@import "bem/stars-rating"; // рейтинг-звёздочки
+@import "bem/advantages"; // преимущества
+@import "bem/partners"; // партнёры // @RE
+@import "bem/props-item"; // свойство товара (элемент списка свойств)
+@import "bem/count-wrap"; // инпут количество с кнопками [+] и [-]
+
+@import "bem/subscribe"; // подписка на рассылку
+@import "bem/cities-list"; // города - список выбора городов // @RE
+
+@import "bem/header";
+@import "bem/breadcrumbs";
+@import "bem/footer";
+
+@import "bem/articles-grid"; // статьи - плитки
+@import "bem/articles-grid-item"; // статьи - превью плитка
+
+@import "bem/categories-grid"; // категории - плитки
+@import "bem/categories-grid-item"; // категория - превью плитка
+
+@import "bem/products-grid"; // товары - плитка
+@import "bem/products-grid-item"; // товар - превью плитка
+
+@import "bem/gallery"; // галерея
+@import "bem/gallery-link";
+@import "bem/gallery-grid"; // галерея плиткой
+
+@import "bem/videos-grid-item"; // видео плиткой
+
+@import "bem/reviews-grid"; // отзывы - плитка
+@import "bem/reviews-grid-item"; // отзыв - плитка
+@import "bem/comments-grid-item"; // комментарий - плитка
+
+@import "bem/brands-grid"; // бренды - плитка
+@import "bem/brands-grid-item"; // бренд - превью плитка
+
+@import "bem/article"; // статья - детальная страница
+
+@import "bem/category-detail"; // категория - детальная страница
+@import "bem/filter"; // фильтр
+@import "bem/filter-option"; // опции фильтра
+@import "bem/sorting"; // сортировка
+@import "bem/tags"; // тэговые ссылки
+
+@import "bem/product-detail"; // товар - детальная страница
+
+@import "bem/cart-checkout"; // корзина // @RE
+@import "bem/checkout-order"; // заказ // @RE
+@import "bem/orders"; // заказы // @RE
+
+@import "bem/faq"; // вопрос-ответ
+@import "bem/quiz"; // опросник
+
+@import "bem/forms"; // формы // @RE в последнюю очередь
+
+@import "bem/page"; // позиции блоков на страницах
+
+@import "bem/modal"; // модальные окна // @RE???
+
+@import "bem/mixes"; // миксы и прочие выручай-штуки
+
+@import "bem/orphans"; // стили которые надо куда-то пристроить...
+
+// @import "bem/block"; // desc
+
+// print styles
+@import "bootstrap/print"; // +/-

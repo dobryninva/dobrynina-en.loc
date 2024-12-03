@@ -1,0 +1,50 @@
+.search-form{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+	&__input{
+		flex-grow: 1;
+	  height: 100%;
+	  border: none;
+	  border-radius: 2px;
+	  padding: 10px 48px 10px 24px;
+	  font-weight: 500;
+	  color: $clrM;
+	  background: #fff;
+	  outline: none;
+
+	  &::placeholder{
+	    color: #a4a4a4;
+	  }
+
+	  &:focus{
+	    outline: none;
+
+	    + .search-form__btn{}
+	  }
+	}
+
+	&__btn{
+		// abs in pad
+	  position: absolute;
+	  top: 0px;
+	  bottom: 0px;
+	  right: 24px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  flex-shrink: 0;
+	  border: none;
+	  padding: 0;
+	  width: 24px;
+	  text-align: center;
+	  background: transparent;
+	  cursor: pointer;
+	  transition: color .2s ease-out;
+
+	  // flex sibling
+	}
+	&__btn-icon{}
+}

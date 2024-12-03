@@ -1,0 +1,147 @@
+//************************************************************************ ༼ つ◕_◕ ༽つ magic */
+
+// .tabs_test.tabs.tabs_def>.tabs_titles>(.tab_title[data-target="#tab_$"]{title-$})*3^.tabs_contents>(.tab_content#tab_${lorem30})*3
+
+//************************************************************************ tabs */
+
+$tabs_bd: $clrB;
+$tabs_bd_a: $clr2;
+$tabs_line: $clr2;
+
+.tabs{
+
+  // common styles
+
+  .tabs_contents{}
+
+  .tab_content{
+    display: none;
+
+    &.active{
+      display: block;
+    }
+  }
+
+  .tabs_titles{
+    display: flex;
+    align-items: flex-end;
+    @include user-select(none);
+  }
+
+  .tab_title{
+    cursor: pointer;
+    transition: border .2s ease-out, color .2s ease-out, background .2s ease-out, opacity .2s ease-out, box-shadow .2s ease-out;
+    &:hover{}
+    &.active{}
+    &.disabled{
+      opacity: .5;
+    }
+    &.closed{
+      display: none;
+    }
+    +.tab_title{}
+  }
+
+  // themes
+
+  // tpl for new theme
+  &.tabs_new{
+    .tab_title{
+
+      &:hover{}
+      &.active{}
+      &.disabled{}
+      &.closed{}
+      +.tab_title{}
+    }
+  }
+
+  // tabs_def
+  &.tabs_def{
+    .tabs_titles{
+      margin-bottom: 12px;
+      border-bottom: 1px solid $tabs_line;
+    }
+    .tab_title{
+      margin-bottom: -1px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $tabs_bd $tabs_bd $tabs_line;
+      border-radius: .25rem .25rem 0 0;
+      padding: 9px 24px; // 38 - 20
+      line-height: 20px;
+      font-weight: 600;
+      color: $clrH;
+      background: $clr6;
+      &:hover{
+        background: $clr4;
+      }
+      &.active{
+        border-color: $tabs_bd_a $tabs_bd_a transparent;
+        color: $clr1;
+        background: $tabs_bd_a;
+      }
+      &.disabled{
+        color: #1d1a1a !important;
+        background: #e7e7e7 !important;
+      }
+      &.closed{}
+      +.tab_title{
+        margin-left: 3px;
+      }
+    }
+  } // end tabs_def
+
+  // tabs_main
+  &.tabs_main{
+    .tabs_titles{
+      // justify-content: center;
+      margin-bottom: 22px;//27px;
+      border-bottom: 3px solid $clrD;
+    }
+    .tab_title{
+      margin-right: 58px;
+      margin-bottom: -3px;
+      border-bottom: 3px solid transparent;
+      padding-bottom: 12px;
+      line-height: 1.2;
+      font-weight: 600;
+      font-size: 38px;
+      color: $clrD;
+
+      &:hover{
+        border-color: $clr1;
+      }
+
+      &.active{
+        border-color: $clr1;
+        color: $clrH;
+        cursor: default;
+      }
+      &.disabled{}
+      &.closed{}
+      +.tab_title{}
+    }
+  } // end tabs_main
+
+} // tabs
+
+//======================================================================== @MEDIA
+
+@include media-breakpoint-up(md){} // @min-md
+
+@include media-breakpoint-down(sm){
+
+  .tabs_sm_off{
+    .tabs_contents{}
+    .tab_content{
+      display: block !important;
+      margin-bottom: 27px;
+      &.active{}
+    }
+
+    .tabs_titles{}
+    .tab_title{}
+  }
+
+} // @max-sm

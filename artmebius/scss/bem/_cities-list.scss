@@ -1,0 +1,105 @@
+.cities_list{
+  overflow: hidden;
+  list-style:none;
+  padding: 0 18px;
+  text-align: left;
+  font-size: 14px;
+  li{
+    span{
+      border-bottom: 1px dotted #666;
+      text-decoration: none;
+      font-size: 14px;
+      color: #666;
+      cursor: pointer;
+      &:hover{
+        border-color: $clrLh;
+        color: $clrLh;
+        b{
+          color: $clrLh;
+        }
+      }
+      &.cities_letter{
+        display: block;
+        border: none;
+        margin-top: 18px;
+        margin-bottom: 3px;
+        font-weight: bold;
+        color: $clrLh;
+        cursor: default;
+      }
+      b{
+        color: #333;
+        transition: color .2s ease-out;
+      }
+    }
+    &:first-child{
+      span{
+        &.cities_letter{
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+//======================================================================== @MEDIA
+
+//xs
+@media (min-width: $screen-xs) { // 0
+
+.cities_list{
+  padding: 0;
+  @include content-columns(1);
+}
+
+} // @xs
+
+//sm
+@media (min-width: $screen-sm) { // 480
+
+.cities_list{
+  padding: 0;
+  @include content-columns(2);
+}
+
+} // @sm
+
+//640
+@media (min-width: 640px) { // 640
+
+.cities_list{
+  padding: 0;
+  @include content-columns(3);
+}
+
+} // @640
+
+//md
+@media (min-width: $screen-md) { // 768
+
+.cities_list{
+  padding: 0;
+  @include content-columns(4);
+}
+
+} // @md
+
+//lg
+@media (min-width: $screen-lg) { // 1024
+
+.cities_list{
+  padding: 0;
+  @include content-columns(5);
+}
+
+} // @lg
+
+//xl
+@media (min-width: $screen-xl) { // 1280
+
+.cities_list{
+  // padding: 0;
+  @include content-columns(7);
+}
+
+} // @xl

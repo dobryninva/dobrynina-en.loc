@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '013b1290300a83239dca03d254c1a507',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '4bb5b43b921c12542260cda7f2c03bec',
+  'native_key' => 'eshoplogistic3_delivery_pick_up',
+  'object' => '{"key":"eshoplogistic3_delivery_pick_up","value":false,"xtype":"combo-boolean","namespace":"eshoplogistic3","area":"eshoplogistic3_order_automatic_unload","editedon":null}',
+);

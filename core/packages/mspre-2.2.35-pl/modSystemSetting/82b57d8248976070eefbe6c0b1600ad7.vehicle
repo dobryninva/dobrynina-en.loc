@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '910b538d9a3bd0f79c255111d56cadb5',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '82b57d8248976070eefbe6c0b1600ad7',
+  'native_key' => 'mspre_export_date_format',
+  'object' => '{"key":"mspre_export_date_format","value":"Y-m-d H:i:s","xtype":"textfield","namespace":"mspre","area":"mspre_export","editedon":null}',
+);

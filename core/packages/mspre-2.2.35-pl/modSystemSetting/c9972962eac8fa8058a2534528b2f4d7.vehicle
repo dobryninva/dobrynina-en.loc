@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '61bdca8a37c1f6feebc88ddb915bae0c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'c9972962eac8fa8058a2534528b2f4d7',
+  'native_key' => 'mspre_product_export_selected_fields',
+  'object' => '{"key":"mspre_product_export_selected_fields","value":"id,menuindex,thumb,article,pagetitle,price,old_price,new,vendor","xtype":"textfield","namespace":"mspre","area":"mspre_export","editedon":null}',
+);

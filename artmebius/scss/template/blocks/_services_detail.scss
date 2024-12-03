@@ -1,0 +1,267 @@
+// .services_products{
+//   margin-bottom: 40px;
+
+//   .mdl-header{
+//     // margin-bottom: 40px;
+//   }
+// }
+
+// .services_products_title{
+//   margin-bottom: 30px;
+// }
+
+// .services_prds_item{
+//   border: 1px solid $clrB;
+//   padding: 18px 18px 45px;
+//   line-height: 1.2;
+//   text-align: center;
+// }
+// .services_prds_item_title{
+//   margin-bottom: 18px;
+//   // text-align: center;
+//   font-size: 21px;
+//   font-weight: 500;
+// }
+// .services_prds_item_title_image{
+//   margin-bottom: 3px;
+// }
+// .services_prds_item_title_text{}
+
+// .services_prds_item_desc{
+//   margin-bottom: 14px;
+//   font-size: 18px;
+
+//   p{
+//     margin-bottom: 0;
+//   }
+// }
+
+// .services_prds_item_price{
+//   margin-bottom: 14px;
+//   font-size: 21px;
+//   font-weight: 500;
+// }
+// .services_prds_item_order{
+//   font-size: 18px;
+// }
+// .services_prds_item_order_link{
+//   text-decoration: underline;
+// }
+
+
+// .services_advantages{
+//   margin-bottom: 54px;
+
+//   .mdl-header{
+//     margin-bottom: 40px;
+//   }
+//   .tiles_col{
+//     margin-bottom: 26px;
+//   }
+// }
+
+// .services_advantage_item{
+//   padding: 0 18px;
+//   text-align: center;
+//   line-height: 1.2;
+// }
+// .services_advantage_item_icon{
+//   margin-bottom: 18px;
+// }
+// .services_advantage_item_title{
+//   margin-bottom: 9px;
+//   font-size: 21px;
+//   font-weight: 500;
+// }
+// .services_advantage_item_desc{
+//   font-size: 18px;
+// }
+
+
+// .services_calc_block{
+//   margin-bottom: 52px;
+//   border-radius: 9px;
+//   padding: 80px 110px 88px 65px;
+//   line-height: 1.2;
+//   background: #eaf9ff url('../img/bg-calc.jpg') 50% 50% / cover no-repeat;
+// }
+// .services_calc_block_info{}
+// .services_calc_block_title{
+//   margin-bottom: 12px;
+//   font-size: 40px;
+//   font-weight: 800;
+// }
+// .services_calc_block_desc{
+//   font-size: 21px;
+// }
+// .services_calc_block_btn{
+//   .btn{
+//     font-size: 21px;
+//   }
+// }
+
+
+// .services_portfolio{
+
+//   .mdl-header{
+//     margin-bottom: 24px;
+//   }
+// }
+
+
+// .services_production_stages{
+//   margin-top: 5px;
+
+//   .mdl-header{
+//     margin-bottom: 43px;
+//   }
+
+//   .tabs{
+
+//     .tabs_titles{
+//       margin-bottom: 53px;
+//     }
+//   }
+// }
+// .services_production_stage{}
+// .services_production_stage_items_col{}
+// .services_production_stage_items{
+//   line-height: 1.6;
+//   margin-bottom: 15px;
+// }
+// .services_production_stage_items_icon{
+//   flex-shrink: 0;
+//   margin-right: 18px;
+//   width: 100px;
+//   text-align: center;
+// }
+// .services_production_stage_items_info{}
+// .services_production_stage_items_title{
+//   font-size: 21px;
+//   font-weight: 500;
+// }
+// .services_production_stage_items_desc{
+//   font-size: 18px;
+// }
+// .services_production_stage_image{
+//   // flex-shrink: 0;
+//   // margin-left: 18px;
+// }
+
+
+// .services_price_table{
+//   margin-bottom: 47px;
+
+//   .mdl-header{
+//     margin-bottom: 26px;
+//   }
+
+//   table{
+//     margin-bottom: 0;
+//   }
+// }
+
+// .services_purpose{
+//   margin-bottom: 40px;
+
+//   .mdl-header{
+//     margin-bottom: 32px;
+//   }
+// }
+// .services_purpose_image{
+//   padding-top: 32px;
+//   padding-bottom: 32px;
+//   position: relative;
+//   z-index: 2;
+// }
+// .services_purpose_titles{
+//   padding-top: 38px;
+//   padding-bottom: 18px;
+//   position: relative;
+
+//   &.with_image{
+//     @include content-columns(2);
+//   }
+//   &.wo_image{
+//     @include content-columns(4);
+//   }
+
+//   &:before{
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: -225px;
+//     display: block;
+//     background: #f6f6f6;
+//     content: '';
+//     z-index: 1;
+//   }
+// }
+// .services_purpose_title{
+//   position: relative;
+//   z-index: 3;
+//   margin-bottom: 24px;
+// }
+// .services_purpose_title_link{
+//   position: relative;
+//   font-size: 21px;
+//   color: $clrM;
+
+//   &:hover{
+//     color: $clr1;
+//     text-decoration: none;
+//   }
+
+//   &:before{
+//     display: inline-block;
+//     margin-right: 9px;
+//     border: 1px solid $clr1;
+//     border-radius: 50%;
+//     width: 22px;
+//     height: 22px;
+//     line-height: 20px;
+//     text-align: center;
+//     font-family: 'fa5l';
+//     font-size: 19px;
+//     color: $clr1;
+//     content: '\f105';
+//   }
+// }
+
+
+// .services_certificates{
+//   margin-bottom: 30px;
+
+//   .mdl-header{
+//     margin-bottom: 30px;
+//   }
+// }
+
+
+
+// .services_faq_image{
+//   align-self: flex-end;
+//   padding-top: 30px;
+// }
+
+// .services_faq{
+//   padding-top: 30px;
+//   padding-bottom: 30px;
+// }
+
+
+// .services_partners{
+//   margin-bottom: 62px;
+
+//   .ctrl-dots{
+//     margin-top: 18px;
+//   }
+
+//   .ctrl-prev{
+//     left: -40px;
+//   }
+//   .ctrl-next{
+//     right: -40px;
+//   }
+// }

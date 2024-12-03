@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0254bd486404d53e5058311032d1fcdd',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '36c32e1ead1080a9aef5a2cfd625fc2d',
+  'native_key' => 'mspre_character_separate_options',
+  'object' => '{"key":"mspre_character_separate_options","value":"||","xtype":"textfield","namespace":"mspre","area":"mspre_main","editedon":null}',
+);

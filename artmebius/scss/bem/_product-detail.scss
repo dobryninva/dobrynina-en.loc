@@ -1,0 +1,131 @@
+.product-detail{
+
+	&__header{}
+
+	// &__form{}
+
+	&__row{}
+	&__col{}
+	&__col_images{}
+	&__col_right{}
+
+	&__labels{}
+
+	&__images{}
+
+	&__images-full{}
+	&__images-full-slide{}
+	&__images-full-link{}
+	&__images-full-img{}
+
+	&__images-thumbs{}
+	&__images-thumbs-slide{}
+	&__images-thumbs-img-wrap{}
+	&__images-thumbs-img{}
+
+	&__prices{}
+
+	&__price-old{}
+	&__price-old-value{}
+	&__price-old-currency{}
+
+	&__price{}
+	&__price_discount{}
+	&__price-title{}
+	&__price-value{}
+	&__price-currency{}
+
+	&__available{}
+	&__available-icon{}
+
+	&__controls{}
+	&__buy{}
+	&__buy-btn{}
+	&__buy-btn-text{}
+
+	&__count{}
+
+	&__not-available{}
+
+	&__order{}
+	&__order-btn{}
+
+	&__favorite-compare{}
+
+	&__favorite{
+		&.active{}
+		&.inactive{}
+	}
+	&__favorite-link{
+    text-decoration: none;
+    color: $clrM;
+
+    &:hover{
+      text-decoration: none;
+    	color: $clr1;
+    }
+
+    .active &{
+      color: $clr1;
+    }
+	}
+	&__favorite-icon{
+    cursor: pointer;
+    transition: color .2s ease-out;
+	}
+	&__favorite-text{}
+
+	&__compare{
+		&.added{}
+		&.can_compare{}
+	}
+	&__compare-link{
+    text-decoration: none;
+    color: $clrM;
+
+    &:hover{
+      text-decoration: none;
+    }
+
+    .can_compare &{
+      color: $clrM;
+
+      &:hover{
+        color: $clr1;
+      }
+    }
+
+    .added &{
+      color: $clr1;
+    }
+	}
+	&__compare-icon{
+      cursor: pointer;
+      transition: color .2s ease-out;
+	}
+	&__compare-text{}
+	&__compare-go{}
+
+	&__brand{}
+	&__brand-title{}
+	&__brand-link{}
+
+	&__props-main{}
+	&__props-title{}
+	&__props-items{}
+	// &__props-item{}
+	// &__props-link{}
+
+	&__share{}
+	&__share-title{}
+	&__share-items{}
+
+	&__tabs{}
+
+	&__props{}
+
+	&__content{}
+
+	&__delivery-payment{}
+
+}

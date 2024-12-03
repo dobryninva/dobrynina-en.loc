@@ -1,0 +1,17 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => true,
+  'namespace' => 'fileattach',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '93dbaa4866b9f0ee2badf742e398d092',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '21aefd1af35f4e160c63f0a38bf005d3',
+  'native_key' => 'fileattach',
+  'object' => '{"text":"fileattach","parent":"components","action":"list","description":"fileattach.menu_desc","icon":"","menuindex":0,"params":"","handler":"","permissions":"fileattach.totallist","namespace":"fileattach"}',
+);

@@ -1,0 +1,56 @@
+[
+    {
+        "name": "agelxnash/jevix",
+        "version": "1.2.4",
+        "version_normalized": "1.2.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/AgelxNash/Jevix.git",
+            "reference": "c37170e3d60f357ee1087adde89df7fd938fdb8b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/AgelxNash/Jevix/zipball/c37170e3d60f357ee1087adde89df7fd938fdb8b",
+            "reference": "c37170e3d60f357ee1087adde89df7fd938fdb8b",
+            "shasum": ""
+        },
+        "require": {
+            "ext-mbstring": "*"
+        },
+        "time": "2019-03-29T12:26:55+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/functions.php"
+            ],
+            "psr-0": {
+                "Jevix": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Roman Shamritskiy",
+                "email": "roman@litgroup.ru"
+            },
+            {
+                "name": "ur001"
+            },
+            {
+                "name": "livestreet framework"
+            },
+            {
+                "name": "Bezumkin"
+            },
+            {
+                "name": "Evgeniy Borisov",
+                "email": "agel-nash@mail.ru"
+            }
+        ],
+        "description": "Library for html filtering"
+    }
+]

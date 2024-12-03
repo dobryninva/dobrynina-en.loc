@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'compiler',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '89a0a86dcf18417131d6418d75b78ba4',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'f2183c150869451830e1a047886de98a',
+  'native_key' => 'compiler_scss_dir_from',
+  'object' => '{"key":"compiler_scss_dir_from","value":"\\/assets\\/themes\\/default\\/src\\/scss\\/","xtype":"textfield","namespace":"compiler","area":"compiler_scss","editedon":null}',
+);

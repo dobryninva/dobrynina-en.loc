@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'mssetincart',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1c3b1dd009b3e1fc55dd9cb1041a2d83',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '910bcec068187adcc6dcb5498bc523e3',
+  'native_key' => 'mssetincart_working_templates',
+  'object' => '{"key":"mssetincart_working_templates","value":"1,2,3,4","xtype":"textfield","namespace":"mssetincart","area":"mssetincart_main","editedon":null}',
+);

@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e94f4d98bd5ccb1d899180a6446e16bf',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '79a84019b87ee353a99e7a0b10e2890f',
+  'native_key' => 'eshoplogistic3_sender_phone',
+  'object' => '{"key":"eshoplogistic3_sender_phone","value":"","xtype":"textfield","namespace":"eshoplogistic3","area":"eshoplogistic3_order_unload","editedon":null}',
+);

@@ -1,0 +1,51 @@
+.menu_main{
+
+	/* common */
+  .menu__item{
+
+    &:before{}
+    .menu__link{
+      &:hover{}
+    }
+
+    &:hover{
+
+      >.menu__link{}
+    }
+    &.active{
+
+      >.menu__link{}
+    }
+    +.menu__item{
+
+      &:before{}
+      .menu__link{}
+    }
+
+    .menu__sub{}
+  }
+
+  /* lvl 1 */
+  >.menu__item{
+
+    >.menu__link{
+      &:hover{}
+    }
+
+    &:hover{
+
+      >.menu__link{}
+    }
+    &.active{
+
+      >.menu__link{}
+    }
+    +.menu__item{
+
+      >.menu__link{}
+    }
+
+    /* lvl 2+ */
+    .menu__sub{}
+  }
+}

@@ -1,0 +1,203 @@
+.prdt{}
+
+.prdt_detail{}
+
+.prdt_row{}
+.prdt_col{}
+.prdt_col_imgs{}
+.prdt_col_right{}
+
+.prdt_info{}
+
+// imgs
+.prdt_imgs_full{}
+.prdt_imgs_full_slide{}
+.prdt_imgs_full_slide_link{}
+
+.prdt_imgs_thumb{}
+.prdt_imgs_thumb_slide{}
+.prdt_imgs_thumb_slide_item{
+  .slick-current &{}
+}
+
+// imgs + videos
+.prdt_full{}
+.prdt_full_slide{}
+.prdt_full_slide_link{
+  img{}
+}
+
+.prdt_thumb{
+  .ctrl-md{
+    opacity: .7;
+    &.slick-disabled{
+      display: none !important;
+    }
+  }
+  &:hover{
+    .ctrl-md{
+      opacity: 1;
+      color: $clrH;
+    }
+  }
+}
+.prdt_thumb_slide{}
+.prdt_thumb_slide_item{
+  .slick-current &{
+    border-color: $clr1;
+  }
+}
+
+.prdt_imgs_labels{}
+
+.prdt_brand{}
+.prdt_brand_title{}
+.prdt_brand_link{}
+
+.prdt_title{}
+.prdt_desc{}
+
+.prdt_prices{}
+.prdt_price{
+  &.price_with_discount{
+    .prdt_price_value{
+      color: $clr0;
+    }
+  }
+}
+.prdt_price_title{}
+.prdt_price_value{}
+.prdt_price_currency{}
+
+.prdt_price_old{
+  color: $clrD;
+}
+.prdt_price_old_value{
+  text-decoration: line-through;
+}
+.prdt_price_old_currency{}
+
+// prdt_props_main
+.prdt_props_main{}
+.prdt_props_main_title{}
+.prdt_props_main_body{}
+.prdt_props_main_item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0 8px;
+  &+&{
+    padding: 7px 0 8px;
+    border-top: 1px solid $clrB;
+  }
+}
+.prdt_props_main_item_title{}
+.prdt_props_main_item_value{}
+.prdt_props_main_item_link{}
+
+// prdt_props
+.prdt_props{}
+.prdt_props_item{
+  display: flex;
+  &:nth-child(2n+1){
+    background: $clr4;
+  }
+}
+.prdt_props_item_title{
+  padding: 9px;
+}
+.prdt_props_item_value{
+  padding: 9px;
+}
+
+.prdt_available{
+  .fas{}
+  &.available_yes{
+    .fas{
+      color: $clr1;
+    }
+  }
+  &.available_no{
+    .fas{
+      color: #7a7d86;
+    }
+  }
+}
+
+.prdt_share{}
+
+.prdt_favorite_compare{}
+
+// comparison
+.prdt_compare{
+  &.added{
+    .prdt_compare_icon{
+      color: $clr1;
+    }
+    .prdt_compare_text{}
+  }
+}
+.prdt_compare_link{
+  color: $clrM;
+  &:hover{
+    text-decoration: none;
+    color: $clr1;
+    .prdt_compare_text{
+      border-color: $clr1;
+    }
+  }
+}
+.prdt_compare_icon{
+  width: 16px;
+  margin-right: 5px;
+}
+.prdt_compare_text{
+  border-bottom: 1px dashed $clrM;
+}
+
+// favorite (& compare shopkeeper)
+.prdt_favorite{
+  color: $clrM;
+  &:hover{
+    color: $clr1;
+    .prdt_favorite_text{
+      border-color: $clr1;
+    }
+  }
+  &.active{
+    .prdt_favorite_icon{
+      color: $clr1;
+      &:before{
+        font-family: 'fa5f';
+        font-weight: 700;
+      }
+    }
+    .prdt_favorite_text{
+      // border-color: $clr1;
+    }
+  }
+}
+.prdt_favorite_row{
+  display: inline;
+}
+.prdt_favorite_icon{
+  width: 16px;
+  margin-right: 5px;
+}
+.prdt_favorite_text{
+  border-bottom: 1px dashed $clrM;
+}
+
+.prdt_controls{}
+.prdt_buy_count{}
+.prdt_buy{}
+.prdt_count{}
+.prdt_order{}
+
+.prdt_ean{}
+.prdt_ean_title{}
+
+.prdt_country{}
+.prdt_country_title{}
+
+.prdt_tabs{}

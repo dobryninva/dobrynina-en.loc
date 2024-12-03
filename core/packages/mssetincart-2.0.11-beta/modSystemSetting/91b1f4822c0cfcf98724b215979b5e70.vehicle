@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'mssetincart',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e7489e76966aa7303becc41ac188b339',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '91b1f4822c0cfcf98724b215979b5e70',
+  'native_key' => 'mssetincart_front_css',
+  'object' => '{"key":"mssetincart_front_css","value":"[[+assetsUrl]]css\\/web\\/default.css","xtype":"textfield","namespace":"mssetincart","area":"mssetincart_main","editedon":null}',
+);

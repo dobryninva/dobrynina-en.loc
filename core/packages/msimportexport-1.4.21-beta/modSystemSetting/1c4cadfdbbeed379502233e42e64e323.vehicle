@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '94dbf12e87d24526f56d4c90f4cd9a6b',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1c4cadfdbbeed379502233e42e64e323',
+  'native_key' => 'msimportexport.gallery.clear_dir',
+  'object' => '{"key":"msimportexport.gallery.clear_dir","value":"1","xtype":"combo-boolean","namespace":"msimportexport","area":"gallery","editedon":null}',
+);

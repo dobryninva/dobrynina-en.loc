@@ -1,0 +1,41 @@
+.stars-rating{
+  display: flex;
+  position: relative;
+  width: 90px;
+
+	&__default{
+	  position: relative;
+	  display: flex;
+	  height: 16px;
+	  width: 90px;
+	  background: transparent url('../img/bg-star.svg') 0 0 repeat-x;
+	  z-index: 5;
+
+	  // tt
+	  // &:before{
+    //   content: '\f005 \f005 \f005 \f005 \f005';
+    //   font-family: 'fa5f';
+    //   font-weight: 900;
+    // }
+	}
+
+	&__active{
+	  overflow: hidden;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  width: 0%;
+	  background: transparent url('../img/bg-star-active.svg') 0 0 repeat-x;
+	  z-index: 10;
+	}
+
+	&__count{
+	  margin-left: 4px;
+	  font-weight: bold;
+	  font-size: 13px;
+	  color: $clrH;
+	  transition: color .2s ease-out;
+	}
+
+}

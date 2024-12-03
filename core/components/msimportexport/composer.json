@@ -1,0 +1,9 @@
+{
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.6",
+        "mtdowling/cron-expression": "^1.2",
+        "symfony/cache": "^3.4",
+        "cache/simple-cache-bridge": "^1.0",
+        "neitanod/forceutf8": "^2.0"
+    }
+}

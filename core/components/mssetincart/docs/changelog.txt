@@ -1,0 +1,51 @@
+Changelog for msSetInCart
+
+2.0.11-beta (07.11.2019)
+==============
+- Change "isWorkingClassKey", "isWorkingTemplates" [mssetincart]
+
+2.0.10-beta (12.06.2018)
+==============
+- Improved compatibility with "msmulticurrency"
+
+2.0.9-beta (04.03.2018)
+==============
+- Change "getDataSet" [mssetincart]
+
+2.0.8-beta (14.09.2017)
+==============
+- Change "initialize,runProcessor" [mssetincart]
+
+2.0.7 beta (26.06.2017)
+==============
+- Add "mode" [tpl.msSetInCart.set]
+
+2.0.6 beta (26.06.2017)
+==============
+- Fix "get product" [msSetInCartMsOnBeforeAddToCart]
+
+2.0.5 beta (16.06.2017)
+==============
+- Fix "formatData" [mssetincart]
+
+2.0.4 beta (28.05.2017)
+==============
+- Fix "getSetData" [mssetincart]
+
+2.0.3 beta (16.05.2017)
+==============
+- Fix "msSetInCartMsOnBeforeAddToCart"
+
+2.0.2 beta (24.03.2017)
+==============
+- Fix "msSetInCartMsOnBeforeAddToCart"
+
+2.0.1 beta (23.03.2017)
+==============
+- Fix "setValue" [js]
+- Fix "getProductSet" [msSetInCart]
+- Add "en" lexicon
+
+2.0.0-beta (13.03.2017)
+==============
+- Initial

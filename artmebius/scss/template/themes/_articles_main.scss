@@ -1,0 +1,66 @@
+.articles_main{
+
+  //************************************************************************ article_item */
+
+  .article_item{}
+
+  .article_item_title{}
+
+  .article_item_title_link{}
+
+  .article_item_title_link_image{
+    img{}
+  }
+
+  .article_item_title_link_text{}
+
+  .article_item_preview{}
+
+  .article_item_preview_link{}
+
+  .article_item_preview_link_image{
+    img{}
+  }
+
+  .article_item_info{}
+
+  .article_item_date{}
+
+  .article_item_intro{}
+
+  .article_item_more{}
+
+  .article_item_more_link{}
+
+
+  // structures
+
+  .items_grid{
+
+    .article_item{}
+
+  } // .items_grid
+
+
+  .items_list{
+
+    .article_item{
+      &+&{}
+    }
+
+  } // .items_list
+
+
+
+  //************************************************************************ article_blog */
+
+
+
+  //************************************************************************ article_detail */
+
+  .article_detail{}
+
+  .article_detail_preview{}
+
+
+}

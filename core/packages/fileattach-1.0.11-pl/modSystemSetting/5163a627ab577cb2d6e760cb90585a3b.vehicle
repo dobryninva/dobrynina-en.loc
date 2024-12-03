@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'fileattach',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '76642345b284e8380b7ea9402f309e20',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '5163a627ab577cb2d6e760cb90585a3b',
+  'native_key' => 'fileattach.download',
+  'object' => '{"key":"fileattach.download","value":true,"xtype":"combo-boolean","namespace":"fileattach","area":"","editedon":null,"name":"setting_fileattach.download","description":"setting_fileattach.download_desc","lexicon":"fileattach:setting"}',
+);

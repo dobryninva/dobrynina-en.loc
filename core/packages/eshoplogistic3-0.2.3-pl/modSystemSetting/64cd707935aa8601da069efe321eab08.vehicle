@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '66fb9a2a7204118d32c33bddebd69356',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '64cd707935aa8601da069efe321eab08',
+  'native_key' => 'eshoplogistic3_boxberry_order_packing_type',
+  'object' => '{"key":"eshoplogistic3_boxberry_order_packing_type","value":1,"xtype":"numberfield","namespace":"eshoplogistic3","area":"eshoplogistic3_order_unload_boxberry","editedon":null}',
+);

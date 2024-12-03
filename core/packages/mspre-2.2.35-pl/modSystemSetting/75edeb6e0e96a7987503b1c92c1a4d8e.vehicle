@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '43917810911d2f3711d01ba3c9800680',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '75edeb6e0e96a7987503b1c92c1a4d8e',
+  'native_key' => 'mspre_field_string',
+  'object' => '{"key":"mspre_field_string","value":"article,made_in","xtype":"textfield","namespace":"mspre","area":"mspre_fields","editedon":null}',
+);

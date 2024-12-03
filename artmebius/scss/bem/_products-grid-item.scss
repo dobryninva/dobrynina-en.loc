@@ -1,0 +1,57 @@
+.products-grid-item{
+
+	&__top{}
+	&__btm{}
+
+	&__favorite-compare{}
+	&__compare{
+		&.added{}
+		&.can_compare{}
+	}
+	&__compare-link{}
+	&__compare-icon{}
+
+	&__favorite{
+		&.active{}
+		&.inactive{}
+	}
+	&__favorite-icon{}
+
+	&__labels{}
+
+	&__preview{}
+	&__preview-link{}
+
+	&__link{}
+	&__preview-img-wrap{}
+	&__preview-img{}
+	&__title{}
+
+	&__intro{}
+
+	&__prices{}
+
+	&__price-old{}
+	&__price-old-value{}
+	&__price-old-currency{}
+
+	&__price{}
+	&__price_discount{}
+	&__price-title{}
+	&__price-value{}
+	&__price_currency{}
+
+	&__brand{}
+	&__brand-link{}
+
+	&__available{}
+
+	// &__form{}
+
+	&__controls{}
+	&__buy{}
+	&__buy-btn{}
+	&__more-btn{}
+	&__order{}
+	&__order-btn{}
+}

@@ -1,0 +1,16 @@
+<?php return array (
+  'class' => 'xPDOScriptVehicle',
+  'object' => 
+  array (
+    'source' => 'mssetincart-2.0.11-beta/xPDOScriptVehicle/fd4bef7513caa5d9289a3d399745cdcc.resolve.encryption.script',
+  ),
+  'vehicle_class' => 'xPDOScriptVehicle',
+  'namespace' => 'mssetincart',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => '16c21df9a7ca04872300c1f683887dd4',
+  'package' => '',
+  'signature' => 'fd4bef7513caa5d9289a3d399745cdcc',
+  'native_key' => '16c21df9a7ca04872300c1f683887dd4',
+);

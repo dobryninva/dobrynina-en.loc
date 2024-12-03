@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7f328d719a126cd3a5bb0bdd8314c158',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '943a13c03c57d28cb38b8a3e1eddbb29',
+  'native_key' => 'ms2_utility_import_fields',
+  'object' => '{"key":"ms2_utility_import_fields","value":"pagetitle,parent,price,article","xtype":"textfield","namespace":"minishop2","area":"ms2_import","editedon":"2023-07-02 21:18:32"}',
+);

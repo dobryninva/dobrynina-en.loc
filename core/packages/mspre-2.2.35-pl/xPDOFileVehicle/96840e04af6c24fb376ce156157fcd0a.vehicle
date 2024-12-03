@@ -1,0 +1,16 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'mspre-2.2.35-pl/xPDOFileVehicle/96840e04af6c24fb376ce156157fcd0a/',
+    'target' => 'return MODX_CORE_PATH . \'components/mspre/model/\';',
+    'name' => 'encryptedvehicle.class.php',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'uninstall_files' => false,
+  'vehicle_package' => 'transport',
+  'guid' => '0d19ffab436a4f89fee6c817f502e114',
+  'package' => '',
+  'signature' => '96840e04af6c24fb376ce156157fcd0a',
+  'native_key' => '0d19ffab436a4f89fee6c817f502e114',
+);

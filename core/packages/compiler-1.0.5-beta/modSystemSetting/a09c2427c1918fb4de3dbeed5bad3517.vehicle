@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'compiler',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4817cb7c736feb8ff1fba0f0ae22303d',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'a09c2427c1918fb4de3dbeed5bad3517',
+  'native_key' => 'compiler_scss_skip_underscore',
+  'object' => '{"key":"compiler_scss_skip_underscore","value":true,"xtype":"combo-boolean","namespace":"compiler","area":"compiler_scss","editedon":null}',
+);

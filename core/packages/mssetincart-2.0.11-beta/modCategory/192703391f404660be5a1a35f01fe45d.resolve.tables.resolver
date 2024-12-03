@@ -1,0 +1,63 @@
+<?php
+
+/** @var $modx modX */
+if (!$modx = $object->xpdo AND !$object->xpdo instanceof modX) {
+    return true;
+}
+
+/** @var $options */
+switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+    case xPDOTransport::ACTION_INSTALL:
+    case xPDOTransport::ACTION_UPGRADE:
+
+        $modelPath = $modx->getOption('mssetincart_core_path', null,
+                $modx->getOption('core_path') . 'components/mssetincart/') . 'model/';
+        $modx->addPackage('mssetincart', $modelPath);
+
+        $objects = array(// 'mssetincartObject',
+        );
+
+        $manager = $modx->getManager();
+        foreach ($objects as $tmp) {
+            $manager->createObjectContainer($tmp);
+        }
+
+        $level = $modx->getLogLevel();
+        $modx->setLogLevel(xPDO::LOG_LEVEL_FATAL);
+
+        /* */
+
+        $modx->loadClass('msProductLink');
+
+        $modx->map['msProductLink']['fields']['count'] = 0;
+        $modx->map['msProductLink']['fieldMeta']['count'] = array(
+            'dbtype'     => 'int',
+            'precision'  => '10',
+            'phptype'    => 'integer',
+            'attributes' => 'unsigned',
+            'null'       => false,
+            'default'    => 0,
+        );
+
+        $modx->map['msProductLink']['fields']['price'] = '';
+        $modx->map['msProductLink']['fieldMeta']['price'] = array(
+            'dbtype'    => 'varchar',
+            'precision' => 255,
+            'phptype'   => 'string',
+            'null'      => false,
+            'default'   => '',
+        );
+        /* */
+
+        $manager->addField('msProductLink', 'count');
+        $manager->addField('msProductLink', 'price');
+
+        $modx->setLogLevel($level);
+
+        break;
+
+    case xPDOTransport::ACTION_UNINSTALL:
+        break;
+}
+
+return true;

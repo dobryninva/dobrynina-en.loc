@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'comparison',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '988c84fd42bde4c5a71bab5754a1f6e2',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '860cc76513e83ab2f288808f984ba230',
+  'native_key' => 'comparison_frontend_css',
+  'object' => '{"key":"comparison_frontend_css","value":"[[+assetsUrl]]css\\/default.css","xtype":"textfield","namespace":"comparison","area":"comparison_main","editedon":null}',
+);

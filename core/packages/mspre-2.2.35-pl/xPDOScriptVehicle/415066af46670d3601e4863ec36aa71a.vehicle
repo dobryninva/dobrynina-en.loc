@@ -1,0 +1,16 @@
+<?php return array (
+  'class' => 'xPDOScriptVehicle',
+  'object' => 
+  array (
+    'source' => 'mspre-2.2.35-pl/xPDOScriptVehicle/415066af46670d3601e4863ec36aa71a.encryption.script',
+  ),
+  'vehicle_class' => 'xPDOScriptVehicle',
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => '0be9abdf7c246dca9625a8cbf799db9c',
+  'package' => '',
+  'signature' => '415066af46670d3601e4863ec36aa71a',
+  'native_key' => '0be9abdf7c246dca9625a8cbf799db9c',
+);

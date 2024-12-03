@@ -1,0 +1,16 @@
+<?php return array (
+  'class' => 'xPDOScriptVehicle',
+  'object' => 
+  array (
+    'source' => 'resvideogallery-2.0.5-pl/xPDOScriptVehicle/0465a0ff27d1454055a8795e9628751d.resolve.encryption.script',
+  ),
+  'vehicle_class' => 'xPDOScriptVehicle',
+  'namespace' => 'resvideogallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => '5613bd6b92323fde141254a302a0d24b',
+  'package' => '',
+  'signature' => '0465a0ff27d1454055a8795e9628751d',
+  'native_key' => '5613bd6b92323fde141254a302a0d24b',
+);

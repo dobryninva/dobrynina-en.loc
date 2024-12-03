@@ -1,0 +1,165 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '883172a04edecda236d9c82035468a80' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '81c07a3f2c1012b7663a10c8b4e23bbc' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVInputRenderList","priority":0,"propertyset":0}',
+              'guid' => '5b079d2ed7802db3c042a70c077b2dfb',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVInputRenderList',
+              ),
+              'signature' => 'b74c08edd999499503b2bdc3558604b1',
+            ),
+            '2889b0627b16af0a490836bb0efa8a39' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVOutputRenderList","priority":0,"propertyset":0}',
+              'guid' => 'd168608283eb3b74a81b08362af6d023',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVOutputRenderList',
+              ),
+              'signature' => '6e33ab67ce4afe0defd56265db83305c',
+            ),
+            'f54360ac8ed160a6e8772ea4222a8591' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVInputPropertiesList","priority":0,"propertyset":0}',
+              'guid' => '01ea001d888b375eb2392dd0a85355a2',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVInputPropertiesList',
+              ),
+              'signature' => '09a1e4fbea1d2f6635af9a7f5dda0c86',
+            ),
+            'bf7faefa2d8d17c9d0c909b1205cd6d2' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVOutputRenderPropertiesList","priority":0,"propertyset":0}',
+              'guid' => 'a6b69725e463051a0c6619beb59d0b2b',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVOutputRenderPropertiesList',
+              ),
+              'signature' => '827d9e88bfbe797e1b278b71e71f34a9',
+            ),
+            '97d9bddacf005abaf468b94ec848bce0' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageBeforeRender","priority":0,"propertyset":0}',
+              'guid' => '98d59f257cb78036dcec435810aca522',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageBeforeRender',
+              ),
+              'signature' => '0bc91828f88aeaf25b57e9e181d186b2',
+            ),
+            '88e96fe1c82dfda1e4faa3c22903a092' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVFormSave","priority":0,"propertyset":0}',
+              'guid' => 'f0bc324f85250b88ff89b95eec18723f',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVFormSave',
+              ),
+              'signature' => '2eafb5741e523e1c525d9f371958f93d',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"DynamicDropdownTV","description":"Tell MODX to check these directories for DynamicDropdownTV files and save parents and childrens of DynamicDropdownTVs to the TV options.","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\r\\n * DynamicDropdownTV\\r\\n *\\r\\n * Copyright 2012-2013 by Bruno Perner <b.perner@gmx.de>\\r\\n *\\r\\n * DynamicDropdownTV is free software; you can redistribute it and\\/or modify it\\r\\n * under the terms of the GNU General Public License as published by the Free\\r\\n * Software Foundation; either version 2 of the License, or (at your option) any\\r\\n * later version.\\r\\n *\\r\\n * DynamicDropdownTV is distributed in the hope that it will be useful, but\\r\\n * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or\\r\\n * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more\\r\\n * details.\\r\\n *\\r\\n * You should have received a copy of the GNU General Public License along with\\r\\n * DynamicDropdownTV; if not, write to the Free Software Foundation, Inc., 59\\r\\n * Temple Place, Suite 330, Boston, MA 02111-1307 USA\\r\\n *\\r\\n * @package dynamicdropdowntv\\r\\n * @subpackage plugin\\r\\n *\\r\\n * Plugins for DynamicDropdownTV\\r\\n *\\/\\r\\nif (!function_exists(\'ddSetParentChilds\')) {\\r\\n\\r\\n\\tfunction ddSetParentChilds($tvName, $parentTvName, $ddTvArr) {\\r\\n\\t\\tif (!empty($parentTvName) && array_key_exists($parentTvName, $ddTvArr)) {\\r\\n\\t\\t\\t$ddTvArr[$parentTvName][\'childs\'][$tvName] = $tvName;\\r\\n\\t\\t\\tif (!empty($ddTvArr[$parentTvName][\'properties\'][\'parent\'])) {\\r\\n\\t\\t\\t\\t$ddTvArr = ddSetParentChilds($tvName, $ddTvArr[$parentTvName][\'properties\'][\'parent\'], $ddTvArr);\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t\\treturn $ddTvArr;\\r\\n\\t}\\r\\n\\r\\n}\\r\\n\\r\\n$corePath = $modx->getOption(\'dynamicdropdowntv.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/dynamicdropdowntv\\/\');\\r\\n\\r\\nswitch ($modx->event->name) {\\r\\n\\tcase \'OnTVInputRenderList\':\\r\\n\\t\\t$modx->event->output($corePath . \'tv\\/input\\/\');\\r\\n\\t\\tbreak;\\r\\n\\tcase \'OnTVOutputRenderList\':\\r\\n\\t\\t$modx->event->output($corePath . \'tv\\/output\\/\');\\r\\n\\t\\tbreak;\\r\\n\\tcase \'OnTVInputPropertiesList\':\\r\\n\\t\\t$modx->event->output($corePath . \'tv\\/inputoptions\\/\');\\r\\n\\t\\tbreak;\\r\\n\\tcase \'OnTVOutputRenderPropertiesList\':\\r\\n\\t\\t$modx->event->output($corePath . \'tv\\/properties\\/\');\\r\\n\\t\\tbreak;\\r\\n\\tcase \'OnManagerPageBeforeRender\':\\r\\n\\t\\tbreak;\\r\\n\\tcase \'OnTVFormSave\':\\r\\n\\t\\t$tv = &$scriptProperties[\'tv\'];\\r\\n\\t\\t$tvName = $tv->get(\'name\');\\r\\n\\t\\t$tvType = $tv->get(\'type\');\\r\\n\\t\\tif ($tvType == \'dynamicdropdown\' || $tvType == \'dynamicdropdown_multiple\') {\\r\\n\\t\\t\\t$tvInputProperties = $tv->get(\'input_properties\');\\r\\n\\t\\t\\t\\/\\/ get all DynamicDropdownTVs\\r\\n\\t\\t\\t$c = $modx->newQuery(\'modTemplateVar\');\\r\\n\\t\\t\\t$c->where(array(\'type:LIKE\' => \'dynamicdropdown%\'));\\r\\n\\t\\t\\t$ddTvs = $modx->getCollection(\'modTemplateVar\', $c);\\r\\n\\r\\n\\t\\t\\t$ddTvArr = array();\\r\\n\\t\\t\\tforeach ($ddTvs as $key => $ddTv) {\\r\\n\\t\\t\\t\\t$ddTvInputProperties = $ddTv->get(\'input_properties\');\\r\\n\\t\\t\\t\\t\\/\\/ work only with them in the same dd-group\\r\\n\\t\\t\\t\\tif ($ddTvInputProperties[\'group\'] == $tvInputProperties[\'group\']) {\\r\\n\\t\\t\\t\\t\\t$ddTvArr[$ddTv->get(\'name\')][\'properties\'] = $ddTv->get(\'input_properties\');\\r\\n\\t\\t\\t\\t} else {\\r\\n\\t\\t\\t\\t\\tunset($ddTvs[$key]);\\r\\n\\t\\t\\t\\t}\\r\\n\\t\\t\\t}\\r\\n\\t\\t\\t$ddTvResult = $ddTvArr;\\r\\n\\t\\t\\tforeach ($ddTvArr as $tvName => $ddTv) {\\r\\n\\t\\t\\t\\t$ddTvInputProperties = $ddTv[\'properties\'];\\r\\n\\t\\t\\t\\t$ddTvResult = ddSetParentChilds($tvName, $ddTvInputProperties[\'parent\'], $ddTvResult);\\r\\n\\t\\t\\t}\\r\\n\\t\\t\\t$ddTvArr = $ddTvResult;\\r\\n\\t\\t\\tforeach ($ddTvArr as $tvName => $ddTv) {\\r\\n\\t\\t\\t\\t$ddTvInputProperties = $ddTv[\'properties\'];\\r\\n\\t\\t\\t\\tif (count($ddTv[\'childs\'] > 0)) {\\r\\n\\t\\t\\t\\t\\tforeach ($ddTv[\'childs\'] as $child) {\\r\\n\\t\\t\\t\\t\\t\\t$ddTvResult[$child][\'parents\'][$tvName] = $tvName;\\r\\n\\t\\t\\t\\t\\t}\\r\\n\\t\\t\\t\\t}\\r\\n\\t\\t\\t}\\r\\n\\t\\t\\tforeach ($ddTvs as $key => $ddTv) {\\r\\n\\t\\t\\t\\t$ddTvInputProperties = $ddTv->get(\'input_properties\');\\r\\n\\t\\t\\t\\t$ddTvInputProperties[\'childs\'] = isset($ddTvResult[$ddTv->get(\'name\')][\'childs\']) ? implode(\',\', $ddTvResult[$ddTv->get(\'name\')][\'childs\']) : \'\';\\r\\n\\t\\t\\t\\t$ddTvInputProperties[\'parents\'] = isset($ddTvResult[$ddTv->get(\'name\')][\'parents\']) ? implode(\',\', $ddTvResult[$ddTv->get(\'name\')][\'parents\']) : \'\';\\r\\n\\t\\t\\t\\t$ddTv->set(\'input_properties\', $ddTvInputProperties);\\r\\n\\t\\t\\t\\t$ddTv->save();\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t\\tbreak;\\r\\n}\\r\\nreturn;","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\r\\n * DynamicDropdownTV\\r\\n *\\r\\n * Copyright 2012-2013 by Bruno Perner <b.perner@gmx.de>\\r\\n *\\r\\n * DynamicDropdownTV is free software; you can redistribute it and\\/or modify it\\r\\n * under the terms of the GNU General Public License as published by the Free\\r\\n * Software Foundation; either version 2 of the License, or (at your option) any\\r\\n * later version.\\r\\n *\\r\\n * DynamicDropdownTV is distributed in the hope that it will be useful, but\\r\\n * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or\\r\\n * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more\\r\\n * details.\\r\\n *\\r\\n * You should have received a copy of the GNU General Public License along with\\r\\n * DynamicDropdownTV; if not, write to the Free Software Foundation, Inc., 59\\r\\n * Temple Place, Suite 330, Boston, MA 02111-1307 USA\\r\\n *\\r\\n * @package dynamicdropdowntv\\r\\n * @subpackage plugin\\r\\n *\\r\\n * Plugins for DynamicDropdownTV\\r\\n *\\/\\r\\nif (!function_exists(\'ddSetParentChilds\')) {\\r\\n\\r\\n\\tfunction ddSetParentChilds($tvName, $parentTvName, $ddTvArr) {\\r\\n\\t\\tif (!empty($parentTvName) && array_key_exists($parentTvName, $ddTvArr)) {\\r\\n\\t\\t\\t$ddTvArr[$parentTvName][\'childs\'][$tvName] = $tvName;\\r\\n\\t\\t\\tif (!empty($ddTvArr[$parentTvName][\'properties\'][\'parent\'])) {\\r\\n\\t\\t\\t\\t$ddTvArr = ddSetParentChilds($tvName, $ddTvArr[$parentTvName][\'properties\'][\'parent\'], $ddTvArr);\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t\\treturn $ddTvArr;\\r\\n\\t}\\r\\n\\r\\n}\\r\\n\\r\\n$corePath = $modx->getOption(\'dynamicdropdowntv.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/dynamicdropdowntv\\/\');\\r\\n\\r\\nswitch ($modx->event->name) {\\r\\n\\tcase \'OnTVInputRenderList\':\\r\\n\\t\\t$modx->event->output($corePath . \'tv\\/input\\/\');\\r\\n\\t\\tbreak;\\r\\n\\tcase \'OnTVOutputRenderList\':\\r\\n\\t\\t$modx->event->output($corePath . \'tv\\/output\\/\');\\r\\n\\t\\tbreak;\\r\\n\\tcase \'OnTVInputPropertiesList\':\\r\\n\\t\\t$modx->event->output($corePath . \'tv\\/inputoptions\\/\');\\r\\n\\t\\tbreak;\\r\\n\\tcase \'OnTVOutputRenderPropertiesList\':\\r\\n\\t\\t$modx->event->output($corePath . \'tv\\/properties\\/\');\\r\\n\\t\\tbreak;\\r\\n\\tcase \'OnManagerPageBeforeRender\':\\r\\n\\t\\tbreak;\\r\\n\\tcase \'OnTVFormSave\':\\r\\n\\t\\t$tv = &$scriptProperties[\'tv\'];\\r\\n\\t\\t$tvName = $tv->get(\'name\');\\r\\n\\t\\t$tvType = $tv->get(\'type\');\\r\\n\\t\\tif ($tvType == \'dynamicdropdown\' || $tvType == \'dynamicdropdown_multiple\') {\\r\\n\\t\\t\\t$tvInputProperties = $tv->get(\'input_properties\');\\r\\n\\t\\t\\t\\/\\/ get all DynamicDropdownTVs\\r\\n\\t\\t\\t$c = $modx->newQuery(\'modTemplateVar\');\\r\\n\\t\\t\\t$c->where(array(\'type:LIKE\' => \'dynamicdropdown%\'));\\r\\n\\t\\t\\t$ddTvs = $modx->getCollection(\'modTemplateVar\', $c);\\r\\n\\r\\n\\t\\t\\t$ddTvArr = array();\\r\\n\\t\\t\\tforeach ($ddTvs as $key => $ddTv) {\\r\\n\\t\\t\\t\\t$ddTvInputProperties = $ddTv->get(\'input_properties\');\\r\\n\\t\\t\\t\\t\\/\\/ work only with them in the same dd-group\\r\\n\\t\\t\\t\\tif ($ddTvInputProperties[\'group\'] == $tvInputProperties[\'group\']) {\\r\\n\\t\\t\\t\\t\\t$ddTvArr[$ddTv->get(\'name\')][\'properties\'] = $ddTv->get(\'input_properties\');\\r\\n\\t\\t\\t\\t} else {\\r\\n\\t\\t\\t\\t\\tunset($ddTvs[$key]);\\r\\n\\t\\t\\t\\t}\\r\\n\\t\\t\\t}\\r\\n\\t\\t\\t$ddTvResult = $ddTvArr;\\r\\n\\t\\t\\tforeach ($ddTvArr as $tvName => $ddTv) {\\r\\n\\t\\t\\t\\t$ddTvInputProperties = $ddTv[\'properties\'];\\r\\n\\t\\t\\t\\t$ddTvResult = ddSetParentChilds($tvName, $ddTvInputProperties[\'parent\'], $ddTvResult);\\r\\n\\t\\t\\t}\\r\\n\\t\\t\\t$ddTvArr = $ddTvResult;\\r\\n\\t\\t\\tforeach ($ddTvArr as $tvName => $ddTv) {\\r\\n\\t\\t\\t\\t$ddTvInputProperties = $ddTv[\'properties\'];\\r\\n\\t\\t\\t\\tif (count($ddTv[\'childs\'] > 0)) {\\r\\n\\t\\t\\t\\t\\tforeach ($ddTv[\'childs\'] as $child) {\\r\\n\\t\\t\\t\\t\\t\\t$ddTvResult[$child][\'parents\'][$tvName] = $tvName;\\r\\n\\t\\t\\t\\t\\t}\\r\\n\\t\\t\\t\\t}\\r\\n\\t\\t\\t}\\r\\n\\t\\t\\tforeach ($ddTvs as $key => $ddTv) {\\r\\n\\t\\t\\t\\t$ddTvInputProperties = $ddTv->get(\'input_properties\');\\r\\n\\t\\t\\t\\t$ddTvInputProperties[\'childs\'] = isset($ddTvResult[$ddTv->get(\'name\')][\'childs\']) ? implode(\',\', $ddTvResult[$ddTv->get(\'name\')][\'childs\']) : \'\';\\r\\n\\t\\t\\t\\t$ddTvInputProperties[\'parents\'] = isset($ddTvResult[$ddTv->get(\'name\')][\'parents\']) ? implode(\',\', $ddTvResult[$ddTv->get(\'name\')][\'parents\']) : \'\';\\r\\n\\t\\t\\t\\t$ddTv->set(\'input_properties\', $ddTvInputProperties);\\r\\n\\t\\t\\t\\t$ddTv->save();\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t\\tbreak;\\r\\n}\\r\\nreturn;"}',
+        'guid' => '27f501961542267e6719787f6197034e',
+        'native_key' => 1,
+        'signature' => 'f75423f82d55a66eb53486fd5c7ce104',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'dynamicdropdowntv',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"dynamicdropdowntv-1.2-pl\\/modCategory\\/6841aae9499cf1ca548696d518773477\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"dynamicdropdowntv"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"dynamicdropdowntv-1.2-pl\\/modCategory\\/6841aae9499cf1ca548696d518773477\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"dynamicdropdowntv"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '906acb54e082fb314c31319c45e6500f',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '6841aae9499cf1ca548696d518773477',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"DynamicDropdownTV"}',
+);

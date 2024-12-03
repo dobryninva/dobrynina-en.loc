@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '130b20af232ba6a8211b34c21269c7b5',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '2a95db8cdb278c4bd1c1c360706f7d0e',
+  'native_key' => 'mspre_root_parent',
+  'object' => '{"key":"mspre_root_parent","value":"","xtype":"textfield","namespace":"mspre","area":"mspre_main","editedon":null}',
+);

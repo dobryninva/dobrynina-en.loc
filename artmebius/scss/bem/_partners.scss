@@ -1,0 +1,48 @@
+.partners_item{
+  height: 100%;
+
+  &.with_logo{}
+  &.wo_logo{}
+}
+
+.partners_item_link{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $clrB;
+  text-align: center;
+  min-height: 120px;
+  line-height: 1.2;
+  font-size: 24px;
+  color: $clrM;
+
+  &:hover{
+    text-decoration: none;
+    // border-color: $clr0;
+  }
+
+  &:focus{
+    outline: none;
+  }
+
+  .with_logo &{}
+  .wo_logo &{
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.partners_item_link_text{
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // border: 1px solid $clrB;
+  // width: 100%;
+  // padding: 10px;
+  // height: 100%;
+}
+
+// widgets
+.partners_on_main{}
+.partners_slider{}

@@ -1,0 +1,120 @@
+.jGrowl {
+  z-index: 9999;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  position: fixed;
+
+  &.top-left {
+    left: 0;
+    top: 0;
+  }
+
+  &.top-right {
+    right: 0;
+    top: 0;
+  }
+
+  &.bottom-left {
+    left: 0;
+    bottom: 0;
+  }
+
+  &.bottom-right {
+    right: 0;
+    bottom: 0;
+  }
+
+  &.center {
+    top: 0;
+    width: 50%;
+    left: 25%;
+
+    .jGrowl-closer, .jGrowl-notification {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.jGrowl-notification {
+  background-color: #000;
+  opacity: .9;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+  zoom: 1;
+  width: 250px;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+  display: none;
+  border-radius: 5px;
+  min-height: 40px;
+
+  .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+  }
+
+  .jGrowl-header {
+    font-weight: 700;
+    font-size: .85em;
+  }
+
+  .jGrowl-close {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    z-index: 99;
+    float: right;
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+  &.ms2-message-success{
+    border-color: $clr1;
+    color: $clrM;
+    background: lighten($clr1, 10%);
+  }
+
+  &.ms2-message-error{
+    border-color: $clr0;
+    color:#fff;
+    background: lighten($clr0, 10%);
+  }
+}
+
+.jGrowl-closer {
+  background-color: #000;
+  opacity: .9;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+  zoom: 1;
+  width: 250px;
+  padding: 10px;
+  margin: 10px;
+  display: none;
+  border-radius: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  cursor: pointer;
+  font-size: .9em;
+  font-weight: 700;
+  text-align: center;
+
+  .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+  }
+}
+
+@media print {
+  .jGrowl {
+    display: none;
+  }
+}
+
+// ms2-message-error

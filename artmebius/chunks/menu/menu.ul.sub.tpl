@@ -1,0 +1,1 @@
+<ul class="menu__sub">{$wrapper}</ul>

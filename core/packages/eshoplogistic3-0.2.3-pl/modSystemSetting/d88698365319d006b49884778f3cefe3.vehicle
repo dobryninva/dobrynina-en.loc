@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e98de33d98321b9fb36e4940ec9fe8a0',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd88698365319d006b49884778f3cefe3',
+  'native_key' => 'eshoplogistic3_boxberry_pick_up_terminal',
+  'object' => '{"key":"eshoplogistic3_boxberry_pick_up_terminal","value":1,"xtype":"textfield","namespace":"eshoplogistic3","area":"eshoplogistic3_order_unload_boxberry","editedon":null}',
+);

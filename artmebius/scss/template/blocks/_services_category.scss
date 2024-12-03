@@ -1,0 +1,26 @@
+.services_category{}
+
+.services_category_top{}
+.services_category_btm{}
+
+.services_category_preview{
+
+  &:hover{
+    .services_category_preview_link{}
+    .services_category_items_list{}
+  }
+}
+.services_category_preview_link{}
+.services_category_preview_link_image{}
+.services_category_preview_link_img{}
+
+.services_category_items_list{}
+
+.services_category_title{}
+.services_category_title_link{
+
+  &:hover{}
+}
+.services_category_title_link_text{}
+
+.services_category_intro{}

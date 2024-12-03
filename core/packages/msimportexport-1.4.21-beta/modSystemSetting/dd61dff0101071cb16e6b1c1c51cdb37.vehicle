@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'aec074522a88d15ca157574a746e6a3f',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'dd61dff0101071cb16e6b1c1c51cdb37',
+  'native_key' => 'msimportexport.gallery.class_name',
+  'object' => '{"key":"msimportexport.gallery.class_name","value":"msProductFile","xtype":"textfield","namespace":"msimportexport","area":"gallery","editedon":null}',
+);

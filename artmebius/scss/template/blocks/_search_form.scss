@@ -1,0 +1,180 @@
+.search_form{
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search_form_input{
+  flex-grow: 1;
+  height: 100%;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 48px 10px 24px;
+  font-weight: 500;
+  color: $clrM;
+  background: #fff;
+  outline: none;
+
+  &::placeholder{
+    color: #a4a4a4;
+  }
+
+  &:focus{
+    // color: $clrM;
+    // background: #fff;
+    outline: none;
+    + .search_form_submit{
+      // color: $clrM;
+    }
+  }
+}
+
+.search_form_btn{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 24px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  width: 24px;
+  text-align: center;
+  background: transparent;
+  cursor: pointer;
+  transition: color .2s ease-out;
+
+  &:hover{
+    // color: $clr1;
+  }
+
+  &:focus{
+    outline: none;
+  }
+
+  &:active{
+    outline: none;
+  }
+}
+
+.search_form_close{
+  // left: 0;
+  &:hover{}
+}
+
+.search_form_submit{
+  // right: 0;
+  // border: none;
+  &:hover{}
+  &:active{
+    // color: $clr1;
+  }
+}
+
+//************************************************************************ media */
+
+@include media-breakpoint-down(sm){
+
+} // @max-sm
+
+@include media-breakpoint-up(md){
+
+} // @min-md
+
+
+
+//======================================================================== TIPS
+
+.mse2-ac-wrapper{
+  &+&{
+    border-top: 1px dashed $clrB;
+  }
+}
+.mse2-ac-link{
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: #fff !important ;
+  font-weight: normal !important;
+  color: $clrM !important;
+  &.ui-state-active{}
+}
+
+.search_tip{
+  display: flex;
+  align-items: center;
+  padding: 3px 9px;
+  transition: background .2s ease-out;
+  &:hover{
+    // background: $clr1;
+  }
+} // search_tip
+
+.search_tip_image{
+  flex-shrink: 0;
+  margin-right: 9px;
+}
+
+.search_tip_info{}
+
+.search_tip_link{
+  display: block;
+  color: $clrM !important;
+  &:hover{
+    // text-decoration: underline !important;
+    // color: $clr0 !important;
+    .search_tip_title{
+      text-decoration: underline;
+    }
+  }
+}
+
+.search_tip_title{
+  display: block;
+}
+
+.search_tip_prices{
+  display: block;
+}
+
+.search_tip_price{
+  color: $clrM;
+  font-weight: bold;
+  &.price_with_discount{
+    color: $clr0;
+  }
+}
+
+.search_tip_price_old{
+  margin-left: 5px;
+  text-decoration: line-through;
+  font-size: 14px;
+  color: $clrD;
+}
+
+
+// debug
+#ui-id-1{
+  z-index: 1401;
+  // display: block !important;
+  border: 1px solid $clr4;
+  // box-shadow: $bxshf;
+}
+
+
+@include media-breakpoint-up(md){
+
+  #ui-id-1{
+    box-shadow: $bxshf;
+  }
+
+} // @min-md
+
+@include media-breakpoint-down(sm){
+
+  #ui-id-1{}
+
+} // @max-sm

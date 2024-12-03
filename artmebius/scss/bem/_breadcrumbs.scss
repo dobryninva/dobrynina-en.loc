@@ -1,0 +1,31 @@
+.breadcrumbs{
+	font-size: 18px;
+	color: $clrT;
+	--color-text:#fff;
+	--color-link:#fff;
+
+	&_top{
+		margin-top: 58px;
+	}
+
+	&__items{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item{
+
+		&:not(:last-child){
+			margin-right: 14px;
+		}
+
+		&_sepapator{
+
+		}
+	}
+	&__link{}
+	&__link-text{}
+	&__current{
+		// color: $clrLh;
+	}
+}

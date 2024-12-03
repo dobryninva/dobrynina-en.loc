@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'mssetincart',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '81c9d2530040d7142426ef63eb8341e7',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '2f5c4b7a677cf4cfe01457441b606175',
+  'native_key' => 'mssetincart_allow_zero_cost',
+  'object' => '{"key":"mssetincart_allow_zero_cost","value":false,"xtype":"combo-boolean","namespace":"mssetincart","area":"mssetincart_main","editedon":null}',
+);

@@ -1,0 +1,13 @@
+.more{
+
+	&__link{
+		color: $clrT;
+		text-decoration: underline;
+
+		&:hover{
+			color: $clrLh;
+		}
+	}
+
+}
+.more_news{}

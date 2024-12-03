@@ -1,0 +1,136 @@
+.search_form{
+  margin-right: 15px;
+  // position: relative;
+
+  .hidden_switcher{}
+  .hidden_block{
+    position: absolute;
+    left: 200px;//0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    form{
+      height: 100%;
+    }
+    .search_form_inner{
+      height: 100%;
+    }
+  }
+
+  .search_form_inner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    .search_form_btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+      padding: 0;
+      text-align: center;
+      font-size: 22px;
+      color: $clrM;
+      background: $clr4;
+      cursor: pointer;
+      transition: color .2s ease-out;
+      &:hover{
+        color: $clr1;
+      }
+      &:focus{
+        outline: none;
+      }
+      &:active{
+        outline: none;
+      }
+    }
+    .search_form_close{
+      border-radius: 15px 0 0 15px;
+      &:hover{
+        // color: $clr1;
+      }
+    }
+    .search_form_input{
+      flex-grow: 1;
+      width: 100%;//280px;
+      min-width: 80px;
+      height: 60px;
+      line-height: 18px;
+      border: none;
+      padding: 10px 0px 5px 0px;
+      background: $clr4;
+    }
+    .search_form_submit{
+      border: none;
+      border-radius: 0 15px 15px 0;
+      &:hover{
+        // color: $clr1;
+      }
+    }
+  }
+
+  .search_form_tips{
+    // display: block !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 13px;
+    width: 100%;
+    z-index: 1200;
+  }
+  .search_form_tips_list{
+    // margin-top: 1px;
+    border: 1px solid $clr1;
+    border-radius: 0px 0 9px 9px;
+    background: #fff;
+    box-shadow: $bxsh;
+  }
+  .sf_tips_item{
+    // border-top: 1px dotted $clrB;
+    // white-space: nowrap;
+    a,button{
+      display: block;
+      border: none;
+      line-height: 1.2;
+      padding: 10px 14px;
+      text-decoration: none;
+      color: $clr1;
+      background: none;
+      &:hover{
+        // text-decoration: underline;
+        color: $clr0;
+      }
+    }
+    +.sf_tips_item{
+      border-top: 1px dotted $clrB;
+    }
+    &:last-child{
+      a,button{
+        // border-radius: 0px 0 9px 9px;
+      }
+    }
+  }
+  .sf_tips_button{
+    button{
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+  }
+
+  .fixed &{
+    // max-width: none;
+    // flex-grow: 2;
+  }
+
+  .hdr &{}
+  &.search_form_hdr{}
+
+  @include media-breakpoint-up(sm){}
+  @include media-breakpoint-up(md){}
+  @include media-breakpoint-up(lg){}
+  @include media-breakpoint-up(xl){}
+
+}

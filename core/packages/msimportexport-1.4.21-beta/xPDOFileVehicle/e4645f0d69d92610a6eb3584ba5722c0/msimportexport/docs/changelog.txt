@@ -1,0 +1,325 @@
+Changelog for msImportExport integration into MODx Revolution.
+
+ImportExport 1.4.21
+- Added: Setting the "Product key, which determines its uniqueness" in the import preset
+- Added: Setting "Category Tree" in the export preset
+
+ImportExport 1.4.20
+- Added: System event "msieOnBeforeExportQuery"
+
+ImportExport 1.4.19
+- Fixed: Import categories
+
+ImportExport 1.4.18
+- Fixed: Error "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"  when installing/updating a package
+
+ImportExport 1.4.17
+- Updated: Library for working with Excel files (PhpSpreadsheet 1.6.0)
+
+
+ImportExport 1.4.16
+- Added: Param "element" for snippet MsieBtnDownloadPrice
+- Added: Settings: leftjoin; innerjoin; select for export preset
+
+
+ImportExport 1.4.15
+- Added: Param "where" for snippet MsieBtnDownloadPrice
+- Changed:  Chunk msieBtnDownloadPriceTpl
+
+ImportExport 1.4.14
+- Added: Export product preview image in Excel file
+- Added: Option for cron "Run by user"
+- Fixed: Export product images
+
+ImportExport 1.4.13
+====================================
+- Improved: Export Yandex.Market
+- Improved: Import by cron
+
+ImportExport 1.4.12
+====================================
+- Fixed: Export links
+
+ImportExport 1.4.11
+====================================
+- Fixed: Import options
+
+ImportExport 1.4.10
+====================================
+- Added: Integration with msProductRemains 2.1.18-pl
+
+ImportExport 1.4.9
+====================================
+- Fixed: Export in Excel
+
+ImportExport 1.4.8
+====================================
+Warning! This update requires PHP version 5.6 or higher!
+
+- Added: Additional export condition for each preset
+- Changed: Library for work with excel
+
+ImportExport 1.4.7
+====================================
+- Improved: Export image msOptionsPrice2
+
+ImportExport 1.4.6
+====================================
+- Improved: Import msOptionsPrice2
+
+
+ImportExport 1.4.5
+====================================
+- Added: Validation of import fields name
+- Improved: Import msOptionsColor
+
+ImportExport 1.4.4
+====================================
+- Added: Integration with msSalePrice  V-1.2.0-beta2
+- Added: Integration with msOptionsColor  V-2.1.2-beta
+
+ImportExport 1.4.3
+====================================
+- Added: Option to delete all images from the product before importing
+- Added: Option to disable all modifications (msOptionsPrice2) from the product before import starts
+- Added: Parameter "The key of the product, which determines its uniqueness" for the passage through the Cron
+- Added: Events:
+        msieOnStartUpdateProduct
+        msieOnStartImportOptionsPrice2
+        msieOnBeforeImportOptionsPrice2
+        msieOnAfterImportOptionsPrice2
+        msieOnCompleteImportOptionsPrice2
+
+- Improved: Import alias (If the update is not specified, alias will use the old one)
+- Fixed: Reset custom import/export settings when updating a package
+- Fixed: Editing tasks for importing through Cron
+- Fixed: Exception "[MsieExcelReader] Exception Row 2 is out of range (2 - 1)"
+
+ImportExport 1.4.2
+====================================
+- Added: Import Tv for categories
+- Added: Snippet "MsieBtnDownloadPrice" for exporting prices from the site front-end
+- Added: Event msieOnBeforeExport for Yandex.Market
+- Improved: Import images (use maxUploadWidth and maxUploadHeight parameters)
+
+
+ImportExport 1.4.1
+====================================
+- Added: Formatting text when importing
+- Improved: Export in yandex market
+- Improved: Work with contacts
+
+
+ImportExport 1.4.0
+====================================
+- Added: Import/Export gallery
+- Added: Parameter "parents"(tree of names of parents) for export
+- Changed: Import/Export categories
+- Changed: Import/Export links
+
+Warning!! Before using, make a backup of the site database.
+If you are already using import/export links or categories then you need to make the migration.
+After the upgrade, you need to clear the browser cache.
+
+
+ImportExport 1.3.10
+====================================
+- Fixed: Import TV (not clear empty tv) for modx >= 2.5.4
+
+ImportExport 1.3.9
+====================================
+- Fixed: Created categories
+
+ImportExport 1.3.8
+====================================
+- Added: Integration with msOptionsPrice2  V-2.2.37 beta
+- Improved: Work with categories
+Important! After the component has been updated, clear the browser cache
+
+
+ImportExport 1.3.7
+====================================
+- Added: Event msieOnStartImportProduct
+- Added: Support tag sales_notes for Yandex.Market
+
+ImportExport 1.3.6
+====================================
+- Added: Setting full path to the PHP interpreter
+- Added: Integration with SeoPro
+- Added: Cleaning field "description" from the HTML tags for Yandex.Market
+
+
+ImportExport 1.3.5
+====================================
+- Added: Quickly update product
+- Added: Events:
+        msieOnEqualPageTitleImportProduct;
+        msieOnBeforePrepareUpdateProduct;
+        msieOnBeforeUpdateProduct;
+        msieOnCompleteUpdateProduct;
+        msieOnBeforeExport;
+- Added: Export images with absolute paths
+- Added: Parameter "filename" for cron export
+- Fixed: Export categories for Yandex.Market
+- Fixed: Run import CRON  through menu
+
+ImportExport 1.3.4
+====================================
+- Added: Auto-sensing fields
+- Improved: Navigation settings fields list
+- Fixed: Set default context
+
+====================================
+- Added: Event msieOnBeforePrepareImportProduct
+- Added: Clear upload folder the after importing
+- Improved: Import TV (not clear empty tv)
+- Fixed: Error 42S02 executing statement: Table modx_msie_cron doesn't exist
+
+ImportExport 1.3.2
+====================================
+- Fixed: Using $this when not in object context
+
+ImportExport 1.3.0
+====================================
+- Changed: Import by cron
+- Changed: Export by cron
+- Added:    TV vars in settings fields
+- Added:    Event msieOnCompleteImportProduct;
+
+ImportExport 1.2.10
+====================================
+- Fixed: Import categories
+
+ImportExport 1.2.9
+====================================
+- Added: Events for import product
+- Improved: Import report
+
+ImportExport 1.2.8
+====================================
+- Update: Reader Excel files
+
+ImportExport 1.2.7
+====================================
+- Added: Disable directory validation option
+
+ImportExport 1.2.6
+====================================
+- Added: Integration with ms2Gallery
+- Fixed: Import Excel file with a newline character in a cell
+
+ImportExport 1.2.5
+====================================
+- Fixed: Import Excel file with a newline character in a cell
+- Added: Alias for head fields exports
+- Added: Set category for exports cron
+- Added: Checking the validity of a directory structure
+
+ImportExport 1.2.4
+====================================
+- Fixed: Export links
+- Added: Import image in gallery by url
+- Improved: Large file import speed
+
+
+ImportExport 1.2.3
+====================================
+- Fixed: import options type list
+- Update: import in gallery
+- Added: export gallery
+
+ImportExport 1.2.2
+====================================
+- Fixed: Create categories for import
+
+ImportExport 1.2.1
+====================================
+- Fixed: Sub delimiter for import
+
+ImportExport 1.2.0
+====================================
+Warning!! Update only  miniShop2 >= v2.4.0
+- Update: Import options product for miniShop2 2.4.0
+
+ImportExport 1.1.5
+====================================
+- Fixed: Create categories for import
+
+ImportExport 1.1.4
+====================================
+- Fixed: Sub delimiter for import
+
+ImportExport 1.1.3
+====================================
+- Fixed: PHPExcel for php 7
+- Fixed: get list fields
+
+ImportExport 1.1.2
+====================================
+- Added: Template for categories
+
+ImportExport 1.1.1
+====================================
+- Added: Import/export categories
+- Added: Import multi categories
+- Added: nesting of the n-th order of the parent when importing
+- Added: Working with multiple catalogs
+
+ImportExport 1.1.0
+====================================
+- Added: Presets for fields import/export
+- Added: Import from  xls/xlsx files
+- Added: Field parent title for export
+- Fixed: Import fields with html tags
+
+ImportExport 1.0.11
+====================================
+- Added: Possibility to use an additional separator when importing to json-type fields
+
+ImportExport 1.0.10
+====================================
+- Fixed: Import empty elements for the color and size
+
+ImportExport 1.0.8
+====================================
+- Fixed: Export to xls/xlsx array fields
+- Added: Import/export links
+- Added: Automatic creation of vendor
+- Added: Import step by step
+
+ImportExport 1.0.7
+====================================
+- Fixed: Name fields only lowercase
+- Added: Import cron
+
+ImportExport 1.0.6
+====================================
+- Fixed: export of product with zero cost
+
+ImportExport 1.0.5
+====================================
+- Fixed: No class specified for loadClass
+- Added: Import of product without a parent
+- Added: Automatic creation of the category for a product
+- Added: Post-processing import
+
+ImportExport 1.0.4
+====================================
+- Added: Automatic conversion of data import from windows-1251 to utf-8
+
+ImportExport 1.0.3
+====================================
+- Fixed: Set path to the temp directory upload for export to Excel
+- Added: The default fields for export to CSV / Excel
+
+ImportExport 1.0.2
+====================================
+- Added: The ability to use the tv variables for export
+
+msImportExport 1.0.1
+====================================
+- Added: Export to xls/xlsx filems
+
+msImportExport 1.0.0
+====================================
+- First release

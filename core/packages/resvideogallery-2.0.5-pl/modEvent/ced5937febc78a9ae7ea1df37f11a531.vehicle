@@ -1,0 +1,15 @@
+<?php return array (
+  'vehicle_class' => 'encryptedVehicle',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'resvideogallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => 'dca919f9ef0ef12f79ebed342da4b118',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => 'ced5937febc78a9ae7ea1df37f11a531',
+  'native_key' => 'rvgOnGetVideoEmbed',
+  'object_encrypted' => '+7pBAl9J+tJE0ElUUVIng6EQesZV0NU+4THQq6YAykirxBFSEtWcB0vJcBnIYGZ+45zIMcS6TRfALFZw8mSsURDo8juIiOH8JLGsRrGfFa9Eon2uxPa3r7yQPZ95aSLg',
+);

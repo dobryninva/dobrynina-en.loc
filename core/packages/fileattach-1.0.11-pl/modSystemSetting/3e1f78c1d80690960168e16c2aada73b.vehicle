@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'fileattach',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '8a41bd24e5acf4fab3a10f4a57f0f379',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '3e1f78c1d80690960168e16c2aada73b',
+  'native_key' => 'fileattach.private',
+  'object' => '{"key":"fileattach.private","value":false,"xtype":"combo-boolean","namespace":"fileattach","area":"file","editedon":null,"name":"setting_fileattach.private","description":"setting_fileattach.private_desc","lexicon":"fileattach:setting"}',
+);

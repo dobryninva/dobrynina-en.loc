@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'abbdd895ecfc665d99015d207392d174',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '6b0cfe647a4f74bda78f6abc89828466',
+  'native_key' => 'msimportexport.export.head',
+  'object' => '{"key":"msimportexport.export.head","value":"0","xtype":"combo-boolean","namespace":"msimportexport","area":"export CSV","editedon":"2019-06-19 20:39:32"}',
+);

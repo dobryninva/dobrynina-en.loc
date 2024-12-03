@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a216d8583840ded08013169098297192',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '7eb8788ef7e4643e30d6ae5305b4cd66',
+  'native_key' => 'eshoplogistic3_query_log',
+  'object' => '{"key":"eshoplogistic3_query_log","value":false,"xtype":"combo-boolean","namespace":"eshoplogistic3","area":"eshoplogistic3_main","editedon":null}',
+);

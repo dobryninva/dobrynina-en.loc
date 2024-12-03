@@ -1,0 +1,357 @@
+//************************************************************************ fixed */
+
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1021;
+}
+
+.under_fixed{
+  display: none;
+  .fixed + &{
+    display: block;
+  }
+}
+
+
+//************************************************************************ hide */
+@media (max-width: $screen-xs-max) {  //479
+  .hidden-sxs{
+    display: none !important;
+  }
+} // @
+
+//************************************************************************ items grid */
+
+.row{
+  &.vert-stripes{
+
+    >[class*=col-]{
+      border-left: 1px solid $clrB;
+      border-right: 1px solid $clrB;
+
+      +[class*=col-]{
+        margin-left: -1px;
+      }
+    }
+
+    @each $breakpoint, $width in $grid-breakpoints {
+      @include media-breakpoint-only($breakpoint, $grid-breakpoints) {
+        .col-#{$breakpoint}-12{
+          border-left: none;
+          border-right: none;
+
+          +[class*=col-]{
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+
+    &.slick-slider{
+      [class*=col-]{
+        border-left: none;
+        border-right: none;
+        +[class*=col-]{
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+
+  &.vert-mid-stripes{
+
+    >[class*=col-]{
+      // align-self: stretch;
+
+      +[class*=col-]{
+        border-left: 1px solid $clrB;
+        margin-left: -1px;
+      }
+    }
+
+    @each $breakpoint, $width in $grid-breakpoints {
+      @include media-breakpoint-only($breakpoint, $grid-breakpoints) {
+        >[class*=col-]{
+          +.col-#{$breakpoint}-12{
+            border-left: none;
+            margin-left: 0px;
+          }
+        }
+
+        >.col-#{$breakpoint}-12{
+          +[class*=col-]{
+            border-left: none;
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.no-gutters{
+  &.vert-stripes{
+    [class*=col-]{
+      padding-left: 25px;
+      padding-right: 25px;
+
+      +[class*=col-]{}
+    }
+
+    &.slick-slider{
+      margin-left: -9px;
+      margin-right: -9px;
+
+      [class*=col-]{
+        padding-left: 9px;
+        padding-right: 9px;
+      }
+    }
+  }
+
+  &.vert-mid-stripes{}
+}
+
+@include media-breakpoint-down(xs){
+  .row-cols-xs-2 > * {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .row-cols-xs-3 > * {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+
+  .row-cols-xs-3 > * {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+} // @max-xs
+
+.row-cols-xs-1,
+.row-cols-sm-1,
+.row-cols-md-1,
+.row-cols-lg-1,
+.row-cols-xl-1{
+  .col-auto{
+    width: 100%;
+  }
+}
+
+.tiles_grid{
+  .tiles_row{
+    .tiles_col{}
+  }
+}
+
+.tiles_col{
+  margin-bottom: $grid-gutter-width;
+  .row &{
+    > div{
+      height: 100%;
+    }
+  }
+}
+
+$tiny-gutter: 4px; //8
+.row-tiny{
+  margin-left: -$tiny-gutter;
+  margin-right: -$tiny-gutter;
+  [class*='col-']{
+    padding-left: $tiny-gutter;
+    padding-right: $tiny-gutter;
+    margin-bottom: $tiny-gutter; // test
+  }
+}
+
+// custom gutter
+// .row-18{
+//   margin-left: -9px;
+//   margin-right: -9px;
+//   [class*='col-']{
+//     padding-left: 9px;
+//     padding-right: 9px;
+//     margin-bottom: 18px; // test
+//   }
+// }
+
+.row-flex{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: -9px;
+  margin-right: -9px;
+}
+
+.float_grid{
+  .row{
+    display: block;
+    @include clearfix();
+    [class*="col-"]{
+      float: left;
+    }
+  }
+}
+
+.row-float{
+  display: block;
+  @include clearfix();
+  [class*="col-"]{
+    float: left;
+  }
+}
+
+.table-grid{
+  .row{
+    margin-left: 0;
+    margin-right: 0;
+    [class*='col-']{
+      margin: -1px 0 0 -1px;
+      border: 1px solid $clrB;
+      padding: 9px;
+    }
+  }
+  figure{
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+.vert_grid{
+  .row{
+    flex-direction: column;
+  }
+}
+
+//************************************************************** items list */
+
+.items_list{
+  .item_block{
+    +.item_block{
+      margin-top: 9px;// $grid-gutter-width;
+    }
+  }
+}
+
+//************************************************************************ responsive areas */
+
+.resp_wrapper{
+  position: relative;
+  display: block;
+  height: 0;
+  // padding: 100% 0 0 0; // square
+  &.ar3n2{
+    padding: 66% 0px 0px 0px;
+  }
+  &.ar3n4{
+    padding: 133.33% 0px 0px 0px;
+  }
+  &.ar4n3{
+    padding: 75% 0px 0px 0px;
+  }
+  &.ar16n9{
+    padding: 56.25% 0px 0px 0px;
+  }
+  &.arSqr{
+    padding: 100% 0px 0px 0px;
+  }
+  .resp_inner{
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.resp_self{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+    padding-top: 100%;
+  }
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//************************************************************************ backgrounds */
+
+.bg-cv{
+  background-size: cover;
+}
+.bg-ct{
+  background-size: contain;
+}
+.bg-cc{
+  background-position: center center;
+}
+.bg-nr{
+  background-repeat: no-repeat;
+}
+.bg-x{
+  background-repeat: repeat-x;
+}
+.bg-y{
+  background-repeat: repeat-y;
+}
+
+
+//************************************************************************ dots */
+
+.dots{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    border-bottom: 1px dotted $clrB;
+  }
+  span{
+    position: relative;
+    // padding-bottom: 2px;
+    background: #fff;
+  }
+}
+
+//************************************************************************ position */
+
+%posa{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+%posa_full{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+}
+
+.posa_full{
+  @extend %posa_full;
+}
+
+.posr{
+  position: relative;
+}

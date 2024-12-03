@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'mixedimage',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '379138aaa6f49cb02bd6e5b8dcd4b42a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'f06a7a15c835933aab095a75a99b6ed2',
+  'native_key' => 'mixedimage.translit',
+  'object' => '{"key":"mixedimage.translit","value":false,"xtype":"combo-boolean","namespace":"mixedimage","area":"Default","editedon":null}',
+);

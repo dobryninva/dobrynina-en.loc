@@ -1,0 +1,19 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'namespace' => 'fileattach',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9c890e0e0ae11f301c3728aa67797916',
+  'package' => 'modx',
+  'class' => 'modAccessPolicy',
+  'signature' => 'd835afbb06e643040407f3e7d14183d6',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"File Attach Frontend","description":"A policy for frontend uploading files to resources.","parent":0,"template":0,"class":"","data":"{\\"fileattach.download\\":true,\\"fileattach.list\\":true,\\"fileattach.remove\\":true}","lexicon":"fileattach:permissions"}',
+);

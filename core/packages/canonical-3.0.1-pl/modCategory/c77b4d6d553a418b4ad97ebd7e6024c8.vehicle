@@ -1,0 +1,54 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      'c0ff132c13d003afde5e10bc5b368e2d' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"Canonical","description":"Create a canonical tag to prevent SEO penalties for duplicate content. SEO experts recommend a canonical tag for all pages.","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\r\\n * Canonical snippet for Canonical extra\\r\\n *\\r\\n * Copyright 2010-2022 Bob Ray <https:\\/\\/bobsguides.com>\\r\\n * @created 07-31-2010\\r\\n *\\r\\n * Canonical is free software; you can redistribute it and\\/or modify it under the\\r\\n * terms of the GNU General Public License as published by the Free Software\\r\\n * Foundation; either version 2 of the License, or (at your option) any later\\r\\n * version.\\r\\n *\\r\\n * Canonical is distributed in the hope that it will be useful, but WITHOUT ANY\\r\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\r\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\r\\n *\\r\\n * You should have received a copy of the GNU General Public License along with\\r\\n * Canonical; if not, write to the Free Software Foundation, Inc., 59 Temple\\r\\n * Place, Suite 330, Boston, MA 02111-1307 USA\\r\\n *\\r\\n * @package canonical\\r\\n *\\/\\r\\n\\r\\n\\/******************************\\r\\n *             Usage           *\\r\\n *******************************\\r\\n *\\r\\n * \\/*\\r\\n * Install the snippet with Package Manager and put the\\r\\n * following snippet tag in the <head> section of all templates\\r\\n * [[!Canonical]]\\r\\n *\\/\\r\\n\\/** @var $modx modX *\\/\\r\\n\\r\\n$targetId = \'\';\\r\\n$link = \'\';\\r\\n\\r\\n$prefix = $modx->getVersionData()[\'version\'] >= 3\\r\\n    ? \'MODX\\\\Revolution\\\\\\\\\'\\r\\n    : \'\';\\r\\n\\r\\n$isMODX3 = empty($prefix) ? false : true;\\r\\n\\r\\n\\/** @var array $scriptProperties *\\/\\r\\n$docId = (int)$modx->resource->get(\'id\');\\r\\n$mergeFields = (bool) $modx->config[\'symlink_merge_fields\'];\\r\\n$canonicalAlways = (bool) $modx->config[\'canonical_always\'];\\r\\n$canonicalId = false;\\r\\n\\r\\nif ($mergeFields) {\\r\\n    \\/* Default settings (symlink_merge_fields is on);\\r\\n       $id may be Symlink ID, or ID of regular page;\\r\\n       it will never be the ID of a target page\\r\\n     *\\/\\r\\n\\r\\n    \\/* See if we\'re a SymLink *\\/\\r\\n    $q = \'SELECT id,content,class_key FROM \' . $modx->getTableName($prefix . \'modResource\') . \' WHERE id = \' . $docId;\\r\\n\\r\\n    $stmt = $modx->prepare($q);\\r\\n    if ($stmt->execute()) {\\r\\n        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);\\r\\n    }\\r\\n\\r\\n\\r\\n\\/\\/    $doc = $modx->getObject($prefix . \'modResource\', $docId);\\r\\n\\r\\n    \\/* The \\"if\\" code will only execute if\\r\\n       request is for a SymLink *\\/\\r\\n    if ($result[0][\'class_key\'] == $prefix . \'modSymLink\') {\\r\\n        \\/* It\'s a SymLink *\\/\\r\\n        $canonicalId = (int) $result[0][\'content\'];\\r\\n    } else {\\r\\n        \\/* It\'s a regular page; both SymLinks\\r\\n            and targets get a tag; this one doesn\'t\\r\\n            unless all pages do *\\/\\r\\n        $canonicalId = $canonicalAlways ? $docId : false;\\r\\n    }\\r\\n\\r\\n} else {\\r\\n    \\/* Non-Default install settings; (symlink_merge_fields is off)\\r\\n       $docId is always the ID of a target page, or current page\\r\\n       if current page is not a Symlink *\\/\\r\\n    if ($canonicalAlways) {\\r\\n        $canonicalId = $docId; \\/\\/ we\'re done\\r\\n    } else {\\r\\n\\r\\n        \\/* See if there\'s a related Symlink *\\/\\r\\n        $q = \'SELECT COUNT(*) as total FROM \' . $modx->getTableName($prefix . \'modResource\') . \' WHERE content = \' . $docId . \' AND class_key = \\"\' . $prefix . \'modSymLink\\"\';\\r\\n\\r\\n        if ($isMODX3) {\\r\\n            $q = str_replace(\'\\\\\\\\\', \'\\\\\\\\\\\\\\\\\', $q);\\r\\n        }\\r\\n\\r\\n        $stmt = $modx->prepare($q);\\r\\n        if ($stmt->execute()) {\\r\\n            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);\\r\\n        }\\r\\n\\r\\n        $count = $result[0][\'total\'];\\r\\n\\r\\n        if ($count > 0) {\\r\\n            \\/\\/ if ($modx->getCount($prefix . \'modResource\', $c)) {\\r\\n            \\/* Yes. SymLink Page and target pages get a tag *\\/\\r\\n            $canonicalId = $docId;\\r\\n        }\\r\\n    }\\r\\n}\\r\\n\\/* $canonicalId will be false if page isn\'t getting a tag *\\/\\r\\nreturn ($canonicalId)\\r\\n    ? \'<link rel=\\"canonical\\" href=\\"\' .\\r\\n    $modx->makeUrl($canonicalId, \\"\\", \\"\\", \'full\') .\\r\\n    \'\\" \\/>\'\\r\\n    : \'\';","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/**\\r\\n * Canonical snippet for Canonical extra\\r\\n *\\r\\n * Copyright 2010-2022 Bob Ray <https:\\/\\/bobsguides.com>\\r\\n * @created 07-31-2010\\r\\n *\\r\\n * Canonical is free software; you can redistribute it and\\/or modify it under the\\r\\n * terms of the GNU General Public License as published by the Free Software\\r\\n * Foundation; either version 2 of the License, or (at your option) any later\\r\\n * version.\\r\\n *\\r\\n * Canonical is distributed in the hope that it will be useful, but WITHOUT ANY\\r\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\r\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\r\\n *\\r\\n * You should have received a copy of the GNU General Public License along with\\r\\n * Canonical; if not, write to the Free Software Foundation, Inc., 59 Temple\\r\\n * Place, Suite 330, Boston, MA 02111-1307 USA\\r\\n *\\r\\n * @package canonical\\r\\n *\\/\\r\\n\\r\\n\\/******************************\\r\\n *             Usage           *\\r\\n *******************************\\r\\n *\\r\\n * \\/*\\r\\n * Install the snippet with Package Manager and put the\\r\\n * following snippet tag in the <head> section of all templates\\r\\n * [[!Canonical]]\\r\\n *\\/\\r\\n\\/** @var $modx modX *\\/\\r\\n\\r\\n$targetId = \'\';\\r\\n$link = \'\';\\r\\n\\r\\n$prefix = $modx->getVersionData()[\'version\'] >= 3\\r\\n    ? \'MODX\\\\Revolution\\\\\\\\\'\\r\\n    : \'\';\\r\\n\\r\\n$isMODX3 = empty($prefix) ? false : true;\\r\\n\\r\\n\\/** @var array $scriptProperties *\\/\\r\\n$docId = (int)$modx->resource->get(\'id\');\\r\\n$mergeFields = (bool) $modx->config[\'symlink_merge_fields\'];\\r\\n$canonicalAlways = (bool) $modx->config[\'canonical_always\'];\\r\\n$canonicalId = false;\\r\\n\\r\\nif ($mergeFields) {\\r\\n    \\/* Default settings (symlink_merge_fields is on);\\r\\n       $id may be Symlink ID, or ID of regular page;\\r\\n       it will never be the ID of a target page\\r\\n     *\\/\\r\\n\\r\\n    \\/* See if we\'re a SymLink *\\/\\r\\n    $q = \'SELECT id,content,class_key FROM \' . $modx->getTableName($prefix . \'modResource\') . \' WHERE id = \' . $docId;\\r\\n\\r\\n    $stmt = $modx->prepare($q);\\r\\n    if ($stmt->execute()) {\\r\\n        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);\\r\\n    }\\r\\n\\r\\n\\r\\n\\/\\/    $doc = $modx->getObject($prefix . \'modResource\', $docId);\\r\\n\\r\\n    \\/* The \\"if\\" code will only execute if\\r\\n       request is for a SymLink *\\/\\r\\n    if ($result[0][\'class_key\'] == $prefix . \'modSymLink\') {\\r\\n        \\/* It\'s a SymLink *\\/\\r\\n        $canonicalId = (int) $result[0][\'content\'];\\r\\n    } else {\\r\\n        \\/* It\'s a regular page; both SymLinks\\r\\n            and targets get a tag; this one doesn\'t\\r\\n            unless all pages do *\\/\\r\\n        $canonicalId = $canonicalAlways ? $docId : false;\\r\\n    }\\r\\n\\r\\n} else {\\r\\n    \\/* Non-Default install settings; (symlink_merge_fields is off)\\r\\n       $docId is always the ID of a target page, or current page\\r\\n       if current page is not a Symlink *\\/\\r\\n    if ($canonicalAlways) {\\r\\n        $canonicalId = $docId; \\/\\/ we\'re done\\r\\n    } else {\\r\\n\\r\\n        \\/* See if there\'s a related Symlink *\\/\\r\\n        $q = \'SELECT COUNT(*) as total FROM \' . $modx->getTableName($prefix . \'modResource\') . \' WHERE content = \' . $docId . \' AND class_key = \\"\' . $prefix . \'modSymLink\\"\';\\r\\n\\r\\n        if ($isMODX3) {\\r\\n            $q = str_replace(\'\\\\\\\\\', \'\\\\\\\\\\\\\\\\\', $q);\\r\\n        }\\r\\n\\r\\n        $stmt = $modx->prepare($q);\\r\\n        if ($stmt->execute()) {\\r\\n            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);\\r\\n        }\\r\\n\\r\\n        $count = $result[0][\'total\'];\\r\\n\\r\\n        if ($count > 0) {\\r\\n            \\/\\/ if ($modx->getCount($prefix . \'modResource\', $c)) {\\r\\n            \\/* Yes. SymLink Page and target pages get a tag *\\/\\r\\n            $canonicalId = $docId;\\r\\n        }\\r\\n    }\\r\\n}\\r\\n\\/* $canonicalId will be false if page isn\'t getting a tag *\\/\\r\\nreturn ($canonicalId)\\r\\n    ? \'<link rel=\\"canonical\\" href=\\"\' .\\r\\n    $modx->makeUrl($canonicalId, \\"\\", \\"\\", \'full\') .\\r\\n    \'\\" \\/>\'\\r\\n    : \'\';"}',
+        'guid' => '6d570d82b71e26b8372788d209a83a6b',
+        'native_key' => 1,
+        'signature' => '001740f4d8ac1dc6785786bf7044f021',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'canonical',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"canonical-3.0.1-pl\\/modCategory\\/c77b4d6d553a418b4ad97ebd7e6024c8\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"canonical"}',
+    ),
+    1 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"canonical-3.0.1-pl\\/modCategory\\/c77b4d6d553a418b4ad97ebd7e6024c8.canonical.resolver.resolver","type":"php","name":"canonical.resolver"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0322d63876b31a206d76542b8994a1d1',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'c77b4d6d553a418b4ad97ebd7e6024c8',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"Canonical","rank":0}',
+);

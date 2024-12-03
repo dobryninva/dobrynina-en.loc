@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'fileattach',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd6d00356c493a49ba0d76c99993fd4bc',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'f009f0666c56ae124cd5621aec53ff2c',
+  'native_key' => 'fileattach.mediasource',
+  'object' => '{"key":"fileattach.mediasource","value":1,"xtype":"modx-combo-source","namespace":"fileattach","area":"file","editedon":null,"name":"setting_fileattach.mediasource","description":"setting_fileattach.mediasource_desc","lexicon":"fileattach:setting"}',
+);

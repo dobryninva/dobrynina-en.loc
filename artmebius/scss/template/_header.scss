@@ -1,0 +1,138 @@
+.hdr{
+  // position: relative;
+  // background: #fff;
+  // transition: box-shadow .2s ease-out, background .2s ease-out;
+  // z-index: 500;
+
+  a{
+    &:hover{}
+  }
+
+  p{
+    margin: 0;
+  }
+
+  &.fixed{
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // z-index: 500;
+    // @include translateZ0();
+    // background: rgba(255, 255, 255, .97);
+    // box-shadow: $bxsh;
+  }
+
+  .page-main &{
+    &.fixed{}
+  }
+
+  .page-inner &{
+    &.fixed{}
+  }
+}
+
+
+.hdr-inner{
+  &.fixed{}
+
+  .page-main &{
+    &.fixed{}
+  }
+
+  .page-inner &{
+    &.fixed{}
+  }
+}
+
+
+.hdr-top{
+  &.fixed{}
+
+  .page-main &{
+    &.fixed{}
+  }
+
+  .page-inner &{
+    &.fixed{}
+  }
+}
+
+
+.hdr-btm{
+  &.fixed{}
+
+  .page-main &{
+    &.fixed{}
+  }
+
+  .page-inner &{
+    &.fixed{}
+  }
+}
+
+
+.hdr-xs{
+  &.fixed{}
+
+  .page-main &{
+    &.fixed{}
+  }
+
+  .page-inner &{
+    &.fixed{}
+  }
+}
+
+
+.xs_switcher{}
+.xs_switcher_btn{
+  display: flex;
+  align-items: center;
+  // line-height: 40px;
+  font-size: 19px;
+  color: #fff;
+  cursor: pointer;
+  &:active{
+    color: $clr1;
+  }
+}
+
+
+
+//======================================================================== WIDGETS
+
+
+.hdr_menu{}
+
+.hdr_favorite{
+  .hdr-top &{}
+  .hdr-xs &{}
+}
+
+.hdr_compare{
+  .hdr-top &{
+    &.added{} // comparison
+  }
+  .hdr-xs &{}
+}
+
+.hdr_search{}
+
+.hdr_logo{}
+
+.hdr_slogan{}
+
+.hdr_cities{}
+
+.hdr_address{}
+
+.hdr_schedule{}
+
+.hdr_phones{}
+
+.hdr_social_links{}
+
+
+
+//======================================================================== MEDIA

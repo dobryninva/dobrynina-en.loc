@@ -1,0 +1,1 @@
+<div class="img_thumb col-xs-3 col-sm-3"><span class="img_thumb_inner"><img src="[[+img_src:phpthumbon=`&w=140&h=140&zc=1&far=1`]]" alt="[[+img_title:default=`[[*pagetitle]]`:replace=`"=='`]]"></span></div>

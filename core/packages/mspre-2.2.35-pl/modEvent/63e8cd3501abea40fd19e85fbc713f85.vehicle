@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5a203ef2d48cb01622569604d33ec5a4',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '63e8cd3501abea40fd19e85fbc713f85',
+  'native_key' => 'msPreExportGetFields',
+  'object' => '{"name":"msPreExportGetFields","service":6,"groupname":"mspre"}',
+);

@@ -1,0 +1,1 @@
+<div class="categories-slider slider_before_multi">{$output}</div>

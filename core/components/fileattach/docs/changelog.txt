@@ -1,0 +1,110 @@
+Changelog for FileAttach.
+
+1.0.11pl
+==============
+- Fix/update media source
+- Add tag support
+- Add extension filter
+
+1.0.10pl4
+==============
+- Add internal file translit support
+- Configuration keys put to file category
+
+1.0.10pl3
+==============
+- Make menu router-based, enhances compatibility with 2.3+
+
+1.0.10pl2
+==============
+- Add file download in manager
+
+1.0.10pl1
+==============
+- Add support for pagination with new options: totalVar, offset
+
+1.0.10
+==============
+- Add system event 'faOnRemove'
+- Reformat table view
+- Remove unneeded JS objects
+- Fix typos, update doc URLs
+
+1.0.9
+==============
+- Compatibility with MODx >=2.5.2
+- Fix MediaSource error with MySQL 5.7 ONLY_FULL_GROUP_BY SQL Mode
+- Add download range support, download continuation
+
+1.0.8 pl1
+==============
+- Remember column sort state in session
+- Remember column visibility in session
+- Make rank column sortable in resource editor
+- Fix button captions / localization
+- Reformat code
+
+1.0.8
+==============
+- Fix margins in panels
+- Optimize plugin
+- Code cleanup and reformat
+
+1.0.7 pl1
+==============
+- Add file cleanup on resource removal
+- Optimize download processor performance
+
+1.0.7
+==============
+- Now files are available by unique string file ID
+- Add ability to restrict link list access with groups
+- Automatically open picker after upload button is clicked
+
+1.0.6
+==============
+- Add frontend processors
+- Add new policy for frontend uploader
+- Following system upload file type list
+- Don't double save on update
+
+1.0.5 pl1
+==============
+- Add ability to use extension placeholder
+
+1.0.5
+==============
+- Add ability to allow anonymous download
+- Fix snippet arguments typo
+
+1.0.4
+==============
+- DB scheme enhance
+- Add SQLSrv support
+
+1.0.3
+==============
+- Add compatibility with MODx v2.2
+- Snippet fix config loading
+- Enhance media source:
+    - Extension distinction
+    - Display thumbnails
+
+1.0.2
+==============
+- Add download option
+- Add rank field in model
+- Add ability to manually rearrange order
+
+1.0.1
+==============
+- Add ability to hash file if it didn't at upload
+- Add showSize option to snippet
+- Rewritten download processor
+- Updated FileItem model
+- Add filter for templates in document lister
+- UI editor rearrange
+
+1.0.0
+==============
+- Initial release

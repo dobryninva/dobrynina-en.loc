@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'bdacdbcb04f946c63e541f331536d618',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '230dcc7cc12e77c55d5ac0b7f5c8aad1',
+  'native_key' => 'msimportexport.import.mssp_remove',
+  'object' => '{"key":"msimportexport.import.mssp_remove","value":"0","xtype":"combo-boolean","namespace":"msimportexport","area":"import","editedon":null}',
+);

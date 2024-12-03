@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '927402a5c50e2d6e3de7d3a7bac62176',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '01f1a9ebdb7300d1645bc724b0e96cb7',
+  'native_key' => 'msimportexport.cron_sleep_time',
+  'object' => '{"key":"msimportexport.cron_sleep_time","value":"15","xtype":"textfield","namespace":"msimportexport","area":"cron","editedon":"2019-01-30 15:37:50"}',
+);

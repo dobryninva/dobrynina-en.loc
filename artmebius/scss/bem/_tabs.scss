@@ -1,0 +1,120 @@
+//************************************************************************ ༼ つ◕_◕ ༽つ magic */
+
+// .tabs.tabs_default>.tabs__titles>(.tab__title[data-target="#tab_$"]{title$})*3^.tabs__contents>(.tab__content#tab_${lorem})*3
+
+//************************************************************************ tabs */
+
+.tabs{
+
+	&__titles{
+    display: flex;
+    align-items: flex-end;
+    @include user-select(none);
+	}
+
+	&__title{
+    cursor: pointer;
+    transition: border .2s ease-out, color .2s ease-out, background .2s ease-out, opacity .2s ease-out, box-shadow .2s ease-out;
+
+    &.disabled{
+      opacity: .5;
+    }
+
+    &.closed{
+      display: none;
+    }
+	}
+
+	&__title-mob{}
+	&__title-mob-icon{}
+
+	&__contents{}
+	&__content{
+    display: none;
+
+    &.active{
+      display: block;
+    }
+	}
+}
+
+
+.tabs_main{
+
+  .tabs__titles{
+    margin-bottom: 12px;
+    border-bottom: 1px solid $clr2;
+  }
+
+  .tabs__title{
+    margin-bottom: -1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $clrB $clrB $clr2;
+    border-radius: 4px 4px 0 0;
+    padding: 9px 18px;
+    line-height: 20px;
+    font-weight: bold;
+    color: $clrH;
+    background: $clr6;
+
+    &:hover{
+      background: $clr4;
+    }
+
+    &.active{
+      border-color: $clr2 $clr2 transparent;
+      color: $clr1;
+      background: $clr2;
+    }
+
+    &.disabled{
+      color: #1d1a1a ;
+      background: #e7e7e7 ;
+    }
+
+    &.closed{}
+
+    +.tabs__title{
+      margin-left: 3px;
+    }
+  }
+} // end tabs_main
+
+
+.tabs_btns{
+
+  .tabs__titles{
+    margin-bottom: 22px;
+  }
+
+  .tabs__title{
+    // margin-right: 18px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 9px 18px;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: $clrH;
+    background: #fff;
+
+    &:hover{
+      border-color: $clr1;
+    }
+
+    &.active{
+      border-color: $clr1;
+      background: $clr1;
+      color: #fff;
+      cursor: default;
+    }
+
+    &.disabled{}
+    &.closed{}
+
+    +.tabs__title{
+  		margin-left: 18px;
+    }
+  }
+} // end tabs_btns

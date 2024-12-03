@@ -1,0 +1,63 @@
+//************************************************************************ common */
+
+.ctgs_block{
+
+  .item_link{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    font-size: 27px;
+    color: #fff;
+    // overflow: hidden;
+    &:hover{
+      .item_preview{
+        transform: scale(1.09,1.12);
+        &:before{
+          // transform: scale(1.09,1.12);
+          background: rgba(0, 0, 0, .05);
+        }
+        // box-shadow: $bxsh;
+      }
+    }
+  }
+
+  .item_preview{
+    position: relative;
+    display: block;
+    z-index: 500;
+    transition: transform .2s ease-out;
+    &:before{
+      content: '';
+      @extend %posa;
+      background: rgba(0, 0, 0, .15);
+      z-index: 501;
+      transition: background .2s ease-out, transform .2s ease-out;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  .item_img{}
+
+  .item_title{
+    @extend %posa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    // background: rgba(0, 0, 0, .15);
+    @include transition(border .2s ease-out, color .2s ease-out, background .2s ease-out);
+    z-index: 502;
+  }
+
+  &:hover{}
+
+  &.wide{}
+
+  .ctgs_grid &{}
+
+  .catalog_main &{}
+
+  .categories_on_main &{}
+
+} // .ctgs_block

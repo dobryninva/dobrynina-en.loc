@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b95073bce8bc1c2a44fa7f2c92475a62',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '2ff7fdd8384e252342a3eea16ce1409d',
+  'native_key' => 'msimportexport.export.head_category',
+  'object' => '{"key":"msimportexport.export.head_category","value":"0","xtype":"combo-boolean","namespace":"msimportexport","area":"export Excel","editedon":"2019-06-19 20:40:00"}',
+);

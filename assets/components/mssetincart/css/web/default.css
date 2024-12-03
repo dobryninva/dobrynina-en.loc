@@ -1,0 +1,10 @@
+.mssetincart-product .first a,.mssetincart-product .first span{display:block;text-align:center}
+.mssetincart-product .second h4{color:#323232}
+.mssetincart-product .second > div{display:block;padding:0!important}
+.mssetincart-product .third{padding:0 18px;margin:15px 0}
+
+.mssetincart-product{margin:0;padding:0;display:block;}
+.mssetincart-product form{border:2px solid transparent;margin:5px;min-height:300px;display:block;position:relative;z-index:1;cursor:pointer}
+.mssetincart-product form:hover {border:2px dashed #337ab7;border-radius:5px;}
+.mssetincart-product.active form{border:2px solid #337ab7;border-radius:5px;}
+

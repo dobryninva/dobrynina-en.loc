@@ -1,0 +1,4 @@
+.attr_option {opacity: .5}
+.attr_option.attr_active {opacity: 1;}
+.attr_label {margin-top: 8px}
+label {font-weight: 400}

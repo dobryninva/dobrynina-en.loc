@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a41b4e6c78a111986d4fd3ad923134d5',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'b9f9871d55fa843c0e1945903295d4a9',
+  'native_key' => 'msimportexport.import.ctx',
+  'object' => '{"key":"msimportexport.import.ctx","value":"web","xtype":"textfield","namespace":"msimportexport","area":"import","editedon":null}',
+);

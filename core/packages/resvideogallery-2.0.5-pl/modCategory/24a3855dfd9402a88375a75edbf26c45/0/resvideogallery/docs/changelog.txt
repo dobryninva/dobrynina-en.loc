@@ -1,0 +1,111 @@
+ResVideoGallery 2.0.5
+====================================
+- Added: Support for links to short YouTube videos
+
+ResVideoGallery 2.0.4
+====================================
+- Fixed: Parameter "parents" for the snippet ResVideoGallery
+
+ResVideoGallery 2.0.3
+====================================
+- Fixed: Warning: file_get_contents failed to open stream: HTTP request failed!
+
+ResVideoGallery 2.0.2
+====================================
+- Added: Integration with PhotoMechanicsGallery
+
+ResVideoGallery 2.0.1
+====================================
+- c: Parse links google drive video
+
+ResVideoGallery 2.0.0
+====================================
+
+Attention!! Updating to this version may lead to incorrect operation of the snippets.
+Before updating do not forget to backup the site!
+
+- Added: Support for the template engine "Fenom"
+- Added: Support for photo gallery "MS2 Images"
+- Added: Events:
+                 rvgOnGetVideoEmbed;
+                 rvgOnBeforeVideoUpdate;
+                 rvgOnAfterVideoUpdate;
+                 rvgOnBeforeThumbUpdate;
+                 rvgOnAfterThumbUpdate;
+                 rvgOnBeforeVideoAdd;
+                 rvgOnAfterVideoAdd;
+                 rvgOnBeforeVideoRemove;
+                 rvgOnAfterVideoRemove.
+
+- Added: New snippet: ResVideoGalleryUpload
+- Added: New Chunk: resVideoGalleryUploadTpl
+- Updated: JQuery plugin lightcase.js (version 2.5.0)
+
+- Changed: Parameters for snippets:
+                ResVideoGallery;
+                ResVideoGalleryTags.
+- Changed: Chunks:
+            resVideoGalleryTpl;
+            resVideoGalleryRowTpl;
+            resVideoGalleryEmbedTpl;
+            resVideoGalleryTagsTpl.
+
+-Removed: Snippet: ResVideoGalleryForm
+-Removed: Chunks:
+                resVideoGalleryFormTpl;
+                resVideoGalleryTagTpl.
+
+
+
+ResVideoGallery 1.0.10
+====================================
+- Fixed: Remove old video cover
+- Fixed: Pasted link to video from the clipboard
+
+ResVideoGallery 1.0.9
+====================================
+- Changed: Video parser for vk.com. Warning! This parser requires PHP version 7.1 or higher!
+
+
+ResVideoGallery 1.0.8
+====================================
+- Fix: Tag preservation from video in product
+
+ResVideoGallery 1.0.7
+====================================
+- Added: Parameters "parents", "excludeResources" , "includeTags", "tplTag", "autoPlay" for snippet ResVideoGallery
+- Added: Snippet ResVideoGalleryTags
+- Added: Filtering by tag
+- Fix: Get preview for video in Revolution 2.5.1
+
+ResVideoGallery 1.0.6
+====================================
+- Fix: Integration with ms2Gallery
+
+ResVideoGallery 1.0.5
+====================================
+- Update: Parse links vk
+
+ResVideoGallery 1.0.4
+====================================
+- Update: Parse links youtube
+- Fix: Parse video duration for youtube
+
+ResVideoGallery 1.0.3
+====================================
+- Fix: Format video duration on front-end
+
+ResVideoGallery 1.0.2
+====================================
+- Added: Reload video preview
+- Added: Adding video from frontend
+
+ResVideoGallery 1.0.1
+====================================
+- Added: Integration with ms2Gallery
+- Added: Pre and post hooks
+- Added: Custom video providers
+
+ResVideoGallery 1.0.0
+====================================
+- First release

@@ -1,0 +1,45 @@
+.menu_main{
+
+  .menu{
+    li{
+      &:before{}
+      .menu_link{
+        &:hover{}
+      }
+      &:hover{
+        >.menu_link{}
+      }
+      &.active{
+        >.menu_link{}
+      }
+      +li{
+        &:before{}
+        .menu_link{}
+      }
+      ul{}
+    }
+
+    /* lvl 1 */
+    >li{
+      >.menu_link{
+        &:hover{}
+      }
+      &:hover{
+        >.menu_link{}
+      }
+      &.active{
+        >.menu_link{}
+      }
+      +li{
+        >.menu_link{}
+      }
+
+      /* lvl 2+ */
+      ul{}
+    }
+  }
+
+  .hdr &{}
+  &.menu_top{}
+
+}

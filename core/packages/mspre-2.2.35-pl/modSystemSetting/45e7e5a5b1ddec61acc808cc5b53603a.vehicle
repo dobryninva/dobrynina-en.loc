@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'mspre',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1c85a625437475d886856ba6e2ebca7d',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '45e7e5a5b1ddec61acc808cc5b53603a',
+  'native_key' => 'mspre_resource_table_selected_fields',
+  'object' => '{"key":"mspre_resource_table_selected_fields","value":"id:20,menuindex:20,class_key:40,pagetitle:130,introtext:130,template:40,createdby:40,searchable:40,cacheable:40,actions:40","xtype":"textfield","namespace":"mspre","area":"mspre_windows_fields","editedon":null}',
+);

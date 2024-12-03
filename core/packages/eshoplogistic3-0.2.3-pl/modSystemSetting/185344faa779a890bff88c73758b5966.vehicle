@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'eshoplogistic3',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c2514e9288ef38c8c8404c62e3840d60',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '185344faa779a890bff88c73758b5966',
+  'native_key' => 'eshoplogistic3_delline_pick_up_terminal',
+  'object' => '{"key":"eshoplogistic3_delline_pick_up_terminal","value":1,"xtype":"textfield","namespace":"eshoplogistic3","area":"eshoplogistic3_order_unload_delline","editedon":null}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a40a82c6bb15ccedb3c41f251aaab031',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd1c61e70c315e9d3eb2d80c3cfb1210e',
+  'native_key' => 'msimportexport.export.head_style',
+  'object' => '{"key":"msimportexport.export.head_style","value":"{\\"font\\":{\\"bold\\":true,\\"color\\":{\\"rgb\\":\\"000000\\"}},\\"fill\\":{\\"fillType\\":\\"solid\\",\\"color\\":{\\"rgb\\":\\"CFCFCF\\"}}}","xtype":"textfield","namespace":"msimportexport","area":"export Excel","editedon":"2019-05-03 21:31:12"}',
+);
